@@ -4,6 +4,7 @@ const { spacing, fontFamily } = require("tailwindcss/defaultTheme");
 module.exports = {
   content: ["./pages/**/*.tsx", "./components/**/*.tsx"],
   darkMode: "class",
+  safelist: [{ pattern: /(border|bg)-(.*)-(\d00)/ }],
   theme: {
     extend: {
       colors: {

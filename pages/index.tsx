@@ -17,10 +17,10 @@ const Home: NextPage = () => {
             Full-Stack Developer at{" "}
             <span className="font-semibold">Cloudflight</span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 mb-16">
-            Audiophile. Bookworm. Geek. A highly motivated individual
-            <br />
-            who is eager to learn and experience new things.
+          <p className="text-gray-600 dark:text-gray-400 mb-6">
+            Audiophile. Bookworm. Geek. A highly motivated individual <br />
+            who is eager to learn and experience new things. <br />
+            Blessed husband of a wonderful, brilliant woman.
           </p>
         </div>
         <div className="w-[80px] sm:w-[176px] relative mb-8 sm:mb-0 mr-0">
@@ -34,14 +34,47 @@ const Home: NextPage = () => {
         </div>
       </div>
       <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white">
-        Featured Posts
+        Projects
       </h3>
       <div className="flex gap-6 flex-col">
-        <div className="flex flex-row justify-between w-full gap-10 max-w-2xl max-h-full h-[17rem]">
-          {/* <Project name="Lyra" color="green" year="2021">
-            A project where
+        <div className="flex flex-row justify-between w-full gap-10 max-w-2xl max-h-full h-[19rem]">
+          <Project
+            name="Lyra"
+            color="green"
+            year="2022"
+            link="https://github.com/VladCuciureanu/Lyra"
+          >
+            Lyra is an opensource, self-hosted music streaming service that
+            allows you to take your music collection anywhere.
           </Project>
-          <Project name="Idk" color="purple" year="2222"></Project> */}
+          <Project
+            name="Hymn"
+            color="purple"
+            year="TBD"
+            link="https://github.com/VladCuciureanu/Hymn"
+          >
+            Open-source, non-profit, free-access christian music tabs repository
+            with user friendliness and ease of use in mind.
+          </Project>
+        </div>
+        <div className="flex flex-row justify-between w-full gap-10 max-w-2xl max-h-full h-[19rem]">
+          <Project
+            name="Garlic Bread"
+            color="blue"
+            year="2021 (Archived)"
+            link="https://github.com/VladCuciureanu/GarlicBread"
+          >
+            Do you like Garlic bread? Is your sense of humor similar to that of
+            an neanderthal? If so, check out this tasty Discord bot!
+          </Project>
+          <Project
+            name="CatFetch"
+            color="red"
+            year="2021"
+            link="https://github.com/VladCuciureanu/CatFetch"
+          >
+            Ok hear me out guys... Cats. In terminals.
+          </Project>
         </div>
       </div>
       <Link href="https://github.com/VladCuciureanu">

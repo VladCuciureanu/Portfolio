@@ -5,10 +5,10 @@ import ThemeSwitcher from "./ThemeSwitcher";
 
 export default function NavigationBar() {
   return (
-    <nav className="flex flex-row items-center justify-between w-full pt-8 pb-16 ml-[-0.60rem]">
+    <nav className="flex flex-row items-center justify-between w-full pt-8 pb-10 ml-[-0.60rem]">
       <div>
       <NavItem href="/" text="Home" />
-      <NavItem href="/about" text="About me" />
+      <NavItem href="/about" text="About" />
       </div>
       <ThemeSwitcher />
     </nav>
