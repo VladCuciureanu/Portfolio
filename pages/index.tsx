@@ -38,10 +38,10 @@ const Home: NextPage = () => {
       </h3>
       <div className="flex gap-6 flex-col">
         <div className="flex flex-row justify-between w-full gap-10 max-w-2xl max-h-full h-[17rem]">
-          <Project name="Lyra" color="green" year="2021">
+          {/* <Project name="Lyra" color="green" year="2021">
             A project where
           </Project>
-          <Project name="Idk" color="purple" year="2222"></Project>
+          <Project name="Idk" color="purple" year="2222"></Project> */}
         </div>
       </div>
       <Link href="https://github.com/VladCuciureanu">
