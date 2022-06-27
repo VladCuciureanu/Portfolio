@@ -37,7 +37,7 @@ export default function Container(props: { children: any }) {
         <meta name="twitter:image" content={meta.image} />
       </Head>
       <NavigationBar />
-      <main className="w-full mb-8">
+      <main className="w-full mb-4">
         {children}
       </main>
       <Footer />
