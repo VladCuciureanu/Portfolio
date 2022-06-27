@@ -2,7 +2,7 @@ import NextLink from "next/link";
 
 export default function Project(props: any) {
   return (
-    <div className={`bg-${props.color}-300 text-black rounded-2xl p-6 w-full`}>
+    <div className={`bg-${props.color}-300 text-black rounded-2xl p-6 w-full h-72`}>
       <h1 className="font-bold text-2xl">{props.name}</h1>
       <span className="text-sm">{props.year}</span>
       <hr className={`mt-3 mb-3 border-${props.color}-400`}></hr>

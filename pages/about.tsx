@@ -7,7 +7,7 @@ import TopTracks from "../components/TopTracks";
 const About: NextPage = () => {
   return (
     <Container>
-      <h1 className="font-bold text-3xl md:text-5xl tracking-tight text-black dark:text-white">
+      <h1 className="font-bold text-3xl sm:text-5xl tracking-tight text-black dark:text-white">
         About Me
       </h1>
       <div className="mt-6 mb-4 prose dark:prose-dark leading-6">
