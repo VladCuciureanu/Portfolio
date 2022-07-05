@@ -28,7 +28,7 @@ const Home: NextPage = () => {
             alt="Vlad Cuciureanu"
             height={176}
             width={176}
-            src="/static/images/avatar.jpg"
+            src="https://res.cloudinary.com/vladinski-md/image/upload/avatar.jpg"
             className="rounded-full"
           />
         </div>
