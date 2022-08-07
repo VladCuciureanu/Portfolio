@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { HTMLAttributeAnchorTarget } from "react"
-import IndexStyles from "../styles"
+import { default as Styles } from "../styles"
 
 export default function IndexLinkWrapper(props: {
   label: string
@@ -14,4 +14,4 @@ export default function IndexLinkWrapper(props: {
   )
 }
 
-const Anchor = IndexStyles.Anchor
+const Anchor = Styles.Anchor

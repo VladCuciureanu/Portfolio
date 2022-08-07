@@ -1,11 +1,11 @@
 import Layout from "@/ui/shared/layout"
-import IndexStyles from "@/ui/index/styles"
-import IndexConstants from "@/ui/index/constants"
+import { default as Styles } from "@/ui/index/styles"
+import { default as Constants } from "@/ui/index/constants"
 import { Artist } from "@/lib/spotify/types"
 import { default as LinkWrapper } from "@/ui/index/link-wrapper"
-import useSWR from "swr"
 import fetcher from "@/lib/fetcher"
 import Header from "@/ui/shared/header"
+import useSWR from "swr"
 
 export default function Home() {
   const { data } = useSWR<{ artists: Artist[] }>(
@@ -92,14 +92,14 @@ function ArtistLink(props: { artist: Artist | undefined }) {
   )
 }
 
-const Container = IndexStyles.Container
-const Heading = IndexStyles.Heading
-const Subheading = IndexStyles.Subheading
-const Emphasis = IndexStyles.Emphasis
-const Anchor = IndexStyles.Anchor
-const Text = IndexStyles.Text
-const Divider = IndexStyles.Divider
+const Container = Styles.Container
+const Heading = Styles.Heading
+const Subheading = Styles.Subheading
+const Emphasis = Styles.Emphasis
+const Anchor = Styles.Anchor
+const Text = Styles.Text
+const Divider = Styles.Divider
 
-const Hymn = IndexConstants.HymnLink
-const Lyra = IndexConstants.LyraLink
-const Cloudflight = IndexConstants.CloudflightLink
+const Hymn = Constants.HymnLink
+const Lyra = Constants.LyraLink
+const Cloudflight = Constants.CloudflightLink
