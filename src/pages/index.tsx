@@ -5,7 +5,7 @@ import { Artist } from "@/lib/spotify/types"
 import { default as LinkWrapper } from "@/ui/index/link-wrapper"
 import useSWR from "swr"
 import fetcher from "@/lib/fetcher"
-import styled from "styled-components"
+import Header from "@/ui/shared/header"
 
 export default function Home() {
   const { data } = useSWR<{ artists: Artist[] }>(
@@ -13,11 +13,11 @@ export default function Home() {
     fetcher,
   )
   const topArtists = data ? data.artists : []
-  console.log(topArtists)
 
   return (
     <Layout>
       <Container>
+        <Header />
         <Heading>Vlad Cuciureanu</Heading>
         <Text>
           JavaScript Enthusiast, Audio-Video Tinkerer, Green Haribo Bear.
@@ -83,7 +83,13 @@ function ArtistLink(props: { artist: Artist | undefined }) {
     return <>Error</>
   }
 
-  return <LinkWrapper label={props.artist.name} href={props.artist.url} />
+  return (
+    <LinkWrapper
+      label={props.artist.name}
+      href={props.artist.url}
+      target="_blank"
+    />
+  )
 }
 
 const Container = IndexStyles.Container
