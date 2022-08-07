@@ -6,7 +6,6 @@ import { ThemeProvider } from "next-themes"
 import ThemeToggle from "@/ui/shared/theme-toggle"
 import Footer from "@/ui/shared/footer"
 import { AnimatePresence } from "framer-motion"
-import "@/styles/fonts.css"
 
 function App({ Component, pageProps, router }: AppProps) {
   return (

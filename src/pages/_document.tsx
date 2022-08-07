@@ -40,7 +40,7 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head>
-          <link rel="icon" href="/assets/graphics/favicon.svg" />
+          <link rel="icon" href="/assets/graphics/logo.svg" />
           <link
             rel="preload"
             href="/assets/fonts/MagnatHead-Semibold.otf"

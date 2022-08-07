@@ -114,13 +114,6 @@ const GlobalStyle = createGlobalStyle`
       src: url(/assets/fonts/MagnatText-MediumItalic.otf) format("opentype");
       font-display: swap;
     }
-    @font-face {
-      font-weight: 400;
-      font-family: Magnat Text;
-      font-style: italic;
-      src: url(/assets/fonts/MagnatText-RegularItalic.otf) format("opentype");
-      font-display: swap;
-    }
 
   /*
     11. Apply theme styles
