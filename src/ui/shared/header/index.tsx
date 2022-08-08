@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { useState, useEffect, useCallback } from "react"
 import styled from "styled-components"
 import { default as Display } from "./display"
 import Marquee from "./marquee"
@@ -9,6 +10,30 @@ const variants = {
 }
 
 export default function Header() {
+  const [mounted, setMounted] = useState(false)
+  const [overflowing, setOverflowing] = useState(false)
+
+  const checkOverflowing = useCallback(() => {
+    const container = document.getElementById("main-container")
+    const display = document.getElementById("display-measure")
+
+    if (!container || !display || !mounted) {
+      setOverflowing(false)
+      return
+    }
+    setOverflowing(container.scrollWidth < display.scrollWidth)
+    return
+  }, [mounted])
+
+  useEffect(() => {
+    setMounted(true)
+    window.addEventListener("resize", checkOverflowing)
+  }, [checkOverflowing])
+
+  if (!mounted) {
+    return <></>
+  }
+
   return (
     <Container
       initial="hidden"
@@ -16,12 +41,23 @@ export default function Header() {
       variants={variants}
       transition={{ delay: 0.75, type: "linear", duration: 0.75 }}
     >
-      <Marquee speed={12.5}>
+      <InvisibleContainer>
+        <Display
+          id="display-measure"
+          tabIndex={-1}
+          onChange={() => checkOverflowing()}
+        />
+      </InvisibleContainer>
+      {overflowing ? (
+        <Marquee speed={12.5}>
+          <Display />
+          <Spacer />
+          <Display />
+          <Spacer />
+        </Marquee>
+      ) : (
         <Display />
-        <Spacer />
-        <Display />
-        <Spacer />
-      </Marquee>
+      )}
     </Container>
   )
 }
@@ -44,4 +80,12 @@ const Container = styled(motion.header)`
 const Spacer = styled.div`
   margin-left: var(--space-4);
   margin-right: var(--space-4);
+`
+
+const InvisibleContainer = styled.div`
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  max-height: 1px;
+  overflow: hidden;
 `

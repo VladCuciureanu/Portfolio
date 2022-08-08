@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <Layout>
-      <Container>
+      <Container id="main-container">
         <Header />
         <Heading>Vlad Cuciureanu</Heading>
         <Text>

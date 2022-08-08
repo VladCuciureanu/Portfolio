@@ -14,6 +14,7 @@ type MarqueeProps = {
   onFinish?: () => void
   onCycleComplete?: () => void
   children?: React.ReactNode
+  key?: string
 }
 
 export default function Marquee({
@@ -29,6 +30,7 @@ export default function Marquee({
   onFinish,
   onCycleComplete,
   children,
+  key,
 }: MarqueeProps) {
   const [containerWidth, setContainerWidth] = useState(0)
   const [marqueeWidth, setMarqueeWidth] = useState(0)
@@ -73,6 +75,7 @@ export default function Marquee({
             ["--pause-on-click" as string]: pauseOnClick ? "paused" : "running",
           }}
           className={className}
+          key={key}
         >
           <Wrapper
             ref={marqueeRef}

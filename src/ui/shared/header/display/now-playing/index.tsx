@@ -5,7 +5,7 @@ import UnstyledSpotifyIcon from "/public/assets/graphics/spotify.svg"
 import { default as Styles } from "../styles"
 
 export default function HeaderNowPlaying(props: { data?: NowPlayingSong }) {
-  if (!props.data?.url) {
+  if (!props.data?.isPlaying) {
     return (
       <NowPlayingContainer>
         <SpotifyIcon />
