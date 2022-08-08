@@ -4,7 +4,7 @@ import { default as Constants } from "@/ui/index/constants"
 import { Artist } from "@/lib/spotify/types"
 import { default as LinkWrapper } from "@/ui/index/link-wrapper"
 import fetcher from "@/lib/fetcher"
-import Header from "@/ui/shared/header"
+import Header from "@/ui/index/header"
 import useSWR from "swr"
 
 export default function Home() {

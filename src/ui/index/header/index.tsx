@@ -1,13 +1,9 @@
-import { motion } from "framer-motion"
-import { useState, useEffect, useCallback } from "react"
+import { AnimatePresence, motion } from "framer-motion"
+import React, { useState, useEffect, useCallback } from "react"
 import styled from "styled-components"
+import SlideInOut from "../../shared/animations/slide-in-out"
 import { default as Display } from "./display"
 import Marquee from "./marquee"
-
-const variants = {
-  hidden: { opacity: 0 },
-  enter: { opacity: 1 },
-}
 
 export default function Header() {
   const [mounted, setMounted] = useState(false)
@@ -34,11 +30,16 @@ export default function Header() {
     return <></>
   }
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    enter: { opacity: 1 },
+  }
+
   return (
     <Container
       initial="hidden"
       animate="enter"
-      variants={variants}
+      variants={containerVariants}
       transition={{ delay: 0.75, type: "linear", duration: 0.75 }}
     >
       <InvisibleContainer>
@@ -48,16 +49,22 @@ export default function Header() {
           onChange={() => checkOverflowing()}
         />
       </InvisibleContainer>
-      {overflowing ? (
-        <Marquee speed={12.5}>
-          <Display />
-          <Spacer />
-          <Display />
-          <Spacer />
-        </Marquee>
-      ) : (
-        <Display />
-      )}
+      <AnimatePresence exitBeforeEnter>
+        {overflowing ? (
+          <SlideInOut key="marquee">
+            <Marquee speed={12.5}>
+              <Display />
+              <Spacer />
+              <Display />
+              <Spacer />
+            </Marquee>
+          </SlideInOut>
+        ) : (
+          <SlideInOut key="display">
+            <Display />
+          </SlideInOut>
+        )}
+      </AnimatePresence>
     </Container>
   )
 }
