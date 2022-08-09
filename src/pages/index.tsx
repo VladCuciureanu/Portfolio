@@ -48,10 +48,10 @@ export default function Home() {
           <Emphasis>{`'What?!'`}</Emphasis>
           {`... Just kidding!`}
         </Text>
-        <Text style={{ paddingRight: "25px" }}>
+        <Text>
           {`
           Passionate about building polished software and web products. Working
-          carefully and methodically. Mindfully spending my time and attention
+          methodically and carefully. Mindfully spending my time and attention
           so that I can produce quality work and feel productive. In pursuit of
           aiding towards the betterment of humanity.
           `}

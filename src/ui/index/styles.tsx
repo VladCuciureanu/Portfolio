@@ -44,7 +44,7 @@ const Emphasis = styled.span`
 `
 
 const Svg = styled.svg`
-  width: 95%;
+  width: 77%;
   height: 16px;
   stroke: var(--colors-gray6);
   margin-top: 1rem;

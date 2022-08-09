@@ -20,7 +20,7 @@ const Container = styled(motion.div)`
   position: fixed;
   left: 50%;
   bottom: 20px;
-  transform: translate(-50%, 0);
+  transform: translate(-51.75%, 0);
 `
 
 const Divider = styled.div`
