@@ -46,24 +46,28 @@ export default class Document extends NextDocument {
             href="/assets/fonts/MagnatHead-Semibold.otf"
             as="font"
             type="font/otf"
+            crossOrigin="anonymous"
           />
           <link
             rel="preload"
             href="/assets/fonts/MagnatText-Regular.otf"
             as="font"
             type="font/otf"
+            crossOrigin="anonymous"
           />
           <link
             rel="preload"
             href="/assets/fonts/MagnatText-Medium.otf"
             as="font"
             type="font/otf"
+            crossOrigin="anonymous"
           />
           <link
             rel="preload"
             href="/assets/fonts/MagnatText-MediumItalic.otf"
             as="font"
             type="font/otf"
+            crossOrigin="anonymous"
           />
         </Head>
         <body>
