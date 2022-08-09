@@ -3,7 +3,6 @@ import { DefaultSeo } from "next-seo"
 import { seo } from "@/utils/seo"
 import GlobalStyle from "@/styles/global"
 import { ThemeProvider } from "next-themes"
-import ThemeToggle from "@/ui/shared/theme-toggle"
 import Footer from "@/ui/shared/footer"
 import { AnimatePresence } from "framer-motion"
 
@@ -20,7 +19,6 @@ function App({ Component, pageProps, router }: AppProps) {
         >
           <Component {...pageProps} key={router.route} />
         </AnimatePresence>
-        {/* <ThemeToggle /> */}
       </ThemeProvider>
     </>
   )

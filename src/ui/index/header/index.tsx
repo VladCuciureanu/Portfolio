@@ -3,9 +3,9 @@ import React, { useState, useEffect, useCallback } from "react"
 import styled from "styled-components"
 import SlideInOut from "../../shared/animations/slide-in-out"
 import { default as Display } from "./display"
-import Marquee from "./marquee"
+import Marquee from "../../shared/marquee"
 
-export default function Header() {
+export default function IndexHeader() {
   const [mounted, setMounted] = useState(false)
   const [overflowing, setOverflowing] = useState(false)
 
@@ -80,7 +80,6 @@ const Container = styled(motion.header)`
   justify-content: flex-start;
   align-items: stretch;
   flex-direction: row;
-  box-sizing: border-box;
   display: flex;
 `
 

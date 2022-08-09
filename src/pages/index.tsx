@@ -2,9 +2,9 @@ import Layout from "@/ui/shared/layout"
 import { default as Styles } from "@/ui/index/styles"
 import { default as Constants } from "@/ui/index/constants"
 import { Artist } from "@/lib/spotify/types"
-import { default as LinkWrapper } from "@/ui/index/link-wrapper"
+import { default as LinkWrapper } from "@/ui/shared/link"
 import fetcher from "@/lib/fetcher"
-import Header from "@/ui/index/header"
+import { default as Header } from "@/ui/index/header"
 import useSWR from "swr"
 
 export default function Home() {
@@ -96,7 +96,6 @@ const Container = Styles.Container
 const Heading = Styles.Heading
 const Subheading = Styles.Subheading
 const Emphasis = Styles.Emphasis
-const Anchor = Styles.Anchor
 const Text = Styles.Text
 const Divider = Styles.Divider
 

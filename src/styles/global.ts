@@ -32,6 +32,7 @@ const GlobalStyle = createGlobalStyle`
   */
   body {
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   /*
@@ -131,7 +132,6 @@ const GlobalStyle = createGlobalStyle`
     color: var(--colors-highContrast);
     background-color: var(--colors-gray1);
     transition: background var(--theme-transition), color var(--theme-transition);
-    -moz-osx-font-smoothing: grayscale;
     font-family: Magnat Text;
   }
 `

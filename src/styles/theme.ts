@@ -25,9 +25,6 @@ export const lightTheme = css`
   --colors-grayA10: hsl(0 0% 0% / 0.478);
   --colors-grayA11: hsl(0 0% 0% / 0.565);
   --colors-grayA12: hsl(0 0% 0% / 0.91);
-  --colors-bg: #fff;
-  --colors-lowContrast: #ffffff;
-  --colors-highContrast: black;
   --colors-blue1: hsl(206 100% 99.2%);
   --colors-blue2: hsl(210 100% 98%);
   --colors-blue3: hsl(209 100% 96.5%);
@@ -64,6 +61,12 @@ export const lightTheme = css`
   --colors-amber10: hsl(35 100% 55.5%);
   --colors-amber11: hsl(30 100% 34%);
   --colors-amber12: hsl(20 80% 17%);
+  --colors-bg: #fff;
+  --colors-lowContrast: #ffffff;
+  --colors-highContrast: black;
+  --colors-dock-bg: rgba(255, 255, 255, 0.7);
+  --colors-dock-button-color-1: var(--colors-gray2);
+  --colors-dock-button-color-2: var(--colors-gray5);
 `
 
 export const darkTheme = css`
@@ -130,4 +133,7 @@ export const darkTheme = css`
   --colors-bg: #000;
   --colors-lowContrast: black;
   --colors-highContrast: white;
+  --colors-dock-bg: rgba(22, 22, 22, 0.8);
+  --colors-dock-button-color-1: var(--colors-gray2);
+  --colors-dock-button-color-2: var(--colors-gray3);
 `

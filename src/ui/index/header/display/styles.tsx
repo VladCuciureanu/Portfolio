@@ -7,7 +7,6 @@ const Container = styled.span`
   justify-content: flex-start;
   flex-direction: row;
   display: flex;
-  box-sizing: border-box;
 `
 
 const Divider = styled.div`

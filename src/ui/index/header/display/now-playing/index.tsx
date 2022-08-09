@@ -3,9 +3,25 @@ import Link from "next/link"
 import styled from "styled-components"
 import UnstyledSpotifyIcon from "/public/assets/graphics/spotify.svg"
 import { default as Styles } from "../styles"
+import fetcher from "@/lib/fetcher"
+import useSwr from "swr"
+import { useEffect } from "react"
 
-export default function HeaderNowPlaying(props: { data?: NowPlayingSong }) {
-  if (!props.data?.isPlaying) {
+type HeaderNowPlayingProps = {
+  onChange?: any
+}
+
+export default function HeaderNowPlaying(props: HeaderNowPlayingProps) {
+  const { data } = useSwr<NowPlayingSong>("/api/spotify/now-playing", fetcher, {
+    refreshInterval: 15000,
+  })
+
+  useEffect(() => {
+    const onChange = props.onChange ? props.onChange : () => {}
+    onChange()
+  }, [data, props.onChange])
+
+  if (data === undefined || !data.isPlaying) {
     return (
       <NowPlayingContainer>
         <SpotifyIcon />
@@ -15,13 +31,13 @@ export default function HeaderNowPlaying(props: { data?: NowPlayingSong }) {
   }
 
   return (
-    <Link href={props.data?.url} passHref>
+    <Link href={data.url} passHref>
       <Gray as="a" target="_blank">
         <NowPlayingContainer>
           <SpotifyIcon />
-          {props.data.title}
+          {data.title}
           {` - `}
-          {props.data?.artist}
+          {data.artist}
         </NowPlayingContainer>
       </Gray>
     </Link>

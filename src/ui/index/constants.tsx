@@ -1,25 +1,21 @@
-import { default as LinkWrapper } from "./link-wrapper"
+import Link from "../shared/link"
 
 const LyraLink = (
-  <LinkWrapper
+  <Link
     label="Lyra"
     href="https://github.com/VladCuciureanu/Lyra"
     target="_blank"
   />
 )
 const HymnLink = (
-  <LinkWrapper
+  <Link
     label="Hymn"
     href="https://github.com/VladCuciureanu/Hymn"
     target="_blank"
   />
 )
 const CloudflightLink = (
-  <LinkWrapper
-    label="Cloudflight"
-    href="https://cloudflight.io"
-    target="_blank"
-  />
+  <Link label="Cloudflight" href="https://cloudflight.io" target="_blank" />
 )
 
 const IndexConstants = {

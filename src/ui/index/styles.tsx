@@ -38,25 +38,6 @@ const Subheading = styled.h2`
   display: block;
 `
 
-const Anchor = styled.a`
-  text-decoration: none;
-  color: var(--colors-gray12);
-  font-weight: 500;
-  border-bottom: 1px solid var(--colors-gray6);
-  padding-bottom: 4px;
-  transition: border-color 150ms ease;
-  display: inline-block;
-  line-height: 1em;
-  display: inline-flex;
-  flex-direction: row;
-  margin-left: 1px;
-  margin-right: 1px;
-
-  &:hover {
-    border-color: var(--colors-gray8);
-  }
-`
-
 const Emphasis = styled.span`
   border-bottom: 1px solid var(--colors-gray6);
   padding-bottom: 4px;
@@ -103,7 +84,6 @@ const IndexStyles = {
   Heading: Heading,
   Subheading: Subheading,
   Text: Text,
-  Anchor: Anchor,
 }
 
 export default IndexStyles
