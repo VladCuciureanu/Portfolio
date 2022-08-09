@@ -29,6 +29,16 @@ module.exports = withContentlayer({
         destination: "https://twitter.com/VladinskiDev",
         permanent: true,
       },
+      {
+        source: "/lyra",
+        destination: "https://github.com/VladCuciureanu/Lyra",
+        permanent: false,
+      },
+      {
+        source: "/hymn",
+        destination: "https://github.com/VladCuciureanu/Hymn",
+        permanent: false,
+      },
     ]
   },
   experimental: {

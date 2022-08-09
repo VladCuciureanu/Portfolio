@@ -2,11 +2,11 @@ import { motion } from "framer-motion"
 
 const SlideInOut = ({
   children,
-  key,
+  uniqueKey,
   zIndex,
 }: {
   children: React.ReactNode
-  key: string
+  uniqueKey: string
   zIndex?: number
 }) => {
   const variants = {
@@ -23,7 +23,7 @@ const SlideInOut = ({
       style={{ zIndex: zIndex }}
       transition={{ type: "linear", duration: 0.75 }}
     >
-      <div key={key}>{children}</div>
+      <div key={uniqueKey}>{children}</div>
     </motion.div>
   )
 }
