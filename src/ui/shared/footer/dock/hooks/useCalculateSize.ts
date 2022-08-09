@@ -27,7 +27,7 @@ export default function useCalculateSize(
 
   // Create a motion value with a spring animation
   const size = useSpring(startSize, {
-    mass: 0.5,
+    mass: 0.05,
   })
 
   // Limit in pixels. Elements who's centers are further from the mouse position

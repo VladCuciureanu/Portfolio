@@ -49,7 +49,7 @@ export default function DockItem(props: DockItemProps) {
     <Item
       as={motion.button}
       whileTap={{ scale: 0.85 }}
-      onTap={() => props.onClick?props.onClick():()=>{}}
+      onTap={() => (props.onClick ? props.onClick() : () => {})}
       ref={element}
       style={{
         width: dynamicSize,
