@@ -5,6 +5,7 @@ const Container = styled.div`
   position: relative;
   z-index: 5;
 `
+
 const Heading = styled.h1`
   letter-spacing: -0.5px;
   font-size: var(--fontSizes-20);
