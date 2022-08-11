@@ -18,7 +18,7 @@ export default function ThemeSwitcher(props: ThemeSwitcherProps) {
   const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark")
 
   if (!mounted) {
-    return <DockItem mouseX={undefined} icon={undefined}/>
+    return <DockItem mouseX={undefined} icon={undefined} />
   }
 
   return (

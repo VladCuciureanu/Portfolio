@@ -10,7 +10,9 @@ const SvgHymn = ({ ...props }, ref?: React.LegacyRef<SVGSVGElement>) => (
     ref={ref}
     {...props}
   >
-    Hymn
+    <text x="50%" y="55%" dominantBaseline="middle" textAnchor="middle">
+      H
+    </text>
   </svg>
 )
 

@@ -14,14 +14,12 @@ export default function Projects() {
           href="/lyra"
           description="Open-source, self-hosted music streaming service"
           creationYear={2021}
-          previewImageUrl="/assets/graphics/thumbnails/lyra.png"
         />
         <ProjectCard
           name="Hymn"
           href="/hymn"
           description="Open-source, non-profit, free-access christian music tabs repository"
           creationYear={2021}
-          previewImageUrl="/assets/graphics/thumbnails/hymn.png"
         />
         <ProjectCard
           name="Garlic Bread"

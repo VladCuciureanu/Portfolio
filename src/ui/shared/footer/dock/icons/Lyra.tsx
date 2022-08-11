@@ -10,7 +10,9 @@ const SvgLyra = ({ ...props }, ref?: React.LegacyRef<SVGSVGElement>) => (
     ref={ref}
     {...props}
   >
-    Lyra
+    <text x="50%" y="55%" dominantBaseline="middle" textAnchor="middle">
+      L
+    </text>
   </svg>
 )
 
