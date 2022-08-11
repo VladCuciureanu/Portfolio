@@ -7,6 +7,7 @@ import useCalculateSize from "../hooks/useCalculateSize"
 type DockItemProps = {
   mouseX: number | undefined
   icon: React.ReactNode
+  tooltip?: string
   href?: string
   onClick?: Function
   dataKey?: string | number
@@ -38,6 +39,7 @@ export default function DockItem(props: DockItemProps) {
           }}
           key={props.dataKey}
         >
+          {props.tooltip ? <Tooltip>{props.tooltip}</Tooltip> : <></>}
           {props.icon}
         </Item>
       </Link>
@@ -57,6 +59,7 @@ export default function DockItem(props: DockItemProps) {
       }}
       key={props.dataKey}
     >
+      {props.tooltip ? <Tooltip>{props.tooltip}</Tooltip> : <></>}
       {props.icon}
     </Item>
   )
@@ -91,4 +94,29 @@ const Item = styled(motion.button)`
     stroke: var(--colors-gray10);
     stroke-width: 1.25;
   }
+
+  &:hover {
+    div {
+      opacity: 1;
+    }
+  }
+`
+
+const Tooltip = styled.div`
+  margin: 0;
+  opacity: 0;
+  padding: 4px 8px;
+  position: absolute;
+  color: var(--colors-gray-11);
+  background: var(--colors-gray2);
+  box-shadow: var(--shadows-small);
+  font-family: var(--fonts-body);
+  border: 1px solid var(--colors-gray6);
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  transform: translateY(-200%);
+  transition: opacity 0.125s ease-in;
+  pointer-events: none;
+  z-index: 9000;
 `

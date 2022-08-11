@@ -28,6 +28,7 @@ export default function FooterDock() {
                   key={itemIndex}
                   dataKey={itemIndex}
                   mouseX={mouseX}
+                  tooltip={item.label}
                   icon={item.icon}
                   href={item.href}
                   onClick={item.onClick}
