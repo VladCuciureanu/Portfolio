@@ -13,7 +13,7 @@ type HeaderNowPlayingProps = {
 
 export default function HeaderNowPlaying(props: HeaderNowPlayingProps) {
   const { data } = useSwr<NowPlayingSong>("/api/spotify/now-playing", fetcher, {
-    refreshInterval: 15000,
+    refreshInterval: 2000,
   })
 
   useEffect(() => {
