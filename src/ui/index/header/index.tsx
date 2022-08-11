@@ -51,7 +51,7 @@ export default function IndexHeader() {
       </InvisibleContainer>
       <AnimatePresence exitBeforeEnter>
         {overflowing ? (
-          <SlideInOut key="marquee">
+          <SlideInOut key="marquee" uniqueKey="marquee">
             <Marquee speed={12.5}>
               <Display />
               <Spacer />
@@ -60,7 +60,7 @@ export default function IndexHeader() {
             </Marquee>
           </SlideInOut>
         ) : (
-          <SlideInOut key="display">
+          <SlideInOut key="display" uniqueKey="display">
             <Display />
           </SlideInOut>
         )}
