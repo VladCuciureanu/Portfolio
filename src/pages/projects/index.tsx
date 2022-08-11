@@ -1,7 +1,7 @@
 import Layout from "@/ui/shared/layout"
 import SharedStyles from "@/ui/shared/styles"
 import styled from "styled-components"
-import ProjectCard from "./project-card"
+import ProjectCard from "../../ui/projects/project-card"
 
 export default function Projects() {
   return (
