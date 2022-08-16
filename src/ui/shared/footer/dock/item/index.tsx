@@ -73,6 +73,7 @@ const Item = styled(motion.button)`
   display: block;
   cursor: pointer;
   padding: 4px;
+  flex-shrink: 0;
 
   background-image: linear-gradient(
     45deg,

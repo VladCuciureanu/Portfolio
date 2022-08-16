@@ -19,27 +19,29 @@ export default function FooterDock() {
       }}
       key="footer-dock"
     >
-      {DockStructure.map((group, groupIndex) => {
-        return (
-          <Fragment key={groupIndex}>
-            {group.items.map((item, itemIndex) => {
-              return (
-                <DockItem
-                  key={itemIndex}
-                  dataKey={itemIndex}
-                  mouseX={mouseX}
-                  tooltip={item.label}
-                  icon={item.icon}
-                  href={item.href}
-                  onClick={item.onClick}
-                />
-              )
-            })}
-            <Divider key={"d-" + groupIndex} />
-          </Fragment>
-        )
-      })}
-      <ThemeSwitcher key={"dock-theme-switcher"} mouseX={mouseX} />
+      <Slider>
+        {DockStructure.map((group, groupIndex) => {
+          return (
+            <Fragment key={groupIndex}>
+              {group.items.map((item, itemIndex) => {
+                return (
+                  <DockItem
+                    key={itemIndex}
+                    dataKey={itemIndex}
+                    mouseX={mouseX}
+                    tooltip={item.label}
+                    icon={item.icon}
+                    href={item.href}
+                    onClick={item.onClick}
+                  />
+                )
+              })}
+              <Divider key={"d-" + groupIndex} />
+            </Fragment>
+          )
+        })}
+        <ThemeSwitcher key={"dock-theme-switcher"} mouseX={mouseX} />
+      </Slider>
     </Container>
   )
 }
@@ -57,4 +59,5 @@ export interface DockItem {
 }
 
 const Container = Styles.Container
+const Slider = Styles.Slider
 const Divider = Styles.Divider

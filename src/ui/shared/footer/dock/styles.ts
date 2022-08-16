@@ -1,12 +1,10 @@
 import { motion } from "framer-motion"
 import styled from "styled-components"
 
-const Container = styled(motion.div)`
+const Container = styled(motion.footer)`
   display: flex;
-  flex-direction: row;
   align-items: flex-end;
-  gap: 8px;
-
+  width: auto;
   height: 70px;
   padding: 8px;
   margin: 0 auto;
@@ -21,6 +19,24 @@ const Container = styled(motion.div)`
   left: 50%;
   bottom: 20px;
   transform: translate(-51.75%, 0);
+
+  @media (max-width: 720px) {
+    max-width: calc(100% - 64px);
+    height: 72px;
+  }
+`
+
+const Slider = styled.div`
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 8px;
+  overflow: auto hidden;
+  @media (max-width: 720px) {
+    padding-bottom: 10px;
+    transform: translateY(8px);
+  }
 `
 
 const Divider = styled.div`
@@ -34,6 +50,7 @@ const Divider = styled.div`
 
 const DockStyles = {
   Container,
+  Slider,
   Divider,
 }
 
