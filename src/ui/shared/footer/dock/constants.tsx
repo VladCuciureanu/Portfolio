@@ -8,6 +8,7 @@ import {
   IconMail,
   IconProjects,
   IconTwitter,
+  IconResume,
 } from "./icons"
 
 const ProjectsGroup: DockGroup = {
@@ -38,6 +39,11 @@ const PagesGroup: DockGroup = {
       label: "Projects",
       href: "/projects",
       icon: <IconProjects />,
+    },
+    {
+      label: "Resume",
+      href: "/resume",
+      icon: <IconResume />,
     },
   ],
 }
