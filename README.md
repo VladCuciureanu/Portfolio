@@ -29,9 +29,10 @@ Blessed husband of a <i>brilliant</i> woman.
 
 <!-- PROJECT-LIST:START -->
 
-- [Lyra](https://github.com/VladCuciureanu/Lyra) - Self-hosted audio streaming server for audiophiles
+- [Lyra](https://github.com/VladCuciureanu/Lyra) - Self-hosted audio streaming service for audiophiles.
 - [Hymn](https://github.com/VladCuciureanu/Hymn) - Non-profit, curated repository of christian music tabs.
-- [GarlicBread](https://github.com/VladCuciureanu/GarlicBread) - Discord bot for deepfried zoomers
+- [Toothpick](https://github.com/VladCuciureanu/Toothpick) - A [Raycast](https://www.raycast.com/) extension for handling bluetooth connections.
+- [GarlicBread](https://github.com/VladCuciureanu/GarlicBread) - Discord bot for deepfried zoomers.
 - [CatFetch](https://github.com/VladCuciureanu/CatFetch) - Who ordered the neofetch with extra cats?
   <!-- - [Khora](https://github.com/VladCuciureanu/khora) -->
   <!-- PROJECT-LIST:END -->
