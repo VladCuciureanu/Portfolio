@@ -8,6 +8,9 @@ export default function FooterDock() {
   const [mouseX, setMouseX] = useState<number | undefined>(undefined)
 
   function handleMouse(event: React.MouseEvent<HTMLDivElement>) {
+    if (matchMedia("(hover: none)").matches) {
+      return
+    }
     setMouseX(event.clientX)
   }
 

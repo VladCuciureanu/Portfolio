@@ -9,7 +9,7 @@ export default function Projects() {
       <Heading>Projects</Heading>
       <Subheading>{`It ain't much, but it's honest work!`}</Subheading>
       <List>
-      <ProjectCard
+        <ProjectCard
           name="Toothpick"
           href="/toothpick"
           description="Observe and control Bluetooth devices. A @raycast extension."
