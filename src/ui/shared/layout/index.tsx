@@ -1,15 +1,6 @@
 import { motion } from "framer-motion"
 import styled from "styled-components"
-
-type LayoutProps = {
-  children?: React.ReactNode
-}
-
-const variants = {
-  hidden: { opacity: 0 },
-  enter: { opacity: 1 },
-  exit: { opacity: 0 },
-}
+import Footer from "../footer"
 
 export default function Layout(props: LayoutProps) {
   return (
@@ -17,26 +8,45 @@ export default function Layout(props: LayoutProps) {
       initial="hidden"
       animate="enter"
       exit="exit"
-      variants={variants}
+      variants={TransitionVariants}
       transition={{ type: "linear" }}
     >
       {props.children}
+      <Footer />
     </Main>
   )
 }
 
+const TransitionVariants = {
+  hidden: { opacity: 0 },
+  enter: { opacity: 1 },
+  exit: { opacity: 0 },
+}
+
+type LayoutProps = {
+  children?: React.ReactNode
+}
+
 const Main = styled(motion.main)`
-  display: flex;
-  flex-direction: column;
-  max-width: 720px;
+  color: var(--colors-fg);
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  padding-top: 12rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: grid;
+  grid-template-columns: 1fr min(640px, 100%) 1fr;
+  row-gap: 2rem;
+  z-index: 10;
   position: relative;
-  min-height: 100vh;
-  padding-left: var(--space-3);
-  padding-right: var(--space-3);
-  padding-top: 120px;
-  padding-bottom: 120px;
-  margin: 0 auto;
-  @media (max-width: 720px) {
-    padding-top: 40px;
+
+  @media (min-width: 1280px) {
+    grid-template-columns: 1fr minmax(auto, 240px) min(640px, 100%) minmax(
+        auto,
+        240px
+      ) 1fr;
+    padding-right: 0;
+    padding-left: 0;
+    column-gap: 2.25rem;
   }
 `

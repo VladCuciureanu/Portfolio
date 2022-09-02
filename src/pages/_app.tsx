@@ -1,10 +1,10 @@
 import GlobalStyle from "@/styles/global"
-import Footer from "@/ui/shared/footer"
 import { seo } from "@/utils/seo"
 import { DefaultSeo } from "next-seo"
 import { ThemeProvider } from "next-themes"
 import { AnimatePresence } from "framer-motion"
 import type { AppProps } from "next/app"
+import Header from "@/ui/shared/header"
 
 function App({ Component, pageProps, router }: AppProps) {
   return (
@@ -12,7 +12,7 @@ function App({ Component, pageProps, router }: AppProps) {
       <GlobalStyle />
       <DefaultSeo {...seo} />
       <ThemeProvider defaultTheme="dark">
-        <Footer />
+        <Header />
         <AnimatePresence
           exitBeforeEnter
           onExitComplete={() => window.scrollTo(0, 0)}
