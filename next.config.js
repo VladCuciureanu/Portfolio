@@ -39,6 +39,11 @@ module.exports = withContentlayer({
         destination: "https://github.com/VladCuciureanu/Hymn",
         permanent: false,
       },
+      {
+        source: "/toothpick",
+        destination: "https://github.com/VladCuciureanu/Toothpick",
+        permanent: false,
+      },
     ]
   },
   experimental: {

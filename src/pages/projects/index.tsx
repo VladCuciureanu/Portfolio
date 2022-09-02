@@ -2,43 +2,38 @@ import Layout from "@/ui/shared/layout"
 import SharedStyles from "@/ui/shared/styles"
 import styled from "styled-components"
 import ProjectCard from "../../ui/projects/project-card"
+import { Project } from "contentlayer/generated"
+import { allProjects } from "contentlayer/generated"
 
-export default function Projects() {
+export async function getStaticProps() {
+  const projects = allProjects ? allProjects : []
+  return {
+    props: {
+      projects: projects,
+    },
+  }
+}
+
+export default function Projects({ projects }: { projects: Project[] }) {
   return (
     <Layout>
       <Heading>Projects</Heading>
       <Subheading>{`It ain't much, but it's honest work!`}</Subheading>
       <List>
-        <ProjectCard
-          name="Toothpick"
-          href="/toothpick"
-          description="Observe and control Bluetooth devices. A @raycast extension."
-          creationYear={2022}
-        />
-        <ProjectCard
-          name="Lyra"
-          href="/lyra"
-          description="Open-source, self-hosted music streaming service"
-          creationYear={2021}
-        />
-        <ProjectCard
-          name="Hymn"
-          href="/hymn"
-          description="Open-source, non-profit, free-access christian music tabs repository"
-          creationYear={2021}
-        />
-        <ProjectCard
-          name="Garlic Bread"
-          href="https://github.com/VladCuciureanu/GarlicBread"
-          description="Light-hearted Discord bot designed for personal use"
-          creationYear={2020}
-        />
-        <ProjectCard
-          name="CatFetch"
-          href="https://github.com/VladCuciureanu/CatFetch"
-          description="Ok hear me out guys... Cats. In terminals! 🤯"
-          creationYear={2020}
-        />
+        {projects.map((project) => {
+          const { name, description, creationYear, href, thumbnailUrl } =
+            project
+          return (
+            <ProjectCard
+              name={name}
+              description={description}
+              creationYear={creationYear}
+              href={href}
+              previewImageUrl={thumbnailUrl}
+              key={href}
+            />
+          )
+        })}
       </List>
     </Layout>
   )

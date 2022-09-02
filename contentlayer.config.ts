@@ -16,13 +16,24 @@ export const Project = defineDocumentType(() => ({
       type: "string",
       required: true,
     },
-    year: {
-      type: "string",
+    creationYear: {
+      type: "number",
       required: true,
     },
     thumbnailUrl: {
       type: "string",
+      required: false,
+    },
+    status: {
+      type: "enum",
       required: true,
+      options: [
+        "unreleased",
+        "work-in-progress",
+        "released",
+        "discontinued",
+        "private",
+      ],
     },
   },
 }))
