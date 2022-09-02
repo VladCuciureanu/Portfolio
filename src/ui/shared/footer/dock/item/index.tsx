@@ -66,11 +66,14 @@ export default function DockItem(props: DockItemProps) {
 }
 
 const Item = styled(motion.button)`
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
   border-radius: 12px;
   text-align: center;
   outline: 0;
   border: 1px solid transparent;
-  display: block;
   cursor: pointer;
   padding: 4px;
   flex-shrink: 0;
