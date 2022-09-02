@@ -100,6 +100,10 @@ const Description = styled.span`
   font-size: var(--fontSizes-14);
   margin: 0;
   margin-left: 10px;
+
+  @media (max-width: 719px) {
+    display: none;
+  }
 `
 
 const Spacer = styled.div`
