@@ -1,7 +1,7 @@
 import { NowPlayingSong } from "@/lib/spotify/types"
 import Link from "next/link"
 import styled from "styled-components"
-import UnstyledSpotifyIcon from "/public/assets/graphics/spotify.svg"
+import UnstyledSpotifyIcon from "/public/assets/graphics/icons/spotify.svg"
 import { default as Styles } from "../styles"
 import fetcher from "@/lib/fetcher"
 import useSwr from "swr"

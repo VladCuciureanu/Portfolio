@@ -1,3 +1,4 @@
+import { ServerStyleSheet } from "styled-components"
 import NextDocument, {
   DocumentContext,
   DocumentInitialProps,
@@ -6,7 +7,6 @@ import NextDocument, {
   Main,
   NextScript,
 } from "next/document"
-import { ServerStyleSheet } from "styled-components"
 
 export default class Document extends NextDocument {
   // Generate stylesheet for SSG
@@ -41,33 +41,15 @@ export default class Document extends NextDocument {
       <Html lang="en">
         <Head>
           <link rel="icon" href="/assets/graphics/logo.svg" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
-            rel="preload"
-            href="/assets/fonts/MagnatHead-Semibold.otf"
-            as="font"
-            type="font/otf"
-            crossOrigin="anonymous"
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="*"
           />
           <link
-            rel="preload"
-            href="/assets/fonts/MagnatText-Regular.otf"
-            as="font"
-            type="font/otf"
-            crossOrigin="anonymous"
-          />
-          <link
-            rel="preload"
-            href="/assets/fonts/MagnatText-Medium.otf"
-            as="font"
-            type="font/otf"
-            crossOrigin="anonymous"
-          />
-          <link
-            rel="preload"
-            href="/assets/fonts/MagnatText-MediumItalic.otf"
-            as="font"
-            type="font/otf"
-            crossOrigin="anonymous"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
           />
         </Head>
         <body>

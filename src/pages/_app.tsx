@@ -1,10 +1,10 @@
-import type { AppProps } from "next/app"
-import { DefaultSeo } from "next-seo"
-import { seo } from "@/utils/seo"
 import GlobalStyle from "@/styles/global"
-import { ThemeProvider } from "next-themes"
 import Footer from "@/ui/shared/footer"
+import { seo } from "@/utils/seo"
+import { DefaultSeo } from "next-seo"
+import { ThemeProvider } from "next-themes"
 import { AnimatePresence } from "framer-motion"
+import type { AppProps } from "next/app"
 
 function App({ Component, pageProps, router }: AppProps) {
   return (
