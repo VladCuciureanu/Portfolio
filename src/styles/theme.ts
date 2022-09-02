@@ -64,9 +64,6 @@ export const lightTheme = css`
   --colors-bg: #fff;
   --colors-lowContrast: #ffffff;
   --colors-highContrast: black;
-  --colors-dock-bg: rgba(255, 255, 255, 0.7);
-  --colors-dock-button-color-1: var(--colors-gray2);
-  --colors-dock-button-color-2: var(--colors-gray5);
 `
 
 export const darkTheme = css`
@@ -133,7 +130,4 @@ export const darkTheme = css`
   --colors-bg: #000;
   --colors-lowContrast: black;
   --colors-highContrast: white;
-  --colors-dock-bg: rgba(22, 22, 22, 0.8);
-  --colors-dock-button-color-1: var(--colors-gray2);
-  --colors-dock-button-color-2: var(--colors-gray3);
 `

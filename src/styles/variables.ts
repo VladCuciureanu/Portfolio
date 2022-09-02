@@ -1,15 +1,15 @@
 import { css } from "styled-components"
 
 export const cssVariables = css`
-  --fonts-body: Magnat Text, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
-  --fonts-head: Magnat Head, serif;
+  --fonts-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  /* --fonts-head: Magnat Head, serif;
   --fonts-poster: Magnat Poster, serif;
   --fonts-flexible: Flexible, sans-serif;
   --fonts-mono: Menlo, monospace;
   --fonts-pf: Playfair Display, serif;
-  --fonts-flexibleWide: Flexible Wide, serif;
+  --fonts-flexibleWide: Flexible Wide, serif; */
   --space-1: 8px;
   --space-2: 16px;
   --space-3: 24px;

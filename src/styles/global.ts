@@ -82,42 +82,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   /*
-    10. Load up fonts
-  */
-    @font-face {
-      font-weight: 600;
-      font-family: Magnat Poster;
-      src: url(/assets/fonts/MagnatPoster-Semibold.otf) format("opentype");
-      font-display: swap;
-    }
-    @font-face {
-      font-weight: 600;
-      font-family: Magnat Head;
-      src: url(/assets/fonts/MagnatHead-Semibold.otf) format("opentype");
-      font-display: swap;
-    }
-    @font-face {
-      font-weight: 400;
-      font-family: Magnat Text;
-      src: url(/assets/fonts/MagnatText-Regular.otf) format("opentype");
-      font-display: swap;
-    }
-    @font-face {
-      font-weight: 500;
-      font-family: Magnat Text;
-      src: url(/assets/fonts/MagnatText-Medium.otf) format("opentype");
-      font-display: swap;
-    }
-    @font-face {
-      font-weight: 500;
-      font-family: Magnat Text;
-      font-style: italic;
-      src: url(/assets/fonts/MagnatText-MediumItalic.otf) format("opentype");
-      font-display: swap;
-    }
-
-  /*
-    11. Apply theme styles
+    10. Apply theme styles
   */
   :root {
     ${cssVariables}
@@ -132,7 +97,7 @@ const GlobalStyle = createGlobalStyle`
     color: var(--colors-highContrast);
     background-color: var(--colors-gray1);
     transition: background var(--theme-transition), color var(--theme-transition);
-    font-family: Magnat Text;
+    font-family: var(--fonts-body);
   }
 `
 
