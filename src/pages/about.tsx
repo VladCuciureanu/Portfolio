@@ -1,10 +1,10 @@
 import Layout from "@/ui/shared/layout"
-import { default as Styles } from "@/ui/index/styles"
-import { default as Constants } from "@/ui/index/constants"
+import { default as Styles } from "@/ui/about/styles"
+import { default as Constants } from "@/ui/about/constants"
 import { Artist } from "@/lib/spotify/types"
 import { default as LinkWrapper } from "@/ui/shared/link"
 import fetcher from "@/lib/fetcher"
-import { default as Header } from "@/ui/index/header"
+import { default as Header } from "@/ui/about/header"
 import useSWR from "swr"
 
 export default function Home() {

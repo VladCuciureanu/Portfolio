@@ -29,8 +29,7 @@ type LayoutProps = {
 
 const Main = styled(motion.main)`
   color: var(--colors-fg);
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  font-size: 1rem;
   padding-top: 12rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -41,10 +40,9 @@ const Main = styled(motion.main)`
   position: relative;
 
   @media (min-width: 1280px) {
-    grid-template-columns: 1fr minmax(auto, 240px) min(640px, 100%) minmax(
-        auto,
-        240px
-      ) 1fr;
+    grid-template-columns:
+      1fr minmax(auto, 240px) min(640px, 100%) minmax(auto, 240px)
+      1fr;
     padding-right: 0;
     padding-left: 0;
     column-gap: 2.25rem;
