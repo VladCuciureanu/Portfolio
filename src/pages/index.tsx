@@ -18,7 +18,6 @@ export async function getStaticProps() {
 }
 
 export default function HomePage({ projects }: { projects: Project[] }) {
-  console.log(projects)
   return (
     <Layout>
       <MainColumn>

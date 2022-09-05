@@ -4,12 +4,12 @@ import React, { useEffect, useState } from "react"
 import Styles from "./styles"
 
 export default function ProjectPreviewCard({ project }: { project: Project }) {
-  const { name, description, creationYear, href, homePageSlot } = project
+  const { name, description, creationYear, href } = project
 
   return (
     <Link href={href} passHref target={"_blank"}>
       <Anchor>
-        <Card slotId={homePageSlot!}>
+        <Card>
           <Name>{name}</Name>
           <Description>{description}</Description>
           <Flairs>

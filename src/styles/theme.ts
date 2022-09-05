@@ -127,7 +127,7 @@ export const darkTheme = css`
   --colors-amber10: hsl(43 100% 64%);
   --colors-amber11: hsl(39 90% 49.8%);
   --colors-amber12: hsl(39 97% 93.2%);
-  --colors-bg: #000;
+  --colors-bg: rgb(17, 17, 17);
   --colors-lowContrast: black;
   --colors-highContrast: white;
 `

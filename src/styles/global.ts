@@ -95,7 +95,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     color: var(--colors-highContrast);
-    background-color: var(--colors-gray1);
+    background-color: var(--colors-bg);
     transition: background var(--theme-transition), color var(--theme-transition);
     font-family: var(--fonts-body);
   }

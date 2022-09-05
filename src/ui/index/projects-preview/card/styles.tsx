@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import CalendarSvg from "public/assets/graphics/icons/calendar.svg"
 
-const Card = styled.article<{ slotId: number }>`
+const Card = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: left;
@@ -11,18 +11,16 @@ const Card = styled.article<{ slotId: number }>`
   min-height: 8rem;
   border-radius: var(--radii-2);
   box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.025);
+  background: rgba(255, 255, 255, 0.01);
   backdrop-filter: blur(35px);
   border: 2px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 0 0 80px rgba(0, 0, 0, 0.25); */
   flex: 1 auto 1;
-  transition: transform 0.075s linear;
+  transition: transform 0.075s ease, background 0.075s ease;
 
   &:hover {
-    --translate-x: ${(props) =>
-      props.slotId % 2 === 0 ? "0.5rem" : "-0.5rem"};
-
-    transform: scale(1.05) translateX(var(--translate-x));
+    background: rgba(255, 255, 255, 0.03);
+    transform: scale(1.015);
     cursor: pointer;
   }
 `
