@@ -1,7 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion"
 import React, { useState, useEffect, useCallback } from "react"
 import styled from "styled-components"
-import SlideInOut from "../../shared/animations/slide-in-out"
 import { default as Display } from "./display"
 import Marquee from "../../shared/marquee"
 
@@ -51,18 +50,14 @@ export default function IndexHeader() {
       </InvisibleContainer>
       <AnimatePresence exitBeforeEnter>
         {overflowing ? (
-          <SlideInOut key="marquee" uniqueKey="marquee">
-            <Marquee speed={12.5}>
-              <Display />
-              <Spacer />
-              <Display />
-              <Spacer />
-            </Marquee>
-          </SlideInOut>
-        ) : (
-          <SlideInOut key="display" uniqueKey="display">
+          <Marquee speed={12.5}>
             <Display />
-          </SlideInOut>
+            <Spacer />
+            <Display />
+            <Spacer />
+          </Marquee>
+        ) : (
+          <Display />
         )}
       </AnimatePresence>
     </Container>

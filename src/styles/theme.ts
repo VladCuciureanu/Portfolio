@@ -62,7 +62,7 @@ export const lightTheme = css`
   --colors-amber11: hsl(30 100% 34%);
   --colors-amber12: hsl(20 80% 17%);
   --colors-bg: #fff;
-  --colors-lowContrast: #ffffff;
+  --colors-lowContrast: var(--colors-gray8);
   --colors-highContrast: black;
 `
 
@@ -128,6 +128,6 @@ export const darkTheme = css`
   --colors-amber11: hsl(39 90% 49.8%);
   --colors-amber12: hsl(39 97% 93.2%);
   --colors-bg: rgb(17, 17, 17);
-  --colors-lowContrast: black;
+  --colors-lowContrast: var(--colors-gray8);
   --colors-highContrast: white;
 `

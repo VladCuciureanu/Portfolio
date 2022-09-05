@@ -5,7 +5,7 @@ import { ThemeProvider } from "next-themes"
 import { AnimatePresence } from "framer-motion"
 import type { AppProps } from "next/app"
 import Header from "@/ui/shared/header"
-import NoiseFilter from "@/ui/shared/noise"
+// import NoiseFilter from "@/ui/shared/noise"
 
 function App({ Component, pageProps, router }: AppProps) {
   return (
