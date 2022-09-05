@@ -68,7 +68,6 @@ export default function NowPlaying() {
 const Container = styled.div`
   max-height: 1rem;
   max-width: max-content;
-  margin-right: 3rem;
   transition: all 0.3s ease;
   display: flex;
   flex-direction: row;
@@ -84,6 +83,10 @@ const Container = styled.div`
     & svg path {
       fill: #1ed760;
     }
+  }
+
+  @media (min-width: 721px) {
+    margin-right: 3rem;
   }
 `
 

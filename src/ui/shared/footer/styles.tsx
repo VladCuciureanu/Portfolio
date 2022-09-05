@@ -13,6 +13,10 @@ const Container = styled.footer`
   @media (min-width: 1280px) {
     grid-column-start: 3;
   }
+
+  @media (max-width: 720px) {
+    padding-bottom: 3.5rem;
+  }
 `
 
 const Navigation = styled.nav`
@@ -21,6 +25,11 @@ const Navigation = styled.nav`
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  @media (max-width: 720px) {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 `
 
 const Group = styled.div`
@@ -28,6 +37,9 @@ const Group = styled.div`
   flex-direction: row;
   gap: 1.25rem;
   align-items: center;
+  @media (max-width: 720px) {
+    gap: 2rem;
+  }
 `
 
 const Footnote = styled.div`
@@ -40,6 +52,11 @@ const Footnote = styled.div`
   margin-top: 1rem;
   margin-right: auto;
   font-size: small;
+  @media (max-width: 720px) {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
 `
 
 const VercelConteiner = styled.div`
