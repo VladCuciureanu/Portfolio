@@ -1,4 +1,4 @@
-import ProjectsPreview from "@/ui/index/projects-preview"
+import ProjectsPreview from "@/ui/index/project-showcase"
 import Layout from "@/ui/shared/layout"
 import { allProjects, Project } from "contentlayer/generated"
 import styled from "styled-components"

@@ -1,12 +1,12 @@
 import { Project } from "contentlayer/generated"
 import styled from "styled-components"
-import ProjectPreviewCard from "./card"
+import ProjectShowcaseCard from "./card"
 
-export default function ProjectsPreview({ projects }: { projects: Project[] }) {
+export default function ProjectShowcase({ projects }: { projects: Project[] }) {
   return (
     <Grid>
       {projects.map((project) => (
-        <ProjectPreviewCard key={project.href} project={project} />
+        <ProjectShowcaseCard key={project.href} project={project} />
       ))}
     </Grid>
   )

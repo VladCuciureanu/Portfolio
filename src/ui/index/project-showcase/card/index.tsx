@@ -3,7 +3,7 @@ import Link from "next/link"
 import React, { useEffect, useState } from "react"
 import Styles from "./styles"
 
-export default function ProjectPreviewCard({ project }: { project: Project }) {
+export default function ProjectShowcaseCard({ project }: { project: Project }) {
   const { name, description, creationYear, href } = project
 
   return (
