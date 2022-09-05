@@ -24,6 +24,10 @@ export const Project = defineDocumentType(() => ({
       type: "string",
       required: false,
     },
+    homePageSlot: {
+      type: "number",
+      required: false,
+    },
     status: {
       type: "enum",
       required: true,
