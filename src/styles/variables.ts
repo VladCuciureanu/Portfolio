@@ -1,9 +1,7 @@
 import { css } from "styled-components"
 
 export const cssVariables = css`
-  --fonts-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  --fonts-body: "Inter", sans-serif;
   /* --fonts-head: Magnat Head, serif;
   --fonts-poster: Magnat Poster, serif;
   --fonts-flexible: Flexible, sans-serif;

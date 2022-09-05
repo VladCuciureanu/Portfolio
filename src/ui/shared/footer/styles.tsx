@@ -5,7 +5,9 @@ const Container = styled.footer`
   flex-direction: column;
   align-items: center;
   grid-column-start: 2;
-  margin-top: 9rem;
+  border-top: 1px solid var(--colors-gray2);
+  margin-top: 1.5rem;
+  padding-top: 3rem;
   padding-bottom: 9rem;
   width: 100%;
   @media (min-width: 1280px) {
