@@ -30,7 +30,7 @@ const Anchor = styled.a`
   color: var(--colors-fg);
 `
 
-const Name = styled.h1`
+const Name = styled.h2`
   font-size: 1rem;
   line-height: 1rem;
 `

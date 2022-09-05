@@ -33,3 +33,5 @@ const MainColumn = styled.div`
     grid-column-start: 3;
   }
 `
+
+const Section = styled.section``
