@@ -1,4 +1,4 @@
-import Link from "../shared/link"
+import Link from "./link"
 
 const LyraLink = (
   <Link
