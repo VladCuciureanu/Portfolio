@@ -28,12 +28,23 @@ const Group = styled.div`
   align-items: center;
 `
 
-const Note = styled.div`
+const Footnote = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   color: var(--colors-gray7);
   margin-top: 1rem;
   margin-right: auto;
   font-size: small;
 `
 
-const FooterStyles = { Container, Group, Note, Navigation }
+const VercelConteiner = styled.div`
+  flex-shrink: 0;
+  white-space: nowrap;
+`
+const Vercel = () => <VercelConteiner>Powered by ▲Vercel</VercelConteiner>
+
+const FooterStyles = { Container, Group, Footnote, Navigation, Vercel }
 export default FooterStyles

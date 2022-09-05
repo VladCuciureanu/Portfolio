@@ -1,5 +1,6 @@
 import Styles from "./styles"
 import Link from "./link"
+import NowPlaying from "./now-playing"
 
 export default function Footer() {
   return (
@@ -21,12 +22,16 @@ export default function Footer() {
           <Link href="mailto:dev@vladinski.md">Mail</Link>
         </Group>
       </Navigation>
-      <Note>Powered by ▲Vercel</Note>
+      <Footnote>
+        <NowPlaying />
+        <Vercel />
+      </Footnote>
     </Container>
   )
 }
 
 const Container = Styles.Container
 const Group = Styles.Group
-const Note = Styles.Note
+const Footnote = Styles.Footnote
 const Navigation = Styles.Navigation
+const Vercel = Styles.Vercel
