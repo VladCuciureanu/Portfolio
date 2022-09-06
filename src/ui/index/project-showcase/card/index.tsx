@@ -1,24 +1,33 @@
 import { Project } from "contentlayer/generated"
 import Link from "next/link"
-import React, { useEffect, useState } from "react"
+import React from "react"
 import Styles from "./styles"
 
 export default function ProjectShowcaseCard({ project }: { project: Project }) {
-  const { name, description, creationYear, href } = project
+  const { name, description, creationYear, href, status } = project
+
+  const CardBase = (
+    <Card>
+      <FlexRow>
+        <Name>{name}</Name>
+        <Status status={status} />
+      </FlexRow>
+      <Description>{description}</Description>
+      <Flairs>
+        <Flair>
+          <CalendarIcon /> {creationYear}
+        </Flair>
+      </Flairs>
+    </Card>
+  )
+
+  if (href === undefined) {
+    return CardBase
+  }
 
   return (
     <Link href={href} passHref target={"_blank"}>
-      <Anchor>
-        <Card>
-          <Name>{name}</Name>
-          <Description>{description}</Description>
-          <Flairs>
-            <Flair>
-              <CalendarIcon /> {creationYear}
-            </Flair>
-          </Flairs>
-        </Card>
-      </Anchor>
+      <Anchor>{CardBase}</Anchor>
     </Link>
   )
 }
@@ -30,3 +39,5 @@ const Description = Styles.Description
 const Flairs = Styles.Flairs
 const Flair = Styles.Flair
 const CalendarIcon = Styles.CalendarIcon
+const FlexRow = Styles.FlexRow
+const Status = Styles.StatusPill
