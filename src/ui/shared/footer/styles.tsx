@@ -5,9 +5,10 @@ const Container = styled.footer`
   flex-direction: column;
   align-items: center;
   grid-column-start: 2;
-  border-top: 1px solid var(--colors-gray2);
+  border-top: 1px solid var(--colors-gray-200);
   margin-top: 1.5rem;
-  padding-top: 3rem;
+  padding: 0.25rem;
+  padding-top: 3.2rem;
   padding-bottom: 9rem;
   width: 100%;
   @media (min-width: 1280px) {
@@ -48,7 +49,7 @@ const Footnote = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  color: var(--colors-gray7);
+  color: var(--colors-lowContrast);
   margin-top: 1rem;
   margin-right: auto;
   font-size: small;
@@ -59,11 +60,11 @@ const Footnote = styled.div`
   }
 `
 
-const VercelConteiner = styled.div`
+const VercelContainer = styled.div`
   flex-shrink: 0;
   white-space: nowrap;
 `
-const Vercel = () => <VercelConteiner>Powered by ▲Vercel</VercelConteiner>
+const Vercel = () => <VercelContainer>Powered by ▲Vercel</VercelContainer>
 
 const FooterStyles = { Container, Group, Footnote, Navigation, Vercel }
 export default FooterStyles

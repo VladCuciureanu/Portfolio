@@ -17,6 +17,7 @@ export default function Header() {
       <Wrapper>
         <HeaderButton label="Home" href="/" />
         <HeaderButton label="Home" href="/" />
+        <ThemeSwitcher />
       </Wrapper>
     </Container>
   )
@@ -52,6 +53,7 @@ const Glider = styled.div`
 `
 
 import Link from "next/link"
+import ThemeSwitcher from "./theme-switcher"
 
 type HeaderButtonProps = {
   label: string

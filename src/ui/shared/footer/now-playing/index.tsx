@@ -98,7 +98,7 @@ const Icon = styled(SpotifySvg)`
   margin-right: 0.5rem;
   & path {
     transition: all 0.2s ease;
-    fill: var(--colors-gray8);
+    fill: var(--colors-lowContrast);
   }
 `
 

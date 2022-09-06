@@ -75,13 +75,13 @@ const Pill = styled.div`
   padding-left: 0.45rem;
   padding-right: 0.45rem;
   margin-left: 0.75rem;
-  margin-top: -2px;
+  margin-top: 2px;
   border: 1px solid;
   border-radius: var(--radii-3);
 `
 
 function StatusPill({ status }: { status: Project["status"] }) {
-  var color = "var(--colors-gray9)"
+  var color = "var(--colors-gray-500)"
   var label = "Unicorn"
 
   switch (status) {
@@ -90,19 +90,19 @@ function StatusPill({ status }: { status: Project["status"] }) {
       break
     case "work-in-progress":
       label = "Work-In-Progress"
-      color = "var(--colors-amber9)"
+      color = "var(--colors-amber-500)"
       break
     case "released":
       label = "Released"
-      color = "var(--colors-green9)"
+      color = "var(--colors-green-500)"
       break
     case "discontinued":
       label = "Discontinued"
-      color = "firebrick"
+      color = "var(--colors-red-500)"
       break
     case "private":
       label = "Private"
-      color = "var(--colors-blue9)"
+      color = "var(--colors-blue-500)"
       break
   }
   return <Pill style={{ color: color, borderColor: color }}>{label}</Pill>
