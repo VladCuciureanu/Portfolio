@@ -14,7 +14,7 @@ export const Project = defineDocumentType(() => ({
     },
     href: {
       type: "string",
-      required: true,
+      required: false,
     },
     creationYear: {
       type: "number",
