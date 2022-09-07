@@ -1,34 +1,20 @@
 import styled from "styled-components"
 import CalendarSvg from "public/assets/graphics/icons/calendar.svg"
 import { Project } from "contentlayer/generated"
+import Glass from "@/ui/shared/glass"
 
-const Card = styled.article`
+const Card = styled(Glass)`
   display: flex;
   flex: 1 auto 1;
   flex-direction: column;
   justify-content: left;
   min-width: 100%;
-  min-height: 8rem;
+  height: 8rem;
   padding: 1.5rem;
   padding-top: 1.35rem;
   padding-bottom: 1.25rem;
-  box-sizing: border-box;
-  backdrop-filter: blur(35px);
-  border: 2px solid;
-  border-radius: var(--radii-2);
-  border-left-color: rgba(var(--colors-gray-12), 0.5);
-  border-top-color: rgba(var(--colors-gray-12), 0.5);
-  border-right-color: rgba(var(--colors-gray-6), 0.4);
-  border-bottom-color: rgba(var(--colors-gray-6), 0.4);
-  background: linear-gradient(
-    to bottom right,
-    rgba(var(--colors-highContrast), 0.2),
-    rgba(var(--colors-bg), 1)
-  );
-  transition: background 0.075s ease;
 
   &:hover {
-    background: transparent;
     cursor: pointer;
   }
 `

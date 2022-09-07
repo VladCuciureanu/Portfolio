@@ -5,14 +5,15 @@ import Noise from "../noise"
 export default function Glass(props: {
   children?: ReactNode
   style?: CSSProperties
+  className?: string
   enableStaticGlare?: boolean
 }) {
   return (
     <GlassPane
       style={props.style}
-      className={props.enableStaticGlare ? "glare" : ""}
+      className={props.className + (props.enableStaticGlare ? " glare" : "")}
     >
-      <Noise opacity={0.115} />
+      <Noise opacity={0.12} />
       {props.children}
     </GlassPane>
   )
@@ -30,8 +31,8 @@ const GlassPane = styled.div`
   &.glare {
     background: linear-gradient(
       135deg,
-      rgba(var(--colors-gray-12), 0.2),
-      rgba(var(--colors-gray-11), 0.025) 85%
+      rgba(var(--colors-gray-12), 0.075),
+      rgba(var(--colors-gray-11), 0) 85%
     );
   }
 

@@ -18,10 +18,12 @@ export default function Noise({ opacity = 0.15 }: { opacity?: number }) {
 
 const Svg = styled.svg`
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
   isolation: isolate;
   z-index: 1;
-  mix-blend-mode: overlay;
+  mix-blend-mode: soft-light;
 `
