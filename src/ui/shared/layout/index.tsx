@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import styled from "styled-components"
-import Footer from "../footer"
+import Footer from "./footer"
 
 export default function Layout(props: LayoutProps) {
   return (

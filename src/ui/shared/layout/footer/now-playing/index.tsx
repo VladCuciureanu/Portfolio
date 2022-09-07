@@ -5,7 +5,7 @@ import SpotifySvg from "public/assets/graphics/icons/spotify.svg"
 import { useCallback, useEffect, useState } from "react"
 import styled from "styled-components"
 import useSwr from "swr"
-import Marquee from "../../marquee"
+import Marquee from "../../../marquee"
 
 export default function NowPlaying() {
   const [mounted, setMounted] = useState(false)
