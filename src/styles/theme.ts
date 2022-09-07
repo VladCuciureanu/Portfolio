@@ -79,9 +79,9 @@ export const lightTheme = css`
   --colors-blue-11: ${convert(blue.blue11)};
   --colors-blue-12: ${convert(blue.blue12)};
 
-  --colors-bg: rgb(var(--colors-gray-1));
-  --colors-lowContrast: rgb(var(--colors-gray-11));
-  --colors-highContrast: rgb(var(--colors-gray-12));
+  --colors-bg: var(--colors-gray-1);
+  --colors-lowContrast: var(--colors-gray-11);
+  --colors-highContrast: var(--colors-gray-12);
 `
 
 export const darkTheme = css`
@@ -149,9 +149,9 @@ export const darkTheme = css`
   --colors-blue-10: ${convert(blueDark.blue10)};
   --colors-blue-11: ${convert(blueDark.blue11)};
   --colors-blue-12: ${convert(blueDark.blue12)};
-  --colors-bg: rgb(var(--colors-gray-1));
-  --colors-lowContrast: rgb(var(--colors-gray-7));
-  --colors-highContrast: rgb(var(--colors-gray-12));
+  --colors-bg: var(--colors-gray-1);
+  --colors-lowContrast: var(--colors-gray-7);
+  --colors-highContrast: var(--colors-gray-12);
 `
 
 function convert(color: string): string {

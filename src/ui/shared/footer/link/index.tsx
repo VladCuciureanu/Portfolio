@@ -21,12 +21,12 @@ const Anchor = styled.a`
   font-size: 0.9rem;
   line-height: 1.5rem;
   font-weight: 400;
-  color: var(--colors-lowContrast);
+  color: rgb(var(--colors-lowContrast));
   border-bottom: 1px solid;
   border-bottom-color: transparent;
   transition: color 0.25s ease, border-bottom-color 0.25s ease;
   &:hover {
-    color: var(--colors-highContrast);
-    border-bottom-color: var(--colors-highContrast);
+    color: rgb(var(--colors-highContrast));
+    border-bottom-color: rgb(var(--colors-highContrast));
   }
 `

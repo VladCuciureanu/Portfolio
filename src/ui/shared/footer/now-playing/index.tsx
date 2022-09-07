@@ -79,7 +79,7 @@ const Container = styled.div`
   overflow: hidden;
 
   &:hover {
-    color: var(--colors-highContrast);
+    color: rgb(var(--colors-highContrast));
     & svg path {
       fill: #1ed760;
     }
@@ -98,7 +98,7 @@ const Icon = styled(SpotifySvg)`
   margin-right: 0.5rem;
   & path {
     transition: all 0.2s ease;
-    fill: var(--colors-lowContrast);
+    fill: rgb(var(--colors-lowContrast));
   }
 `
 

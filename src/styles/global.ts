@@ -94,8 +94,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    color: var(--colors-highContrast);
-    background-color: var(--colors-bg);
+    color: rgb(var(--colors-highContrast));
+    background-color: rgb(var(--colors-bg));
     transition: background var(--theme-transition), color var(--theme-transition);
     font-family: var(--fonts-body);
   }

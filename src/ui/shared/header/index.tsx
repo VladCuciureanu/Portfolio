@@ -74,8 +74,8 @@ const Anchor = styled.a`
   padding: 0.3rem;
   padding-left: 0.6rem;
   padding-right: 0.6rem;
-  color: var(--colors-lowContrast);
+  color: rgb(var(--colors-lowContrast));
   &:hover {
-    color: var(--colors-highContrast);
+    color: rgb(var(--colors-highContrast));
   }
 `

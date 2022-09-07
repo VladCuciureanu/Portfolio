@@ -4,24 +4,35 @@ import { Project } from "contentlayer/generated"
 
 const Card = styled.article`
   display: flex;
+  flex: 1 auto 1;
   flex-direction: column;
   justify-content: left;
+  min-width: 100%;
+  min-height: 8rem;
   padding: 1.5rem;
   padding-top: 1.35rem;
   padding-bottom: 1.25rem;
-  min-width: 100%;
-  min-height: 8rem;
-  border-radius: var(--radii-2);
   box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.01);
   backdrop-filter: blur(35px);
-  border: 2px solid rgba(255, 255, 255, 0.05);
-  /* box-shadow: 0 0 80px rgba(0, 0, 0, 0.25); */
-  flex: 1 auto 1;
+  border: 2px solid;
+  border-radius: var(--radii-2);
+  border-left-color: rgba(var(--colors-gray-12), 0.5);
+  border-top-color: rgba(var(--colors-gray-12), 0.5);
+  border-right-color: rgba(var(--colors-gray-6), 0.4);
+  border-bottom-color: rgba(var(--colors-gray-6), 0.4);
+  background: linear-gradient(
+    to bottom right,
+    rgba(var(--colors-highContrast), 0.2),
+    rgba(var(--colors-bg), 1)
+  );
   transition: background 0.075s ease;
 
   &:hover {
-    background: rgba(255, 255, 255, 0.03);
+    background: linear-gradient(
+      to bottom right,
+      rgba(var(--colors-highContrast), 0.2),
+      rgba(var(--colors-bg), 0.35)
+    );
     cursor: pointer;
   }
 `
@@ -41,7 +52,7 @@ const Description = styled.p`
   font-size: 0.9rem;
   line-height: 1rem;
   flex-grow: 1;
-  color: rgb(var(--colors-gray-600));
+  color: rgb(var(--colors-gray-11));
 `
 
 const Flairs = styled.div`
@@ -49,7 +60,7 @@ const Flairs = styled.div`
   flex-direction: row;
   align-items: center;
   font-size: 0.8rem;
-  color: var(--colors-lowContrast);
+  color: rgb(var(--colors-gray-9));
 `
 
 const Flair = styled.div`
@@ -82,7 +93,7 @@ const Pill = styled.div`
 `
 
 function StatusPill({ status }: { status: Project["status"] }) {
-  var color = "rgb(var(--colors-gray-500))"
+  var color = "rgb(var(--colors-gray-11))"
   var label = "Unicorn"
 
   switch (status) {
@@ -91,19 +102,19 @@ function StatusPill({ status }: { status: Project["status"] }) {
       break
     case "work-in-progress":
       label = "Work-In-Progress"
-      color = "rgb(var(--colors-amber-500))"
+      color = "rgb(var(--colors-amber-10))"
       break
     case "released":
       label = "Released"
-      color = "rgb(var(--colors-green-500))"
+      color = "rgb(var(--colors-green-9))"
       break
     case "discontinued":
       label = "Discontinued"
-      color = "rgb(var(--colors-red-500))"
+      color = "rgb(var(--colors-red-9))"
       break
     case "private":
       label = "Private"
-      color = "rgb(var(--colors-blue-500))"
+      color = "rgb(var(--colors-blue-9))"
       break
   }
   return <Pill style={{ color: color, borderColor: color }}>{label}</Pill>

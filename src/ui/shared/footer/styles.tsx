@@ -49,7 +49,7 @@ const Footnote = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  color: var(--colors-lowContrast);
+  color: rgb(var(--colors-lowContrast));
   margin-top: 1rem;
   margin-right: auto;
   font-size: small;
