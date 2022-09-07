@@ -19,6 +19,11 @@
       "@/*": ["src/*"],
       "contentlayer/generated": ["./.contentlayer/generated"]
     },
+    "plugins": [
+      {
+        "name": "typescript-tslint-plugin"
+      }
+    ]
   },
   "include": [
     "next-env.d.ts",
