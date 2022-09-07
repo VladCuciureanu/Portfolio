@@ -28,11 +28,7 @@ const Card = styled.article`
   transition: background 0.075s ease;
 
   &:hover {
-    background: linear-gradient(
-      to bottom right,
-      rgba(var(--colors-highContrast), 0.2),
-      rgba(var(--colors-bg), 0.35)
-    );
+    background: transparent;
     cursor: pointer;
   }
 `
