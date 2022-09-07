@@ -1,13 +1,13 @@
 import styled from "styled-components"
 
-export default function NoiseFilter() {
+export default function NoiseFilter({ opacity = 0.15 }: { opacity?: number }) {
   return (
-    <Svg>
+    <Svg style={{ opacity: opacity }}>
       <filter id="noise">
         <feTurbulence
           type="fractalNoise"
-          baseFrequency="0.80"
-          numOctaves="4"
+          baseFrequency=".80"
+          numOctaves="3"
           stitchTiles="stitch"
         />
       </filter>
@@ -17,12 +17,14 @@ export default function NoiseFilter() {
 }
 
 const Svg = styled.svg`
-  width: 100vw;
-  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
   position: fixed;
   isolation: isolate;
   z-index: 1;
-  opacity: 0.08;
   mix-blend-mode: soft-light;
 `

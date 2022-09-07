@@ -1,124 +1,167 @@
 import { css } from "styled-components"
+import {
+  gray,
+  grayDark,
+  red,
+  redDark,
+  amber,
+  amberDark,
+  green,
+  greenDark,
+  blue,
+  blueDark,
+} from "@radix-ui/colors"
+import hslToRgb from "@/utils/hslToRgb"
 
 export const lightTheme = css`
-  --colors-gray-50: #fafafa;
-  --colors-gray-100: #f5f5f5;
-  --colors-gray-200: #e5e5e5;
-  --colors-gray-300: #d4d4d4;
-  --colors-gray-400: #a3a3a3;
-  --colors-gray-500: #737373;
-  --colors-gray-600: #525252;
-  --colors-gray-700: #404040;
-  --colors-gray-800: #262626;
-  --colors-gray-900: #171717;
-  --colors-gray-1000: #111;
-  --colors-red-50: #fef2f2;
-  --colors-red-100: #fee2e2;
-  --colors-red-200: #fecaca;
-  --colors-red-300: #fca5a5;
-  --colors-red-400: #f87171;
-  --colors-red-500: #ef4444;
-  --colors-red-600: #dc2626;
-  --colors-red-700: #b91c1c;
-  --colors-red-800: #991b1b;
-  --colors-red-900: #7f1d1d;
-  --colors-red-1000: #110000;
-  --colors-blue-50: #eff6ff;
-  --colors-blue-100: #dbeafe;
-  --colors-blue-200: #bfdbfe;
-  --colors-blue-300: #93c5fd;
-  --colors-blue-400: #60a5fa;
-  --colors-blue-500: #3b82f6;
-  --colors-blue-600: #2563eb;
-  --colors-blue-700: #1d4ed8;
-  --colors-blue-800: #1e40af;
-  --colors-blue-900: #1e3a8a;
-  --colors-blue-1000: #000011;
-  --colors-green-50: #ecfdf5;
-  --colors-green-100: #d1fae5;
-  --colors-green-200: #a7f3d0;
-  --colors-green-300: #6ee7b7;
-  --colors-green-400: #34d399;
-  --colors-green-500: #10b981;
-  --colors-green-600: #059669;
-  --colors-green-700: #047857;
-  --colors-green-800: #065f46;
-  --colors-green-900: #064e3b;
-  --colors-green-1000: #001100;
-  --colors-amber-50: #fffbeb;
-  --colors-amber-100: #fef3c7;
-  --colors-amber-200: #fde68a;
-  --colors-amber-300: #fcd34d;
-  --colors-amber-400: #fbbf24;
-  --colors-amber-500: #f59e0b;
-  --colors-amber-600: #d97706;
-  --colors-amber-700: #b45309;
-  --colors-amber-800: #92400e;
-  --colors-amber-900: #78350f;
-  --colors-amber-1000: #7c2d12;
+  --colors-gray-1: ${convert(gray.gray1)};
+  --colors-gray-2: ${convert(gray.gray2)};
+  --colors-gray-3: ${convert(gray.gray3)};
+  --colors-gray-4: ${convert(gray.gray4)};
+  --colors-gray-5: ${convert(gray.gray5)};
+  --colors-gray-6: ${convert(gray.gray6)};
+  --colors-gray-7: ${convert(gray.gray7)};
+  --colors-gray-8: ${convert(gray.gray8)};
+  --colors-gray-9: ${convert(gray.gray9)};
+  --colors-gray-10: ${convert(gray.gray10)};
+  --colors-gray-11: ${convert(gray.gray11)};
+  --colors-gray-12: ${convert(gray.gray12)};
 
-  --colors-bg: var(--colors-gray-50);
-  --colors-lowContrast: var(--colors-gray-400);
-  --colors-highContrast: var(--colors-gray-1000);
+  --colors-red-1: ${convert(red.red1)};
+  --colors-red-2: ${convert(red.red2)};
+  --colors-red-3: ${convert(red.red3)};
+  --colors-red-4: ${convert(red.red4)};
+  --colors-red-5: ${convert(red.red5)};
+  --colors-red-6: ${convert(red.red6)};
+  --colors-red-7: ${convert(red.red7)};
+  --colors-red-8: ${convert(red.red8)};
+  --colors-red-9: ${convert(red.red9)};
+  --colors-red-10: ${convert(red.red10)};
+  --colors-red-11: ${convert(red.red11)};
+  --colors-red-12: ${convert(red.red12)};
+
+  --colors-amber-1: ${convert(amber.amber1)};
+  --colors-amber-2: ${convert(amber.amber2)};
+  --colors-amber-3: ${convert(amber.amber3)};
+  --colors-amber-4: ${convert(amber.amber4)};
+  --colors-amber-5: ${convert(amber.amber5)};
+  --colors-amber-6: ${convert(amber.amber6)};
+  --colors-amber-7: ${convert(amber.amber7)};
+  --colors-amber-8: ${convert(amber.amber8)};
+  --colors-amber-9: ${convert(amber.amber9)};
+  --colors-amber-10: ${convert(amber.amber10)};
+  --colors-amber-11: ${convert(amber.amber11)};
+  --colors-amber-12: ${convert(amber.amber12)};
+
+  --colors-green-1: ${convert(green.green1)};
+  --colors-green-2: ${convert(green.green2)};
+  --colors-green-3: ${convert(green.green3)};
+  --colors-green-4: ${convert(green.green4)};
+  --colors-green-5: ${convert(green.green5)};
+  --colors-green-6: ${convert(green.green6)};
+  --colors-green-7: ${convert(green.green7)};
+  --colors-green-8: ${convert(green.green8)};
+  --colors-green-9: ${convert(green.green9)};
+  --colors-green-10: ${convert(green.green10)};
+  --colors-green-11: ${convert(green.green11)};
+  --colors-green-12: ${convert(green.green12)};
+
+  --colors-blue-1: ${convert(blue.blue1)};
+  --colors-blue-2: ${convert(blue.blue2)};
+  --colors-blue-3: ${convert(blue.blue3)};
+  --colors-blue-4: ${convert(blue.blue4)};
+  --colors-blue-5: ${convert(blue.blue5)};
+  --colors-blue-6: ${convert(blue.blue6)};
+  --colors-blue-7: ${convert(blue.blue7)};
+  --colors-blue-8: ${convert(blue.blue8)};
+  --colors-blue-9: ${convert(blue.blue9)};
+  --colors-blue-10: ${convert(blue.blue10)};
+  --colors-blue-11: ${convert(blue.blue11)};
+  --colors-blue-12: ${convert(blue.blue12)};
+
+  --colors-bg: rgb(var(--colors-gray-1));
+  --colors-lowContrast: rgb(var(--colors-gray-11));
+  --colors-highContrast: rgb(var(--colors-gray-12));
 `
 
 export const darkTheme = css`
-  --colors-gray-1000: #fafafa;
-  --colors-gray-900: #f5f5f5;
-  --colors-gray-800: #e5e5e5;
-  --colors-gray-700: #d4d4d4;
-  --colors-gray-600: #a3a3a3;
-  --colors-gray-500: #737373;
-  --colors-gray-400: #525252;
-  --colors-gray-300: #404040;
-  --colors-gray-200: #262626;
-  --colors-gray-100: #171717;
-  --colors-gray-50: #111;
-  --colors-red-1000: #fef2f2;
-  --colors-red-900: #fee2e2;
-  --colors-red-800: #fecaca;
-  --colors-red-700: #fca5a5;
-  --colors-red-600: #f87171;
-  --colors-red-500: #ef4444;
-  --colors-red-400: #dc2626;
-  --colors-red-300: #b91c1c;
-  --colors-red-200: #991b1b;
-  --colors-red-100: #7f1d1d;
-  --colors-red-50: #110000;
-  --colors-blue-1000: #eff6ff;
-  --colors-blue-900: #dbeafe;
-  --colors-blue-800: #bfdbfe;
-  --colors-blue-700: #93c5fd;
-  --colors-blue-600: #60a5fa;
-  --colors-blue-500: #3b82f6;
-  --colors-blue-400: #2563eb;
-  --colors-blue-300: #1d4ed8;
-  --colors-blue-200: #1e40af;
-  --colors-blue-100: #1e3a8a;
-  --colors-blue-50: #000011;
-  --colors-green-1000: #ecfdf5;
-  --colors-green-900: #d1fae5;
-  --colors-green-800: #a7f3d0;
-  --colors-green-700: #6ee7b7;
-  --colors-green-600: #34d399;
-  --colors-green-500: #10b981;
-  --colors-green-400: #059669;
-  --colors-green-300: #047857;
-  --colors-green-200: #065f46;
-  --colors-green-100: #064e3b;
-  --colors-green-50: #001100;
-  --colors-amber-1000: #fffbeb;
-  --colors-amber-900: #fef3c7;
-  --colors-amber-800: #fde68a;
-  --colors-amber-700: #fcd34d;
-  --colors-amber-600: #fbbf24;
-  --colors-amber-500: #f59e0b;
-  --colors-amber-400: #d97706;
-  --colors-amber-300: #b45309;
-  --colors-amber-200: #92400e;
-  --colors-amber-100: #78350f;
-  --colors-amber-50: #7c2d12;
-  --colors-bg: var(--colors-gray-50);
-  --colors-lowContrast: var(--colors-gray-300);
-  --colors-highContrast: var(--colors-gray-1000);
+  --colors-gray-1: ${convert(grayDark.gray1)};
+  --colors-gray-2: ${convert(grayDark.gray2)};
+  --colors-gray-3: ${convert(grayDark.gray3)};
+  --colors-gray-4: ${convert(grayDark.gray4)};
+  --colors-gray-5: ${convert(grayDark.gray5)};
+  --colors-gray-6: ${convert(grayDark.gray6)};
+  --colors-gray-7: ${convert(grayDark.gray7)};
+  --colors-gray-8: ${convert(grayDark.gray8)};
+  --colors-gray-9: ${convert(grayDark.gray9)};
+  --colors-gray-10: ${convert(grayDark.gray10)};
+  --colors-gray-11: ${convert(grayDark.gray11)};
+  --colors-gray-12: ${convert(grayDark.gray12)};
+
+  --colors-red-1: ${convert(redDark.red1)};
+  --colors-red-2: ${convert(redDark.red2)};
+  --colors-red-3: ${convert(redDark.red3)};
+  --colors-red-4: ${convert(redDark.red4)};
+  --colors-red-5: ${convert(redDark.red5)};
+  --colors-red-6: ${convert(redDark.red6)};
+  --colors-red-7: ${convert(redDark.red7)};
+  --colors-red-8: ${convert(redDark.red8)};
+  --colors-red-9: ${convert(redDark.red9)};
+  --colors-red-10: ${convert(redDark.red10)};
+  --colors-red-11: ${convert(redDark.red11)};
+  --colors-red-12: ${convert(redDark.red12)};
+
+  --colors-amber-1: ${convert(amberDark.amber1)};
+  --colors-amber-2: ${convert(amberDark.amber2)};
+  --colors-amber-3: ${convert(amberDark.amber3)};
+  --colors-amber-4: ${convert(amberDark.amber4)};
+  --colors-amber-5: ${convert(amberDark.amber5)};
+  --colors-amber-6: ${convert(amberDark.amber6)};
+  --colors-amber-7: ${convert(amberDark.amber7)};
+  --colors-amber-8: ${convert(amberDark.amber8)};
+  --colors-amber-9: ${convert(amberDark.amber9)};
+  --colors-amber-10: ${convert(amberDark.amber10)};
+  --colors-amber-11: ${convert(amberDark.amber11)};
+  --colors-amber-12: ${convert(amberDark.amber12)};
+
+  --colors-green-1: ${convert(greenDark.green1)};
+  --colors-green-2: ${convert(greenDark.green2)};
+  --colors-green-3: ${convert(greenDark.green3)};
+  --colors-green-4: ${convert(greenDark.green4)};
+  --colors-green-5: ${convert(greenDark.green5)};
+  --colors-green-6: ${convert(greenDark.green6)};
+  --colors-green-7: ${convert(greenDark.green7)};
+  --colors-green-8: ${convert(greenDark.green8)};
+  --colors-green-9: ${convert(greenDark.green9)};
+  --colors-green-10: ${convert(greenDark.green10)};
+  --colors-green-11: ${convert(greenDark.green11)};
+  --colors-green-12: ${convert(greenDark.green12)};
+
+  --colors-blue-1: ${convert(blueDark.blue1)};
+  --colors-blue-2: ${convert(blueDark.blue2)};
+  --colors-blue-3: ${convert(blueDark.blue3)};
+  --colors-blue-4: ${convert(blueDark.blue4)};
+  --colors-blue-5: ${convert(blueDark.blue5)};
+  --colors-blue-6: ${convert(blueDark.blue6)};
+  --colors-blue-7: ${convert(blueDark.blue7)};
+  --colors-blue-8: ${convert(blueDark.blue8)};
+  --colors-blue-9: ${convert(blueDark.blue9)};
+  --colors-blue-10: ${convert(blueDark.blue10)};
+  --colors-blue-11: ${convert(blueDark.blue11)};
+  --colors-blue-12: ${convert(blueDark.blue12)};
+  --colors-bg: rgb(var(--colors-gray-1));
+  --colors-lowContrast: rgb(var(--colors-gray-7));
+  --colors-highContrast: rgb(var(--colors-gray-12));
 `
+
+function convert(color: string): string {
+  color = color.substring(4, color.length - 1)
+  var [h, s, l] = color.split(",")
+  h = h.replace("deg", "")
+  s = s.replace("%", "")
+  l = l.replace("%", "")
+  const rgb = hslToRgb(parseInt(h), parseInt(s), parseInt(l)).flatMap((color) =>
+    Math.round(color),
+  )
+  return `${rgb[0]}, ${rgb[1]}, ${rgb[2]}`
+}

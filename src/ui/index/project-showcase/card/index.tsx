@@ -1,3 +1,4 @@
+import NoiseFilter from "@/ui/shared/noise"
 import { Project } from "contentlayer/generated"
 import Link from "next/link"
 import React from "react"
@@ -8,6 +9,7 @@ export default function ProjectShowcaseCard({ project }: { project: Project }) {
 
   const CardBase = (
     <Card>
+      <NoiseFilter opacity={0.2} />
       <FlexRow>
         <Name>{name}</Name>
         <Status status={status} />

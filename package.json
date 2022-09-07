@@ -16,6 +16,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "dependencies": {
+    "@radix-ui/colors": "^0.1.8",
     "@svgr/webpack": "^6.3.1",
     "contentlayer": "^0.2.6",
     "framer-motion": "^7.0.0",

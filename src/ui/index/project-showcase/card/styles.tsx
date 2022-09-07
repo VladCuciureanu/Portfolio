@@ -41,6 +41,7 @@ const Description = styled.p`
   font-size: 0.9rem;
   line-height: 1rem;
   flex-grow: 1;
+  color: rgb(var(--colors-gray-600));
 `
 
 const Flairs = styled.div`
@@ -48,7 +49,7 @@ const Flairs = styled.div`
   flex-direction: row;
   align-items: center;
   font-size: 0.8rem;
-  color: var(--colors-gray9);
+  color: var(--colors-lowContrast);
 `
 
 const Flair = styled.div`
@@ -81,7 +82,7 @@ const Pill = styled.div`
 `
 
 function StatusPill({ status }: { status: Project["status"] }) {
-  var color = "var(--colors-gray-500)"
+  var color = "rgb(var(--colors-gray-500))"
   var label = "Unicorn"
 
   switch (status) {
@@ -90,19 +91,19 @@ function StatusPill({ status }: { status: Project["status"] }) {
       break
     case "work-in-progress":
       label = "Work-In-Progress"
-      color = "var(--colors-amber-500)"
+      color = "rgb(var(--colors-amber-500))"
       break
     case "released":
       label = "Released"
-      color = "var(--colors-green-500)"
+      color = "rgb(var(--colors-green-500))"
       break
     case "discontinued":
       label = "Discontinued"
-      color = "var(--colors-red-500)"
+      color = "rgb(var(--colors-red-500))"
       break
     case "private":
       label = "Private"
-      color = "var(--colors-blue-500)"
+      color = "rgb(var(--colors-blue-500))"
       break
   }
   return <Pill style={{ color: color, borderColor: color }}>{label}</Pill>
