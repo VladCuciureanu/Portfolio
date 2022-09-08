@@ -1,7 +1,6 @@
 import { allProjects, Project } from "contentlayer/generated"
 import ProjectsPreview from "@/ui/index/project-showcase"
 import Layout from "@/ui/shared/layout"
-import styled from "styled-components"
 import Styles from "@/ui/shared/styles"
 import Biography from "@/ui/index/bio"
 
@@ -20,6 +19,9 @@ export async function getStaticProps() {
 }
 
 export default function HomePage({ projects }: { projects: Project[] }) {
+  // Null safety
+  projects = projects ? projects : []
+
   return (
     <Layout>
       <MainColumn>
@@ -44,13 +46,7 @@ export default function HomePage({ projects }: { projects: Project[] }) {
   )
 }
 
-const MainColumn = styled.div`
-  grid-column-start: 2;
-  @media (min-width: 1280px) {
-    grid-column-start: 3;
-  }
-`
-
 const Heading = Styles.Heading
 const Subheading = Styles.Subheading
 const Section = Styles.Section
+const MainColumn = Styles.MainColumn

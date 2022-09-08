@@ -25,7 +25,7 @@ const Heading = styled.h1`
 
 const Subheading = styled.p`
   font-size: 1.1rem;
-  margin-bottom: 0.85rem;
+  margin-bottom: 1.25rem;
   color: rgb(var(--colors-gray-11));
 `
 
@@ -70,6 +70,13 @@ const Anchor = styled.a`
   }
 `
 
+const MainColumn = styled.div`
+  grid-column-start: 2;
+  @media (min-width: 1280px) {
+    grid-column-start: 3;
+  }
+`
+
 const SharedStyles = {
   Heading,
   Subheading,
@@ -77,6 +84,7 @@ const SharedStyles = {
   Text,
   Underline,
   Link,
+  MainColumn,
 }
 
 export default SharedStyles

@@ -20,6 +20,8 @@ export default function Glass(props: {
 }
 
 const GlassPane = styled.div`
+  --highlight: rgba(var(--colors-gray-12), 0.075);
+  --shadow: rgba(var(--colors-gray-11), 0);
   position: relative;
   background: transparent;
   backdrop-filter: blur(4px);
@@ -27,11 +29,7 @@ const GlassPane = styled.div`
   overflow: hidden;
 
   &.glare {
-    background: linear-gradient(
-      135deg,
-      rgba(var(--colors-gray-12), 0.075),
-      rgba(var(--colors-gray-11), 0) 85%
-    );
+    background: linear-gradient(135deg, var(--highlight), var(--shadow) 85%);
   }
 
   &::before {

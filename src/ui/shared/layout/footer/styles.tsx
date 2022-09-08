@@ -8,7 +8,7 @@ const Container = styled.footer`
   border-top: 1px solid rgb(var(--colors-gray-5));
   margin-top: 1.5rem;
   padding: 0.25rem;
-  padding-top: 3.2rem;
+  padding-top: 3.4rem;
   padding-bottom: 3.2rem;
   width: 100%;
   @media (min-width: 1280px) {

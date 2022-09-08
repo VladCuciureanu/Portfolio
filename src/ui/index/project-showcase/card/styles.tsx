@@ -76,6 +76,7 @@ const Pill = styled.div`
 
 function StatusPill({ status }: { status: Project["status"] }) {
   var color = "rgb(var(--colors-gray-11))"
+  var backgroundColor = "rgba(var(--colors-gray-7),.2)"
   var label = "Unicorn"
 
   switch (status) {
@@ -85,21 +86,31 @@ function StatusPill({ status }: { status: Project["status"] }) {
     case "work-in-progress":
       label = "Work-In-Progress"
       color = "rgb(var(--colors-amber-10))"
+      backgroundColor = "rgba(var(--colors-amber-8),.2)"
       break
     case "released":
       label = "Released"
       color = "rgb(var(--colors-green-9))"
+      backgroundColor = "rgba(var(--colors-green-7),.2)"
       break
     case "discontinued":
       label = "Discontinued"
       color = "rgb(var(--colors-red-9))"
+      backgroundColor = "rgba(var(--colors-red-7),.2)"
       break
     case "private":
       label = "Private"
       color = "rgb(var(--colors-blue-9))"
+      backgroundColor = "rgba(var(--colors-blue-7),.2)"
       break
   }
-  return <Pill style={{ color: color, borderColor: color }}>{label}</Pill>
+  return (
+    <Pill
+      style={{ color: color, borderColor: color, background: backgroundColor }}
+    >
+      {label}
+    </Pill>
+  )
 }
 
 const ProjectPreviewCardStyles = {
