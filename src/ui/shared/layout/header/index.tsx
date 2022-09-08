@@ -21,10 +21,13 @@ export default function Header() {
 }
 
 const Container = styled(Glass)`
-  width: min(640px, 100%);
+  position: absolute;
   margin: auto;
-  margin-top: 2rem;
-  min-height: 2.75rem;
+  top: 2rem;
+  left: 0;
+  right: 0;
+  width: min(640px, 100%);
+  height: 2.75rem;
   padding: 0.45rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;

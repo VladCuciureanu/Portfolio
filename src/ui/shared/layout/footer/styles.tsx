@@ -9,7 +9,7 @@ const Container = styled.footer`
   margin-top: 1.5rem;
   padding: 0.25rem;
   padding-top: 3.2rem;
-  padding-bottom: 9rem;
+  padding-bottom: 3.2rem;
   width: 100%;
   @media (min-width: 1280px) {
     grid-column-start: 3;

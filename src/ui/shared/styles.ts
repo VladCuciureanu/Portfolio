@@ -11,7 +11,13 @@ const Subheading = styled.p`
   color: rgb(var(--colors-gray-11));
 `
 
-const Section = styled.section``
+const Section = styled.section`
+  margin-bottom: 2.5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+`
 
 const SharedStyles = {
   Heading,

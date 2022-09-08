@@ -22,10 +22,15 @@ export default function HomePage({ projects }: { projects: Project[] }) {
   return (
     <Layout>
       <MainColumn>
+        <Section>{/* Short intro and profile pic */}</Section>
         <Section>
           <Heading>Featured Projects</Heading>
           <Subheading>{`It's not much but it's honest work`}</Subheading>
           <ProjectsPreview projects={projects} />
+        </Section>
+        <Section>
+          <Heading>Recent Posts</Heading>
+          {/* Posts feed */}
         </Section>
       </MainColumn>
     </Layout>
