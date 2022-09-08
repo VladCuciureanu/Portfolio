@@ -1,7 +1,8 @@
+import { allProjects, Project } from "contentlayer/generated"
 import ProjectsPreview from "@/ui/index/project-showcase"
 import Layout from "@/ui/shared/layout"
-import { allProjects, Project } from "contentlayer/generated"
 import styled from "styled-components"
+import Styles from "@/ui/shared/styles"
 
 export async function getStaticProps() {
   const projects = allProjects
@@ -21,7 +22,11 @@ export default function HomePage({ projects }: { projects: Project[] }) {
   return (
     <Layout>
       <MainColumn>
-        <ProjectsPreview projects={projects} />
+        <Section>
+          <Heading>Featured Projects</Heading>
+          <Subheading>{`It's not much but it's honest work`}</Subheading>
+          <ProjectsPreview projects={projects} />
+        </Section>
       </MainColumn>
     </Layout>
   )
@@ -34,4 +39,6 @@ const MainColumn = styled.div`
   }
 `
 
-const Section = styled.section``
+const Heading = Styles.Heading
+const Subheading = Styles.Subheading
+const Section = Styles.Section
