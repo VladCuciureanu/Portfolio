@@ -30,7 +30,7 @@ type LayoutProps = {
 const Main = styled(motion.main)`
   color: var(--colors-fg);
   font-size: 1rem;
-  top: 6rem;
+  top: 9rem;
   padding-left: 1rem;
   padding-right: 1rem;
   display: grid;

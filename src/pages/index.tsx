@@ -3,6 +3,7 @@ import ProjectsPreview from "@/ui/index/project-showcase"
 import Layout from "@/ui/shared/layout"
 import styled from "styled-components"
 import Styles from "@/ui/shared/styles"
+import Biography from "@/ui/index/bio"
 
 export async function getStaticProps() {
   const projects = allProjects
@@ -22,7 +23,13 @@ export default function HomePage({ projects }: { projects: Project[] }) {
   return (
     <Layout>
       <MainColumn>
-        <Section>{/* Short intro and profile pic */}</Section>
+        <Section>
+          <Heading>Vlad Cuciureanu</Heading>
+          <Subheading>
+            JavaScript Enthusiast, Audio-Video Tinkerer, Green Haribo Bear.
+          </Subheading>
+          <Biography />
+        </Section>
         <Section>
           <Heading>Featured Projects</Heading>
           <Subheading>{`It's not much but it's honest work`}</Subheading>
