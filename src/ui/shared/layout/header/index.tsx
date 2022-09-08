@@ -22,18 +22,18 @@ export default function Header() {
 
 const Container = styled(Glass)`
   position: absolute;
-  margin: auto;
   top: 2rem;
-  left: 0;
   right: 0;
-  width: min(640px, 100%);
-  height: 2.75rem;
-  padding: 0.45rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: min(640px, 100%);
+  height: 2.75rem;
+  margin: auto;
+  padding: 0.45rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 `
 
 const Flexbox = styled.div`

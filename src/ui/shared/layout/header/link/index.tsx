@@ -23,6 +23,4 @@ export default function HeaderLink({ label, href, target }: HeaderLinkProps) {
   )
 }
 
-const Anchor = styled.a`
-  z-index: 1;
-`
+const Anchor = styled.a``

@@ -21,8 +21,6 @@ export default function Glass(props: {
 
 const GlassPane = styled.div`
   position: relative;
-  width: 100%;
-  height: 100%;
   background: transparent;
   backdrop-filter: blur(4px);
   border-radius: calc(var(--radii-2) + 1px);
@@ -38,6 +36,7 @@ const GlassPane = styled.div`
 
   &::before {
     position: absolute;
+    z-index: -1;
     padding: 1px;
     background: linear-gradient(
       135deg,

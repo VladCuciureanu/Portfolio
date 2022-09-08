@@ -130,7 +130,6 @@ const Container = styled.div`
 const Wrapper = styled.div`
   flex: 0 0 auto;
   min-width: 100%;
-  z-index: 1;
   display: flex;
   flex-direction: row;
   align-items: center;

@@ -24,6 +24,5 @@ const Svg = styled.svg`
   height: 100%;
   pointer-events: none;
   isolation: isolate;
-  z-index: 1;
   mix-blend-mode: soft-light;
 `
