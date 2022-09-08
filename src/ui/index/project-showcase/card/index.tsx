@@ -19,7 +19,7 @@ export default function ProjectShowcaseCard({ project }: { project: Project }) {
       tiltMaxAngleX={12.5}
       tiltMaxAngleY={12.5}
       glarePosition={"all"}
-      glareMaxOpacity={theme === "dark" ? 0.05: 0.15}
+      glareMaxOpacity={theme === "dark" ? 0.05 : 0.15}
       glareColor={theme === "dark" ? "#fff" : "#000"}
       onEnter={() => setHovering(true)}
       onLeave={() => setHovering(false)}

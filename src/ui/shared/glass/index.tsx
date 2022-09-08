@@ -38,7 +38,7 @@ const GlassPane = styled.div`
 
   &::before {
     position: absolute;
-    padding: 2px;
+    padding: 1px;
     background: linear-gradient(
       135deg,
       rgba(var(--colors-gray-12), 0.3),
