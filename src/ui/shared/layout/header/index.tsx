@@ -9,6 +9,7 @@ export default function Header() {
       <Flexbox>
         <HeaderLink href="/" label="Home" />
         <HeaderLink href="/projects" label="Projects" />
+        <HeaderLink href="/posts" label="Posts" />
         <HeaderLink href="/resume" label="Resume" />
         <HeaderLink href="/about" label="About" />
       </Flexbox>

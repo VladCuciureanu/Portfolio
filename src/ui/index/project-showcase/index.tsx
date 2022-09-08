@@ -40,5 +40,5 @@ const Subtitle = styled.p`
   }
   margin-top: -0.5rem;
   font-size: 1.1rem;
-  color: rgb(var(--colors-gray-500));
+  color: rgb(var(--colors-gray-11));
 `

@@ -16,7 +16,7 @@ const Button = styled.button`
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   z-index: 1;
-  transition: background 0.35s ease, color 0.35s ease, stroke 0.35s ease;
+  transition: background 0.45s ease, color 0.35s ease, stroke 0.35s ease;
   color: rgba(var(--colors-gray-11), 0.5);
   stroke: rgba(var(--colors-gray-11), 0.5);
 
