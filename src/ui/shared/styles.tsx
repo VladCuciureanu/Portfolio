@@ -41,7 +41,7 @@ const TextBase = css`
   font-size: 0.95rem;
   margin-bottom: 1rem;
   color: rgb(var(--colors-gray-11));
-  line-height: 1.4;
+  line-height: 1.5;
 `
 
 const Text = styled.p`

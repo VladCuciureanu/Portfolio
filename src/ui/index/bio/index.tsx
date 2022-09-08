@@ -19,7 +19,7 @@ export default function Biography() {
   ))
   return (
     <>
-      <Text style={{ marginTop: "2rem" }}>
+      <Text style={{ marginTop: "1.45rem" }}>
         {`
           Exploring audio streaming with `}
         <Link label="Lyra" href="/lyra" target={"_blank"} />
@@ -39,12 +39,12 @@ export default function Biography() {
         {`.
         `}
       </Text>
-      <Text>
+      {/* <Text>
         {`
         Passionate about building polished software and web products. Working methodically and carefully.
         Mindfully spending my time and attention so that I can produce quality work and feel productive.
         In pursuit of aiding towards the betterment of humanity.`}
-      </Text>
+      </Text> */}
       <Text>
         {`Aficionado of many genres of music, from `}
         <Underline>Pop</Underline>
