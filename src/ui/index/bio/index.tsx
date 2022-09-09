@@ -19,7 +19,7 @@ export default function Biography() {
   ))
   return (
     <>
-      <Text style={{ marginTop: "1.45rem" }}>
+      <Text style={{ marginTop: "2.45rem" }}>
         {`
           Exploring audio streaming with `}
         <Link label="Lyra" href="/lyra" target={"_blank"} />
