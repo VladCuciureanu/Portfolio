@@ -37,3 +37,6 @@ yarn-error.log*
 
 # Contentlayer
 .contentlayer
+
+# Sandbox
+src/pages/sandbox
