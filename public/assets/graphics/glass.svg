@@ -1,0 +1,41 @@
+<svg>
+  <style>
+    #glass {
+      backdrop-filter: blur(16px);
+    }
+
+    #texture {
+      mix-blend-mode: soft-light;
+    }
+  </style>
+
+  <!-- Background gradient -->
+  <linearGradient id="background-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" style="stop-color:rgb(245,245,245);stop-opacity:.7" />
+    <stop offset="100%" style="stop-color:rgb(48,48,48);stop-opacity:.3" />
+  </linearGradient>
+
+  <!-- Border gradient -->
+  <linearGradient id="stroke-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+    <stop offset="0%" style="stop-color:rgb(245,245,245);stop-opacity:.7" />
+    <stop offset="100%" style="stop-color:rgb(48,48,48);stop-opacity:.3" />
+  </linearGradient>
+
+  <!--Setting up noise filter-->
+  <filter id="noise">
+    <feTurbulence type="fractalNoise" baseFrequency=".80" numOctaves="3" stitchTiles="stitch" />
+  </filter>
+
+  <!--Setting up corners mask-->
+  <mask id="frame">
+    <rect x="0" y="0" width="100%" height="100%" rx="8px" fill="white" />
+  </mask>
+
+  <!--Display layers-->
+  <g mask="url(#frame)">
+    <rect id="glass" width="100%" height="100%" fill="url(#background-gradient)" />
+    <rect id="texture" width="100%" height="100%" filter="url(#noise)" opacity=".15" />
+    <rect id="border" x="0" y="0" width="100%" height="100%" rx="8px" fill="transparent" stroke="url(#stroke-gradient)"
+      stroke-width="2" />
+  </g>
+</svg>
