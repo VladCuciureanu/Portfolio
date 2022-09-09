@@ -1,4 +1,4 @@
-import { allProjects, Project } from "contentlayer/generated"
+import { allProjects, Project, allPosts } from "contentlayer/generated"
 import ProjectsPreview from "@/ui/index/project-showcase"
 import Layout from "@/ui/shared/layout"
 import Styles from "@/ui/shared/styles"
@@ -37,10 +37,14 @@ export default function HomePage({ projects }: { projects: Project[] }) {
           <Subheading>{`It's not much but it's honest work`}</Subheading>
           <ProjectsPreview projects={projects} />
         </Section>
-        <Section>
-          <Heading>Recent Posts</Heading>
-          {/* Posts feed */}
-        </Section>
+        {allPosts.length > 0 ? (
+          <Section>
+            <Heading>Recent Posts</Heading>
+            {/* Posts feed */}
+          </Section>
+        ) : (
+          <></>
+        )}
       </MainColumn>
     </Layout>
   )

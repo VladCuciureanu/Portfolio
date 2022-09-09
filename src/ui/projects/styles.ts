@@ -10,6 +10,7 @@ const Container = styled(Glass)`
   flex: 1 auto 1;
   gap: 1rem;
   transform: translateZ(0);
+
   --glare-factor: 0.1;
 
   &.private {

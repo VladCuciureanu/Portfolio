@@ -79,7 +79,7 @@ export const lightTheme = css`
   --colors-blue-11: ${convert(blue.blue11)};
   --colors-blue-12: ${convert(blue.blue12)};
 
-  --colors-bg: var(--colors-gray-1);
+  --colors-bg: var(--colors-gray-2);
   --colors-lowContrast: var(--colors-gray-11);
   --colors-highContrast: var(--colors-gray-12);
 `

@@ -35,6 +35,51 @@ export default function ProjectsPage({ projects }: { projects: Project[] }) {
             ))}
           </List>
         </Section>
+        <Section>
+          <Heading>Projects</Heading>
+          <Subheading>Khajiit has wares, if you have coin.</Subheading>
+          <List>
+            {projects.map((project) => (
+              <ProjectCard key={project.href} project={project} />
+            ))}
+          </List>
+        </Section>
+        <Section>
+          <Heading>Projects</Heading>
+          <Subheading>Khajiit has wares, if you have coin.</Subheading>
+          <List>
+            {projects.map((project) => (
+              <ProjectCard key={project.href} project={project} />
+            ))}
+          </List>
+        </Section>
+        <Section>
+          <Heading>Projects</Heading>
+          <Subheading>Khajiit has wares, if you have coin.</Subheading>
+          <List>
+            {projects.map((project) => (
+              <ProjectCard key={project.href} project={project} />
+            ))}
+          </List>
+        </Section>
+        <Section>
+          <Heading>Projects</Heading>
+          <Subheading>Khajiit has wares, if you have coin.</Subheading>
+          <List>
+            {projects.map((project) => (
+              <ProjectCard key={project.href} project={project} />
+            ))}
+          </List>
+        </Section>
+        <Section>
+          <Heading>Projects</Heading>
+          <Subheading>Khajiit has wares, if you have coin.</Subheading>
+          <List>
+            {projects.map((project) => (
+              <ProjectCard key={project.href} project={project} />
+            ))}
+          </List>
+        </Section>
       </MainColumn>
     </Layout>
   )
