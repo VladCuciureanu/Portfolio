@@ -1,8 +1,14 @@
 import styled from "styled-components"
 
-export default function Noise({ opacity = 0.15 }: { opacity?: number }) {
+export default function Noise({
+  className,
+  opacity = 0.15,
+}: {
+  className?: string
+  opacity?: number
+}) {
   return (
-    <Svg style={{ opacity: opacity }}>
+    <Svg style={{ opacity: opacity }} className={className}>
       <filter id="noise">
         <feTurbulence
           type="fractalNoise"

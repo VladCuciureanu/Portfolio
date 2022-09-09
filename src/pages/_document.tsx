@@ -1,4 +1,4 @@
-import styled, { ServerStyleSheet } from "styled-components"
+import { ServerStyleSheet } from "styled-components"
 import NextDocument, {
   DocumentContext,
   DocumentInitialProps,
@@ -7,7 +7,6 @@ import NextDocument, {
   Main,
   NextScript,
 } from "next/document"
-import Noise from "@/ui/shared/noise"
 
 export default class Document extends NextDocument {
   // Generate stylesheet for SSG
@@ -54,7 +53,6 @@ export default class Document extends NextDocument {
           />
         </Head>
         <body>
-          <NoiseBackground opacity={0.5} />
           <Main />
           <NextScript />
         </body>
@@ -62,11 +60,3 @@ export default class Document extends NextDocument {
     )
   }
 }
-
-const NoiseBackground = styled(Noise)`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100px;
-`

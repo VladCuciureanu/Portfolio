@@ -5,15 +5,16 @@ import { ThemeProvider } from "next-themes"
 import { AnimatePresence } from "framer-motion"
 import type { AppProps } from "next/app"
 import Header from "@/ui/shared/layout/header"
-// import NoiseFilter from "@/ui/shared/noise"
+import Noise from "@/ui/shared/noise"
+import styled from "styled-components"
 
 function App({ Component, pageProps, router }: AppProps) {
   return (
     <>
-      {/* <NoiseFilter /> */}
       <GlobalStyle />
       <DefaultSeo {...seo} />
       <ThemeProvider defaultTheme="dark">
+        <NoiseBackground opacity={0.1} />
         <Header />
         <AnimatePresence
           exitBeforeEnter
@@ -25,5 +26,11 @@ function App({ Component, pageProps, router }: AppProps) {
     </>
   )
 }
+
+const NoiseBackground = styled(Noise)`
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+`
 
 export default App
