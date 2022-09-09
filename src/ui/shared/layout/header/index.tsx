@@ -1,3 +1,4 @@
+import { allPosts } from ".contentlayer/generated"
 import styled from "styled-components"
 import Glass from "../../glass"
 import HeaderLink from "./link"
@@ -10,7 +11,11 @@ export default function Header() {
         <HeaderLink href="/" label="Home" />
         <HeaderLink href="/projects" label="Projects" />
         <HeaderLink href="/resume" label="Resume" />
-        <HeaderLink href="/posts" label="Posts" />
+        {allPosts.length > 0 ? (
+          <HeaderLink href="/posts" label="Posts" />
+        ) : (
+          <></>
+        )}
       </Flexbox>
       <Flexbox>
         <ThemeSwitcher />
