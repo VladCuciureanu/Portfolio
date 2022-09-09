@@ -16,7 +16,11 @@ export default function ThemeSwitcher() {
   const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark")
 
   if (!mounted) {
-    return <HeaderButton>Unmounted</HeaderButton>
+    return (
+      <HeaderButton>
+        <Sun style={{ opacity: 0 }} />
+      </HeaderButton>
+    )
   }
 
   return (
