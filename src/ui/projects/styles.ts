@@ -72,6 +72,14 @@ const Description = styled.p`
   font-size: 0.8rem;
   color: rgb(var(--colors-gray-11));
   font-weight: 400;
+  transition: widh 0.3s ease;
+
+  @media (max-width: 630px) {
+    max-width: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    opacity: 0;
+  }
 `
 
 const Spacer = styled.div`
