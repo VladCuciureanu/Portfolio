@@ -10,7 +10,7 @@ export default function Footer() {
           <Link href="/">Home</Link>
           <Link href="/projects">Projects</Link>
           <Link href="/resume">Resume</Link>
-          <Link href="/about">About</Link>
+          <Link href="/posts">Posts</Link>
         </Group>
         <Group>
           <Link href="/github" target={"_blank"}>
