@@ -9,7 +9,7 @@ const Card = styled(Glass)`
   flex-direction: column;
   justify-content: left;
   min-width: 100%;
-  height: 8rem;
+  height: 9rem;
   padding: 1.5rem;
   padding-top: 1.35rem;
   padding-bottom: 1.25rem;

@@ -17,7 +17,7 @@ export default function ProjectCard({ project }: { project: Project }) {
     >
       <Container enableStaticGlare className={project.status}>
         <Title>{project.name}</Title>
-        <Description>{project.description}</Description>
+        {/* <Description>{project.description}</Description> */}
         <Spacer />
         <Date>{project.creationYear}</Date>
       </Container>

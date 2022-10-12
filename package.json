@@ -24,10 +24,12 @@
     "next-contentlayer": "^0.2.6",
     "next-seo": "^5.4.0",
     "next-themes": "^0.2.0",
+    "postcss": "^8.4.17",
     "postcss-scss": "^4.0.4",
     "prettier": "^2.7.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-is": "^18.2.0",
     "react-parallax-tilt": "^1.7.62",
     "styled-components": "^5.3.5",
     "swr": "^1.3.0"
