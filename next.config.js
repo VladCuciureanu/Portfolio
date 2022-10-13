@@ -11,7 +11,7 @@ module.exports = withContentlayer({
     return [
       {
         source: "/resume",
-        destination: "/documents/vlad-cuciureanu-resume-2022.pdf",
+        destination: "/documents/VLAD_CUCIUREANU_CV.pdf",
         permanent: true,
       },
       {
