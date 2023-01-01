@@ -32,8 +32,8 @@ export default function Biography() {
         <Underline>Full-stack Software Developer</Underline>
         {` at `}
         <Link
-          label="Cloudflight"
-          href="https://cloudflight.io"
+          label="Vladinski Technologies"
+          href="https://vladinski.md"
           target={"_blank"}
         />
         {`.
