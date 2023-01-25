@@ -4,19 +4,19 @@ import Styles from "@/ui/shared/styles"
 import useSWR from "swr"
 
 export default function Biography() {
-  const { data } = useSWR<{ artists: Artist[] }>(
-    "/api/spotify/top-artists",
-    fetcher,
-  )
-  const topArtists = data ? data.artists : []
-  const artists = topArtists.map((artist) => (
-    <Link
-      key={artist.url}
-      label={artist.name}
-      href={artist.url}
-      target={"_blank"}
-    />
-  ))
+  // const { data } = useSWR<{ artists: Artist[] }>(
+  //   "/api/spotify/top-artists",
+  //   fetcher,
+  // )
+  // const topArtists = data ? data.artists : []
+  // const artists = topArtists.map((artist) => (
+  //   <Link
+  //     key={artist.url}
+  //     label={artist.name}
+  //     href={artist.url}
+  //     target={"_blank"}
+  //   />
+  // ))
   return (
     <>
       <Text style={{ marginTop: "2.45rem" }}>
@@ -45,7 +45,7 @@ export default function Biography() {
         Mindfully spending my time and attention so that I can produce quality work and feel productive.
         In pursuit of aiding towards the betterment of humanity.`}
       </Text> */}
-      <Text>
+      {/* <Text>
         {`Aficionado of many genres of music, from `}
         <Underline>Pop</Underline>
         {`, to `}
@@ -60,7 +60,7 @@ export default function Biography() {
         {` and `}
         {artists[2]}
         {` these days.`}
-      </Text>
+      </Text> */}
     </>
   )
 }
