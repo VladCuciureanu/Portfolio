@@ -7,7 +7,7 @@ const domain = `vladcuciureanu.com`
 const twitter = `@VladCuciureanu_`
 
 export const seo: DefaultSeoProps = {
-  title: title + " | " + description,
+  title,
   description,
   openGraph: {
     title,
