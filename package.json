@@ -1,12 +1,12 @@
 {
-  "name": "vladinski.md",
+  "name": "vladcuciureanu.com",
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
   "author": {
     "name": "Vlad Cuciureanu",
-    "email": "vladcuciureanu@pm.me",
-    "url": "https://vladinski.md"
+    "email": "vlad.cuciureanu@pm.me",
+    "url": "https://vladcuciureanu.com"
   },
   "scripts": {
     "dev": "next dev",

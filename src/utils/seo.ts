@@ -1,10 +1,10 @@
 import { createOgImage } from "@/utils/og"
 import type { DefaultSeoProps } from "next-seo"
 
-const title = `VLADINSKI`
+const title = `Vlad Cuciureanu`
 const description = `JavaScript Enthusiast, Audio-Video Tinkerer, Green Haribo Bear.`
-const domain = `vladinski.md`
-const twitter = `@VladinskiDev`
+const domain = `vladcuciureanu.com`
+const twitter = `@VladCuciureanu_`
 
 export const seo: DefaultSeoProps = {
   title: title + " | " + description,

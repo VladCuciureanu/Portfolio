@@ -26,7 +26,7 @@ module.exports = withContentlayer({
       },
       {
         source: "/twitter",
-        destination: "https://twitter.com/VladinskiDev",
+        destination: "https://twitter.com/VladCuciureanu_",
         permanent: true,
       },
       {

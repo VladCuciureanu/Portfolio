@@ -1,4 +1,4 @@
-# vladinski.md
+# vladcuciureanu.com
 
 [![twitter handle][]][twitter badge]
 

@@ -1,7 +1,7 @@
-import fetcher from "@/lib/fetcher"
-import { Artist } from "@/lib/spotify/types"
+// import fetcher from "@/lib/fetcher"
+// import { Artist } from "@/lib/spotify/types"
 import Styles from "@/ui/shared/styles"
-import useSWR from "swr"
+// import useSWR from "swr"
 
 export default function Biography() {
   // const { data } = useSWR<{ artists: Artist[] }>(
@@ -32,8 +32,8 @@ export default function Biography() {
         <Underline>Full-stack Software Developer</Underline>
         {` at `}
         <Link
-          label="Vladinski Technologies"
-          href="https://vladinski.md"
+          label="Faith Software"
+          href="https://faith.software"
           target={"_blank"}
         />
         {`.

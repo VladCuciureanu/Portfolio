@@ -19,7 +19,7 @@ export default function Footer() {
           <Link href="/twitter" target={"_blank"}>
             Twitter
           </Link>
-          <Link href="mailto:dev@vladinski.md">Mail</Link>
+          <Link href="mailto:vlad.cuciureanu@pm.me">Mail</Link>
         </Group>
       </Navigation>
       <Footnote>
