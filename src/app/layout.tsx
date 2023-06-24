@@ -1,3 +1,4 @@
+import Providers from "@/features/Shared/Providers";
 import "@/styles/globals.scss";
 
 import { Inter } from "next/font/google";
@@ -19,7 +20,9 @@ export default function RootLayout({
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

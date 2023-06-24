@@ -8,9 +8,12 @@ import HouseIcon from "@/assets/graphics/HouseIcon";
 import VialIcon from "@/assets/graphics/VialIcon";
 import GitHubIcon from "@/assets/graphics/GitHubIcon";
 import FaithSoftwareIcon from "@/assets/graphics/FaithSoftwareIcon";
+import { useTheme } from "next-themes";
 
 export default function Header() {
   const [shouldBlur, setShouldBlur] = useState(false);
+
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -46,7 +49,12 @@ export default function Header() {
             <GitHubIcon />
           </Link>
           <div />
-          <button className={linkStyles.Link}>T</button>
+          <button
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className={linkStyles.Link}
+          >
+            T
+          </button>
         </div>
       </nav>
       <div className={styles.Divider} />
