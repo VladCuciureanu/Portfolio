@@ -1,0 +1,12 @@
+@import "colors.scss";
+
+// Light theme
+:root {
+  @include light-colors;
+}
+
+// Dark theme
+[data-theme="dark"] {
+  @include dark-colors;
+  color-scheme: dark;
+}
