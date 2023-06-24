@@ -1,0 +1,65 @@
+.Container {
+  position: sticky;
+  max-width: 640px;
+  top: 0;
+
+  margin: 2.5rem 1rem;
+  margin-top: 0;
+
+  background-color: rgb(var(--background-color) / var(--background-opacity));
+  -webkit-backdrop-filter: var(--backdrop-blur);
+  backdrop-filter: var(--backdrop-blur);
+
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.3s;
+
+  z-index: 30;
+
+  @media (min-width: 640px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  --background-opacity: 0;
+  --background-blur: 0;
+  --divider-opacity: 0;
+}
+
+.BlurredContainer {
+  --background-opacity: 0.2;
+  --background-blur: blur(8px);
+  --divider-opacity: 1;
+}
+
+.Nav {
+  padding: 1.25rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Divider {
+  height: 1px;
+  width: 100%;
+
+  background-color: rgb(var(--foreground-color) / var(--divider-opacity));
+
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0 0.2, 1);
+  transition-duration: 0.3s;
+}
+
+.RightGroup {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+
+  & div {
+    height: 1.25rem;
+    width: 1px;
+
+    background-color: rgb(var(--foreground-color) / 0.1);
+  }
+}

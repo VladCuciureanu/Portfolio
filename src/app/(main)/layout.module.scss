@@ -1,3 +1,25 @@
 .Main {
   width: 100%;
 }
+
+.Glow {
+  max-width: 1024px;
+  margin: 0 auto;
+
+  & span {
+    position: absolute;
+    bottom: calc(100% - 190px);
+    aspect-ratio: 1/1;
+
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+    border-radius: 9999px;
+
+    background-image: linear-gradient(to right, var(--glow-stops));
+
+    opacity: var(--glow-opacity);
+    z-index: -50;
+    filter: blur(64px);
+  }
+}

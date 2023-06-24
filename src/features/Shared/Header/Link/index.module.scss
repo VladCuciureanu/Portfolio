@@ -1,0 +1,18 @@
+.Link {
+  height: 1.25rem;
+  width: 1.25rem;
+  border: 0;
+
+  color: rgb(var(--foreground-color) / 0.7);
+  background-color: transparent;
+
+  cursor: pointer;
+
+  &:hover {
+    color: rgb(var(--foreground-color));
+  }
+}
+
+.ExternalLink {
+  cursor: ne-resize;
+}
