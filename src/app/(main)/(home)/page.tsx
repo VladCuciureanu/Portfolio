@@ -8,10 +8,9 @@ export default function HomePage() {
       <p className={styles.Job}>Full Stack Developer</p>
       <div className={styles.Divider} />
       <section className={styles.Prose}>
-        <p>Hi there! I&apos;m Vlad. Welcome to my website!</p>
-
+        <p>Hey, I&apos;m Vlad! I&apos;m a christian full-stack developer.</p>
         <p>
-          I&apos;m a christian, full-stack developer currently self-employed at{" "}
+          I&apos;m currently self-employed at{" "}
           <Link href="https://faith.software" target="_blank">
             Faith&nbsp;Software
           </Link>
@@ -25,6 +24,10 @@ export default function HomePage() {
           </Link>
           , where I spent four years building multiple distributed web
           solutions.
+        </p>
+        <p>On the side, I like building tools people find useful.</p>
+        <p>
+          <Link href="/resume">Learn more</Link>
         </p>
       </section>
     </>

@@ -8,14 +8,17 @@
 
 .Divider {
   min-height: 1px;
-  width: 7.5rem;
+  width: 100%;
   margin: 4rem auto;
 
   background-color: rgb(var(--foreground-color) / 0.1);
 }
 
 .Prose {
-  & p:not(:first-of-type) {
-    margin-top: 1.5rem;
+  & p {
+    text-align: justify;
+    &:not(:first-of-type) {
+      margin-top: 1.5rem;
+    }
   }
 }
