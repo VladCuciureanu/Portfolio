@@ -3,6 +3,9 @@
 @import "themes.scss";
 
 body {
-  min-height: 200vh;
   font-family: "Inter", sans-serif;
+}
+
+p {
+  color: rgb(var(--text-color));
 }

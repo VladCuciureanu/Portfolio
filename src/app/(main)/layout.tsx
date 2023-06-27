@@ -9,7 +9,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
         <span />
       </div>
       <Header />
-      <main className={styles.Main}>{children}</main>
+      {children}
     </>
   );
 }
