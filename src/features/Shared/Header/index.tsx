@@ -8,6 +8,7 @@ import FlaskIcon from "@/assets/graphics/FlaskIcon";
 import GitHubIcon from "@/assets/graphics/GitHubIcon";
 import FaithSoftwareIcon from "@/assets/graphics/FaithSoftwareIcon";
 import ThemeSwitcher from "./ThemeSwitcher";
+import DocumentIcon from "@/assets/graphics/DocumentIcon";
 
 export default function Header() {
   const [shouldBlur, setShouldBlur] = useState(false);
@@ -37,6 +38,9 @@ export default function Header() {
         <div className={styles.RightGroup}>
           <Link href="/projects">
             <FlaskIcon />
+          </Link>
+          <Link href="/resume">
+            <DocumentIcon />
           </Link>
           <div />
           <Link href="https://faith.software">
