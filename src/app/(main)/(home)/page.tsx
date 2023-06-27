@@ -1,4 +1,4 @@
-import Link from "@/components/Link";
+import Link from "@/features/Shared/Link";
 import styles from "./page.module.scss";
 
 export default function HomePage() {

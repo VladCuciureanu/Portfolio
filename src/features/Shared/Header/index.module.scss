@@ -1,6 +1,5 @@
 .Container {
   position: sticky;
-  max-width: 640px;
   top: 0;
 
   margin: 2.5rem 1rem;
@@ -22,17 +21,19 @@
   }
 
   --background-opacity: 0;
-  --background-blur: 0;
+  --backdrop-blur: 0;
   --divider-opacity: 0;
 }
 
 .BlurredContainer {
   --background-opacity: 0.2;
-  --background-blur: blur(8px);
+  --backdrop-blur: blur(8px);
   --divider-opacity: 1;
 }
 
 .Nav {
+  max-width: 640px;
+  margin: 0 auto;
   padding: 1.25rem 0;
 
   display: flex;

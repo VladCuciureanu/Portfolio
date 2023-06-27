@@ -1,0 +1,24 @@
+.Title {
+  text-align: center;
+}
+
+.Job {
+  text-align: center;
+}
+
+.Divider {
+  min-height: 1px;
+  width: 100%;
+  margin: 4rem auto;
+
+  background-color: rgb(var(--foreground-color) / 0.1);
+}
+
+.Prose {
+  & p {
+    text-align: justify;
+    &:not(:first-of-type) {
+      margin-top: 1.5rem;
+    }
+  }
+}
