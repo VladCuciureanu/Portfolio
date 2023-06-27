@@ -5,10 +5,12 @@ import cn from "@/utils/class-names";
 import styles from "./index.module.scss";
 import linkStyles from "./Link/index.module.scss";
 import HouseIcon from "@/assets/graphics/HouseIcon";
-import VialIcon from "@/assets/graphics/VialIcon";
+import FlaskIcon from "@/assets/graphics/FlaskIcon";
 import GitHubIcon from "@/assets/graphics/GitHubIcon";
 import FaithSoftwareIcon from "@/assets/graphics/FaithSoftwareIcon";
 import { useTheme } from "next-themes";
+import MoonIcon from "@/assets/graphics/MoonIcon";
+import SunIcon from "@/assets/graphics/SunIcon";
 
 export default function Header() {
   const [shouldBlur, setShouldBlur] = useState(false);
@@ -23,7 +25,7 @@ export default function Header() {
     };
   }, []);
 
-  const handleScroll = (event: any) => {
+  const handleScroll = () => {
     setShouldBlur(window.scrollY > 40);
   };
 
@@ -39,7 +41,7 @@ export default function Header() {
         </Link>
         <div className={styles.RightGroup}>
           <Link href="/projects">
-            <VialIcon />
+            <FlaskIcon />
           </Link>
           <div />
           <Link href="https://faith.software">
@@ -53,7 +55,7 @@ export default function Header() {
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             className={linkStyles.Link}
           >
-            T
+            {theme === "dark" ? <MoonIcon /> : <SunIcon />}
           </button>
         </div>
       </nav>
