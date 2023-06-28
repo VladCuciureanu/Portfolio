@@ -1,0 +1,8 @@
+.Link {
+  color: rgb(var(--text-color) / 0.25);
+  opacity: 0.25;
+
+  &:hover {
+    opacity: 1;
+  }
+}

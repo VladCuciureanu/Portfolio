@@ -3,6 +3,7 @@
   --foreground-color: 0 0 0;
   --text-color: 82 82 82;
   --glow-stops: #93c5fd, #67e8f9, #86efac;
+  --table-background-color: 229 229 229;
 }
 
 @mixin dark-colors {
@@ -10,4 +11,5 @@
   --foreground-color: 255 255 255;
   --text-color: 186 186 186;
   --glow-stops: #be123c, #be185d, #7e22ce;
+  --table-background-color: 23 23 23;
 }

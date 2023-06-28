@@ -7,7 +7,7 @@
 }
 
 // Dark theme
-[data-theme="dark"] {
+:root.dark {
   @include dark-colors;
   color-scheme: dark;
   --glow-opacity: 0.6;

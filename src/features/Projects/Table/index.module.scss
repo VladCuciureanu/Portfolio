@@ -1,0 +1,108 @@
+.TableWrapper {
+  margin-left: 3rem;
+
+  @media (min-width: 768px) {
+    margin-left: 0;
+  }
+
+  border: 1px solid rgb(var(--foreground-color) / 0.1);
+  border-radius: 0.5rem;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+.Table {
+  width: 100%;
+
+  text-indent: 0;
+  border-color: inherit;
+  border-collapse: collapse;
+  table-layout: auto;
+
+  & thead {
+    background-color: rgb(var(--background-color) / 0.6);
+    & tr {
+      border-bottom: 1px solid rgb(var(--foreground-color) / 0.1);
+      & th {
+        padding: 0.75rem;
+        color: rgb(var(--text-color));
+
+        font-size: 0.75rem;
+        font-weight: 600;
+        line-height: 1rem;
+        text-align: left;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+
+        white-space: nowrap;
+      }
+    }
+  }
+
+  & tbody {
+    & tr {
+      &.YearContainer {
+        position: absolute;
+
+        & td {
+          position: absolute;
+          height: 3rem;
+          width: 2.7rem;
+          left: -2.75rem;
+
+          padding: 0;
+          padding-right: 0.75rem;
+
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+
+          & .YearDivider {
+            height: 100%;
+            width: 1px;
+
+            background-color: rgb(var(--foreground-color) / 0.1);
+          }
+
+          & .Year {
+            padding-top: 0.25rem;
+            padding-bottom: 0.25rem;
+
+            color: rgb(var(--text-color));
+
+            font-size: 0.75rem;
+            font-weight: 600;
+            line-height: 1rem;
+            text-align: left;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+          }
+        }
+      }
+
+      &.Entry {
+        &:nth-child(even) {
+          & td {
+            padding: 0.75rem;
+            color: rgb(var(--text-color));
+            white-space: nowrap;
+          }
+        }
+
+        &:nth-child(4n) {
+          background-color: rgb(var(--background-color) / 0.6);
+        }
+
+        &:nth-child(4n + 2) {
+          background-color: rgb(var(--table-background-color) / 0.6);
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import styles from "./layout.module.scss";
 import Header from "@/features/Shared/Header";
+import Footer from "@/features/Shared/Footer";
 
 export default function MainLayout({ children }: { children: ReactNode }) {
   return (
@@ -10,6 +11,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
       </div>
       <Header />
       {children}
+      <Footer />
     </>
   );
 }

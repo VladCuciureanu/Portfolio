@@ -1,8 +1,10 @@
 .Main {
   max-width: 640px;
   margin: 0 1rem;
+  margin-bottom: 7rem;
 
   @media (min-width: 640px) {
     margin: 0 auto;
+    margin-bottom: calc(var(--footer-height) + 4rem);
   }
 }

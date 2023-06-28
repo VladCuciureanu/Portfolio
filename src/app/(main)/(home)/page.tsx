@@ -27,7 +27,7 @@ export default function HomePage() {
         </p>
         <p>On the side, I like building tools people find useful.</p>
         <p>
-          <Link href="/resume">Learn more</Link>
+          <Link href="/resume">More about me</Link>
         </p>
       </section>
     </>
