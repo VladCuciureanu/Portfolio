@@ -57,7 +57,7 @@ const TableData: Project[] = [
   },
   {
     name: "Degree",
-    description: "REST-based audio streaming showcased in React and .NET Core",
+    description: "REST-based audio streaming showcased in React and .NET Core.",
     year: "2021",
     href: "https://github.com/VladCuciureanu/Degree",
   },
@@ -77,7 +77,8 @@ const TableData: Project[] = [
   },
   {
     name: "Khora",
-    description: "Open-source synthesizer",
+    description:
+      "Open-source all-in-one portable synthesizer, sampler and controller.",
     year: "2019",
     href: "https://github.com/faith-software/Khora",
   },
