@@ -17,3 +17,17 @@
 .ExternalLink {
   cursor: ne-resize;
 }
+
+.Tooltip {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid rgb(var(--foreground-color) / 0.1);
+  border-radius: 0.5rem;
+
+  font-size: smaller;
+
+  color: rgb(var(--text-color));
+  background-color: rgb(var(--background-color) / 0.6);
+
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}

@@ -32,21 +32,21 @@ export default function Header() {
   return (
     <header className={classNames}>
       <nav className={styles.Nav}>
-        <Link href="/">
+        <Link href="/" tooltip="Home">
           <HouseIcon />
         </Link>
         <div className={styles.RightGroup}>
-          <Link href="/projects">
+          <Link href="/projects" tooltip="Projects">
             <FlaskIcon />
           </Link>
-          <Link href="/resume">
+          <Link href="/resume" tooltip="Resume">
             <DocumentIcon />
           </Link>
           <div />
-          <Link href="https://faith.software">
+          <Link href="https://faith.software" tooltip="Faith Software">
             <FaithSoftwareIcon />
           </Link>
-          <Link href="https://github.com/VladCuciureanu">
+          <Link href="https://github.com/VladCuciureanu" tooltip="GitHub">
             <GitHubIcon />
           </Link>
           <div />
