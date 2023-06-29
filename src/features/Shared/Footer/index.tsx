@@ -8,7 +8,7 @@ export default function Footer() {
         <p>♬ Currently not listening to anything</p>
         <p style={{ display: "flex", gap: 8 }}>
           <EasterEgg />
-          Powered by ▲Vercel
+          <span className={styles.Vercel}>Powered by ▲Vercel</span>
         </p>
       </div>
     </footer>

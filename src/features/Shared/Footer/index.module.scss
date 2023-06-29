@@ -10,6 +10,12 @@
 
   font-size: small;
 
+  padding: 0 1rem;
+
+  @media (min-width: 640px) {
+    padding: 0 auto;
+  }
+
   & div {
     width: 100%;
     max-width: 640px;
@@ -23,5 +29,11 @@
     & p {
       color: rgb(var(--text-color) / 0.25);
     }
+  }
+}
+
+.Vercel {
+  @media (max-width: 460px) {
+    display: none;
   }
 }
