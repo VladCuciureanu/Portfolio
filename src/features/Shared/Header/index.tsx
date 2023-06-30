@@ -39,7 +39,7 @@ export default function Header() {
           <Link href="/projects" tooltip="Projects">
             <FlaskIcon />
           </Link>
-          <Link href="/resume" tooltip="Resume">
+          <Link href="/resume" tooltip="Resume" prefetch={false}>
             <DocumentIcon />
           </Link>
           <div />

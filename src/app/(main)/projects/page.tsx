@@ -1,6 +1,6 @@
 import styles from "./page.module.scss";
 import ProjectsTable from "@/features/Projects/Table";
-import Projects from "@/constants/projects";
+import Projects from "@/content/projects";
 
 export default function ProjectsPage() {
   return (

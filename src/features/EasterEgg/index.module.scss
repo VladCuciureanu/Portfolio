@@ -1,0 +1,32 @@
+.Canvas {
+  --entire-footer-height: calc(var(--footer-height) + 4rem);
+  --entire-header-height: calc(60px + 1px + 2.5rem);
+
+  --canvas-height: calc(
+    100vh - var(--entire-footer-height) - var(--entire-header-height) - 2px
+  );
+
+  --canvas-width: 100vw;
+  margin-left: -1rem;
+  margin-right: -1rem;
+
+  @media (min-width: 640px) {
+    --canvas-width: calc(100vw - 2rem);
+    margin-left: calc(-1 * (100vw - 640px - 2rem) / 2);
+  }
+
+  height: var(--canvas-height) !important;
+  width: var(--canvas-width) !important;
+
+  &,
+  & * {
+    user-select: none;
+  }
+}
+
+.OffscreenCanvas {
+  position: fixed;
+  top: calc(-100% - 100px);
+  left: calc(-100% - 100px);
+  transform: scale(0, 0);
+}

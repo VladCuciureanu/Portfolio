@@ -9,6 +9,7 @@ type HeaderLinkProps = {
   href: string;
   tooltip: string;
   external?: boolean;
+  prefetch?: boolean;
 };
 
 export default function HeaderLink(props: HeaderLinkProps) {
@@ -19,7 +20,11 @@ export default function HeaderLink(props: HeaderLinkProps) {
     <Tooltip.Provider delayDuration={0}>
       <Tooltip.Root>
         <Tooltip.Trigger asChild>
-          <Link className={classNames} href={props.href}>
+          <Link
+            className={classNames}
+            href={props.href}
+            prefetch={props.prefetch}
+          >
             {props.children}
           </Link>
         </Tooltip.Trigger>
