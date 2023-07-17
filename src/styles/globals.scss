@@ -6,9 +6,14 @@ body {
   position: relative;
   height: 100%;
   width: 100%;
-  scroll-padding: 6rem;
+
+  color: rgb(148 163 184);
+  line-height: 1.625;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: rgb(15 23 42);
 }

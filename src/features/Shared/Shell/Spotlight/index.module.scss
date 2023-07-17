@@ -1,0 +1,21 @@
+.Spotlight {
+  position: fixed;
+  inset: 0;
+
+  background: radial-gradient(
+    600px at var(--x-coord) var(--y-coord),
+    rgba(29, 78, 216, 0.15),
+    transparent 80%
+  );
+
+  transition-property: background;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.3s;
+
+  pointer-events: none;
+  z-index: 30;
+
+  @media (min-width: 1024px) {
+    position: absolute;
+  }
+}
