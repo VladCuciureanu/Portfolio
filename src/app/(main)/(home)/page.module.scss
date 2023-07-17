@@ -1,0 +1,11 @@
+.Entries {
+  margin-top: 5rem;
+
+  @media (min-width: 640px) {
+    margin-top: 8rem;
+  }
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}

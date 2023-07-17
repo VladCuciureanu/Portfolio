@@ -1,0 +1,46 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "author": {
+    "name": "Vlad Cuciureanu",
+    "email": "vlad.cuciureanu@pm.me",
+    "url": "https://vladcuciureanu.com"
+  },
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "contentlayer dev & next dev",
+    "prebuild": "contentlayer build",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write ./**/*.{ts,tsx,md,mdx,scss} --no-error-on-unmatched-pattern",
+    "cl:postinstall": "contentlayer postinstall"
+  },
+  "dependencies": {
+    "@radix-ui/react-tooltip": "^1.0.6",
+    "@react-three/drei": "^9.77.8",
+    "@react-three/fiber": "^8.13.4",
+    "@vercel/og": "^0.5.8",
+    "contentlayer": "0.3.1",
+    "framer-motion": "^10.12.17",
+    "next": "13.4.6",
+    "next-contentlayer": "0.3.1",
+    "next-themes": "^0.2.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "three": "^0.154.0"
+  },
+  "devDependencies": {
+    "@types/emscripten": "^1.39.6",
+    "@types/node": "20.3.1",
+    "@types/react": "18.2.12",
+    "@types/react-dom": "18.2.5",
+    "@types/three": "^0.152.1",
+    "eslint": "8.43.0",
+    "eslint-config-next": "13.4.6",
+    "prettier": "^2.8.8",
+    "sass": "^1.63.4",
+    "typescript": "5.1.3"
+  }
+}

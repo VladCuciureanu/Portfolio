@@ -1,0 +1,26 @@
+.Canvas {
+  --canvas-height: calc(100vh - 6.75rem - 32px);
+
+  @media (min-width: 1024px) {
+    --canvas-height: calc(100vh - 6.75rem - 32px);
+  }
+
+  min-height: var(--canvas-height);
+  max-height: var(--canvas-height);
+  width: 100%;
+  margin-top: -5.25rem;
+
+  grid-column: 1/-1;
+
+  &,
+  & * {
+    user-select: none;
+  }
+}
+
+.OffscreenCanvas {
+  position: fixed;
+  top: calc(-100% - 100px);
+  left: calc(-100% - 100px);
+  transform: scale(0, 0);
+}
