@@ -1,0 +1,30 @@
+.Footer {
+  max-width: 28rem;
+  padding-bottom: 4rem;
+
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+
+  color: rgb(100 116 139);
+
+  @media (min-width: 640px) {
+    padding-bottom: 0;
+  }
+
+  & > p > a {
+    font-weight: 500;
+    text-decoration: inherit;
+
+    color: rgb(148 163 184);
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition-property: color;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 0.15s;
+    }
+
+    &:hover {
+      color: rgb(94 234 212);
+    }
+  }
+}

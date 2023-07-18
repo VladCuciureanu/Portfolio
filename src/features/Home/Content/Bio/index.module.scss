@@ -1,0 +1,24 @@
+.ProseBlock {
+  & > p {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    & > a {
+      font-weight: 500;
+      text-decoration: inherit;
+
+      color: rgb(226 232 240);
+
+      @media (prefers-reduced-motion: no-preference) {
+        transition-property: color;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 0.15s;
+      }
+
+      &:hover {
+        color: rgb(94 234 212);
+      }
+    }
+  }
+}

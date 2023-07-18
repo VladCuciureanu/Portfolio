@@ -1,0 +1,17 @@
+.Wrapper {
+  min-height: 100vh;
+  max-width: 1280px;
+
+  padding: 3rem 1.5rem;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 768px) {
+    padding: 5rem 3rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 0rem 6rem;
+  }
+}

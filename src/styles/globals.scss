@@ -17,3 +17,9 @@ body {
 
   background-color: rgb(15 23 42);
 }
+
+a {
+  &[target="_blank"] {
+    cursor: ne-resize;
+  }
+}

@@ -1,0 +1,133 @@
+.Header {
+  @media (min-width: 1024px) {
+    position: sticky;
+    top: 0;
+
+    max-height: 100vh;
+    width: 50%;
+
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.Bio {
+  & > h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+    letter-spacing: -0.025em;
+
+    color: rgb(226 232 240);
+
+    @media (min-width: 640px) {
+      font-size: 3rem;
+      line-height: 1;
+    }
+
+    & > a {
+      color: inherit;
+      text-decoration: inherit;
+    }
+  }
+
+  & > h2 {
+    display: flex;
+    margin-top: 0.75rem;
+
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.75rem;
+    letter-spacing: -0.025em;
+
+    color: rgb(226 232 240);
+
+    @media (min-width: 640px) {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+
+    & > a {
+      display: flex;
+      align-items: flex-end;
+
+      margin-left: 0.135rem;
+
+      font-size: inherit;
+
+      font-weight: 500;
+      text-decoration: inherit;
+
+      color: inherit;
+
+      @media (prefers-reduced-motion: no-preference) {
+        transition-property: color;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 0.15s;
+      }
+
+      &:hover {
+        color: rgb(219, 244, 12);
+      }
+
+      & > svg {
+        display: inline;
+        max-height: 1.75rem;
+        max-width: 1.75rem;
+        min-height: 1.75rem;
+        min-width: 1.75rem;
+      }
+    }
+  }
+
+  & > p {
+    max-width: 20rem;
+
+    margin-top: 1rem;
+
+    line-height: 1.5;
+  }
+}
+
+.Links {
+  padding: 0;
+  margin-top: 2rem;
+  margin-left: 0.25rem;
+
+  display: flex;
+  align-items: center;
+
+  list-style-type: none;
+
+  & > li {
+    margin-right: 1.25rem;
+
+    font-size: 0.75rem;
+    line-height: 1rem;
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition-property: color;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 0.15s;
+    }
+
+    &:hover {
+      color: rgb(226 232 240);
+    }
+
+    & > a {
+      display: block;
+      color: inherit;
+      text-decoration: inherit;
+
+      & > svg {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+  }
+}

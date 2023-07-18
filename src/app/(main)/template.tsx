@@ -5,7 +5,7 @@ import styles from "./template.module.scss";
 
 export default function MainTemplate({ children }: { children: ReactNode }) {
   return (
-    <motion.main
+    <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -13,6 +13,6 @@ export default function MainTemplate({ children }: { children: ReactNode }) {
       className={styles.Wrapper}
     >
       {children}
-    </motion.main>
+    </motion.div>
   );
 }
