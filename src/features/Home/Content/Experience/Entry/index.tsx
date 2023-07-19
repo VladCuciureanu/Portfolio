@@ -60,9 +60,9 @@ export default function HomeContentExperienceEntry(props: EntryProps) {
             <div key={index}>{title}</div>
           ))}
         </h3>
-        <p className={styles.JobDescription}>
+        <div className={styles.JobDescription}>
           <Description />
-        </p>
+        </div>
         {props.links && props.links.length > 0 && (
           <ul className={styles.LinksList}>
             {props.links.map((link, index) => (
