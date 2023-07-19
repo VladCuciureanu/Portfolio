@@ -25,6 +25,13 @@
     & > div {
       opacity: 1 !important;
     }
+    & > section > h3 > a {
+      color: rgb(94 234 212);
+
+      & > svg {
+        transform: translateX(4px) translateY(-3px);
+      }
+    }
   }
 }
 
@@ -96,6 +103,21 @@
   & > a {
     text-decoration: inherit;
     color: rgb(226 232 240);
+
+    & > svg {
+      height: 1rem;
+      width: 1rem;
+      margin-left: 0.25rem;
+
+      display: inline-block;
+      flex-shrink: 0;
+
+      transition-property: transform;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 0.15s;
+
+      transform: translateX(-2px) translateY(3px);
+    }
   }
 
   & > div {

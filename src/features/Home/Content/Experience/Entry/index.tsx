@@ -3,6 +3,7 @@ import styles from "./index.module.scss";
 import LinkIcon from "@/assets/graphics/LinkIcon";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { Suspense } from "react";
+import ExternalLinkArrow from "@/assets/graphics/ExternalLinkArrow";
 
 type EntryProps = {
   jobTitle: string;
@@ -54,6 +55,7 @@ export default function HomeContentExperienceEntry(props: EntryProps) {
         <h3 className={styles.JobTitle}>
           <Link href={props.company.href} target="_blank">
             {`${props.jobTitle} · ${props.company.name}`}
+            <ExternalLinkArrow />
             <div className={styles.LinkExpander} />
           </Link>
           {props.previousJobTitles?.map((title, index) => (
