@@ -1,32 +1,28 @@
+import { allJobs } from "contentlayer/generated";
 import HomeContentExperienceEntry from "./Entry";
 import styles from "./index.module.scss";
+
+const jobs = allJobs.sort(
+  (a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime()
+);
 
 export default function HomeContentExperience() {
   return (
     <div>
       <ol className={styles.Container}>
-        <HomeContentExperienceEntry
-          startDate={new Date("2018/11/26")}
-          jobTitle="Lead Engineer"
-          previousJobTitles={["Senior Engineer", "Engineer"]}
-          company={{ name: "Upstatement", href: "https://faith.software" }}
-          description={
-            "Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more. Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship."
-          }
-          links={[{ label: "Faith Software", href: "https://faith.software" }]}
-          tags={["React", "Express", "TypeScript", "PostgreSQL"]}
-        />
-        {/* <HomeContentExperienceEntry
-          jobTitle="Full-Stack Developer"
-          company={{ name: "Faith Software", href: "https://faith.software" }}
-          description={
-            "Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more. Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship."
-          }
-          startDate={new Date("2022/11/26")}
-          tags={["React", "Express", "TypeScript", "PostgreSQL"]}
-          links={[{ label: "Faith Software", href: "https://faith.software" }]}
-          previousJobTitles={["Test", "Best"]}
-        /> */}
+        {jobs.map((job, index) => (
+          <HomeContentExperienceEntry
+            key={index}
+            startDate={new Date(job.startDate)}
+            endDate={job.endDate ? new Date(job.endDate!) : undefined}
+            jobTitle={job.title}
+            previousJobTitles={job.previousTitles}
+            description={job.body.code}
+            company={job.company}
+            links={job.links}
+            tags={job.tags}
+          />
+        ))}
       </ol>
     </div>
   );

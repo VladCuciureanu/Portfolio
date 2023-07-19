@@ -1,6 +1,8 @@
 import Link from "next/link";
 import styles from "./index.module.scss";
 import LinkIcon from "@/assets/graphics/LinkIcon";
+import { useMDXComponent } from "next-contentlayer/hooks";
+import { Suspense } from "react";
 
 type EntryProps = {
   jobTitle: string;
@@ -12,8 +14,8 @@ type EntryProps = {
   description: string;
   startDate: Date;
   endDate?: Date;
-  tags: string[];
-  links: {
+  tags?: string[];
+  links?: {
     label: string;
     href: string;
   }[];
@@ -42,6 +44,8 @@ export default function HomeContentExperienceEntry(props: EntryProps) {
     dateString = `${startYear} — Present`;
   }
 
+  const Description = useMDXComponent(props.description);
+
   return (
     <li className={styles.Container}>
       <div className={styles.Glass} />
@@ -56,8 +60,10 @@ export default function HomeContentExperienceEntry(props: EntryProps) {
             <div key={index}>{title}</div>
           ))}
         </h3>
-        <p className={styles.JobDescription}>{props.description}</p>
-        {props.links.length > 0 && (
+        <p className={styles.JobDescription}>
+          <Description />
+        </p>
+        {props.links && props.links.length > 0 && (
           <ul className={styles.LinksList}>
             {props.links.map((link, index) => (
               <li key={index}>
@@ -69,7 +75,7 @@ export default function HomeContentExperienceEntry(props: EntryProps) {
             ))}
           </ul>
         )}
-        {props.tags.length > 0 && (
+        {props.tags && props.tags.length > 0 && (
           <ul className={styles.TagsList}>
             {props.tags.map((tag, index) => (
               <li key={index}>{tag}</li>
