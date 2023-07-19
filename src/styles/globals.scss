@@ -4,7 +4,9 @@
 
 body {
   position: relative;
-  height: 100%;
+
+  height: unset;
+  min-height: 100%;
   width: 100%;
 
   color: rgb(148 163 184);
@@ -16,10 +18,4 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   background-color: rgb(15 23 42);
-}
-
-a {
-  &[target="_blank"] {
-    cursor: ne-resize;
-  }
 }
