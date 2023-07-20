@@ -7,8 +7,11 @@ export default function Spotlight() {
 
   const mouseOverHandler = (event: MouseEvent) => {
     if (spotlightRef.current) {
-      spotlightRef.current.style.setProperty("--x-coord", `${event.pageX}px`);
-      spotlightRef.current.style.setProperty("--y-coord", `${event.pageY}px`);
+      const xCoord = (event.clientX / window.innerWidth) * 100;
+      const yCoord = (event.clientY / window.innerHeight) * 100;
+      console.log({ xCoord, yCoord });
+      spotlightRef.current.style.setProperty("--x-coord", `${xCoord}%`);
+      spotlightRef.current.style.setProperty("--y-coord", `${yCoord}%`);
     }
   };
 

@@ -1,6 +1,7 @@
 .Spotlight {
   position: fixed;
-  inset: 0;
+  height: 100vh;
+  width: 100vw;
 
   background: radial-gradient(
     600px at var(--x-coord) var(--y-coord),
@@ -14,8 +15,4 @@
 
   pointer-events: none;
   z-index: 30;
-
-  @media (min-width: 1024px) {
-    position: absolute;
-  }
 }
