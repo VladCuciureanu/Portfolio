@@ -4,6 +4,7 @@ import LinkIcon from "@/assets/graphics/LinkIcon";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import ExternalLinkArrow from "@/assets/graphics/ExternalLinkArrow";
 import { Job } from "contentlayer/generated";
+import PillsList from "@/features/Shared/PillsList";
 
 export default function HomeJobsListEntry({ data }: { data: Job }) {
   const dateString = getJobDateString(data);
@@ -41,11 +42,10 @@ export default function HomeJobsListEntry({ data }: { data: Job }) {
           </ul>
         )}
         {data.tags && data.tags.length > 0 && (
-          <ul className={styles.TagsList}>
-            {data.tags.map((tag, index) => (
-              <li key={index}>{tag}</li>
-            ))}
-          </ul>
+          <PillsList
+            data={data.tags}
+            style={{ marginTop: "0.5rem", marginBottom: "-0.25rem" }}
+          />
         )}
       </section>
     </li>

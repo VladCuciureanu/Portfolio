@@ -6,6 +6,7 @@ import DownloadsIcon from "@/assets/graphics/DownloadsIcon";
 import StarsIcon from "@/assets/graphics/StarsIcon";
 import ForksIcon from "@/assets/graphics/ForksIcon";
 import { Project } from "contentlayer/generated";
+import PillsList from "@/features/Shared/PillsList";
 
 export default function HomeProjectsListEntry({ data }: { data: Project }) {
   const Description = useMDXComponent(data.body.code);
@@ -49,11 +50,10 @@ export default function HomeProjectsListEntry({ data }: { data: Project }) {
           </ul>
         )}
         {data.builtWith && data.builtWith.length > 0 && (
-          <ul className={styles.TagsList}>
-            {data.builtWith.map((tag, index) => (
-              <li key={index}>{tag}</li>
-            ))}
-          </ul>
+          <PillsList
+            data={data.builtWith}
+            style={{ marginTop: "0.75rem", marginBottom: "-0.25rem" }}
+          />
         )}
       </section>
     </li>
