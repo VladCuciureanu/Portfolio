@@ -22,7 +22,7 @@ export function generateMetadata(props: {
   const domain = DefaultMetadataValues.domain;
 
   return {
-    title: `${title} | ${meta}`,
+    title: props.title ? `${title} | ${meta}` : title,
     description,
     metadataBase: new URL(`${protocol}//${domain}`),
     openGraph: {

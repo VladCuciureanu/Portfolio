@@ -19,17 +19,17 @@ export default function GameBoy() {
       >
         <pointLight position={[10, 10, 10]} intensity={1} />
         <Suspense fallback={null}>
-          <Bounds
+          {/* <Bounds
             fit
             clip
             observe
             damping={6}
             margin={Math.min((width / 390) * 0.6, 1)}
-          >
-            <group rotation={[0, 0, -Math.PI / 3.5]} position={[0, 0, 0]}>
-              <GameBoyAdvanceSP />
-            </group>
-          </Bounds>
+          > */}
+          <group rotation={[0, 0, -Math.PI / 3.5]} position={[0, 0, 0]}>
+            <GameBoyAdvanceSP />
+          </group>
+          {/* </Bounds> */}
           <Environment preset="city" />
         </Suspense>
         <OrbitControls

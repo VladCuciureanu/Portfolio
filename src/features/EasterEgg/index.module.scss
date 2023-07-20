@@ -1,16 +1,12 @@
 .Canvas {
-  --canvas-height: calc(100vh - 6.75rem - 32px);
-
-  @media (min-width: 1024px) {
-    --canvas-height: calc(100vh - 6.75rem - 32px);
-  }
-
-  min-height: var(--canvas-height);
-  max-height: var(--canvas-height);
+  height: 100%;
   width: 100%;
-  margin-top: -5.25rem;
 
-  grid-column: 1/-1;
+  z-index: 30;
+
+  & > div {
+    height: 100%;
+  }
 
   &,
   & * {
