@@ -10,8 +10,8 @@ export const metadata: Metadata = generateMetadata({
 
 export default function ZeldaPage() {
   return (
-    <>
+    <section id="emulator" style={{ height: "100vh" }}>
       <EasterEgg />
-    </>
+    </section>
   );
 }
