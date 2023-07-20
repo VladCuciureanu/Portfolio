@@ -1,0 +1,14 @@
+.Rupee {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  color: black;
+
+  z-index: 30;
+
+  &,
+  & > svg {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}
