@@ -3,7 +3,7 @@ import { generateMetadata } from "@/libs/seo";
 import { Metadata } from "next";
 
 export const metadata: Metadata = generateMetadata({
-  title: "Zelda",
+  title: "???",
   description: "I'm so hungry, I could eat an octorock!",
   meta: "Yahaha! You found me!",
 });

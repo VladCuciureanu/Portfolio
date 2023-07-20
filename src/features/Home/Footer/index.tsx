@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "./index.module.scss";
 
-export default function Footer() {
+export default function HomePageFooter() {
   return (
     <footer className={styles.Footer}>
       <p>

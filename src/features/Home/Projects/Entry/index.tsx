@@ -5,24 +5,10 @@ import ExternalLinkArrow from "@/assets/graphics/ExternalLinkArrow";
 import DownloadsIcon from "@/assets/graphics/DownloadsIcon";
 import StarsIcon from "@/assets/graphics/StarsIcon";
 import ForksIcon from "@/assets/graphics/ForksIcon";
+import { Project } from "contentlayer/generated";
 
-type EntryProps = {
-  title: string;
-  href: string;
-  description: string;
-  tags?: string[];
-  additionalMetadata?: {
-    dataType: "stars" | "forks" | "downloads";
-    label: string;
-  }[];
-  github: {
-    stars: number;
-    forks: number;
-  };
-};
-
-export default function HomeContentProjectEntry(props: EntryProps) {
-  const Description = useMDXComponent(props.description);
+export default function HomeProjectsListEntry({ data }: { data: Project }) {
+  const Description = useMDXComponent(data.body.code);
 
   return (
     <li className={styles.Container}>
@@ -30,8 +16,8 @@ export default function HomeContentProjectEntry(props: EntryProps) {
       {/* <header className={styles.Date}>{dateString}</header> */}
       <section className={styles.InfoWrapper}>
         <h3 className={styles.ProjectTitle}>
-          <Link href={props.href} target="_blank">
-            {`${props.title}`}
+          <Link href={data.github.url} target="_blank">
+            {`${data.title ?? data.github.title}`}
             <ExternalLinkArrow />
             <div className={styles.LinkExpander} />
           </Link>
@@ -39,9 +25,9 @@ export default function HomeContentProjectEntry(props: EntryProps) {
         <div className={styles.ProjectDescription}>
           <Description />
         </div>
-        {props.additionalMetadata && props.additionalMetadata.length > 0 && (
+        {data.additionalMetadata && data.additionalMetadata.length > 0 && (
           <ul className={styles.AdditionalMetadataList}>
-            {props.additionalMetadata.map((md, index) => (
+            {data.additionalMetadata.map((md, index) => (
               <li key={index} className={styles.Metadata}>
                 {md.dataType === "downloads" && (
                   <>
@@ -50,21 +36,21 @@ export default function HomeContentProjectEntry(props: EntryProps) {
                 )}
                 {md.dataType === "stars" && (
                   <>
-                    <StarsIcon /> {props.github.stars ?? 0}
+                    <StarsIcon /> {data.github.stars ?? 0}
                   </>
                 )}
                 {md.dataType === "forks" && (
                   <>
-                    <ForksIcon /> {props.github.forks ?? 0}
+                    <ForksIcon /> {data.github.forks ?? 0}
                   </>
                 )}
               </li>
             ))}
           </ul>
         )}
-        {props.tags && props.tags.length > 0 && (
+        {data.builtWith && data.builtWith.length > 0 && (
           <ul className={styles.TagsList}>
-            {props.tags.map((tag, index) => (
+            {data.builtWith.map((tag, index) => (
               <li key={index}>{tag}</li>
             ))}
           </ul>
