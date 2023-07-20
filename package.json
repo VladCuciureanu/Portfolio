@@ -9,13 +9,13 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "contentlayer dev & next dev",
+    "postinstall": "contentlayer postinstall",
+    "dev": "concurrently \"contentlayer dev\" \"next dev\"",
     "prebuild": "contentlayer build",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write ./**/*.{ts,tsx,md,mdx,scss} --no-error-on-unmatched-pattern",
-    "cl:postinstall": "contentlayer postinstall"
+    "format": "prettier --write ./**/*.{ts,tsx,md,mdx,scss} --no-error-on-unmatched-pattern"
   },
   "dependencies": {
     "@radix-ui/react-tooltip": "^1.0.6",
@@ -37,6 +37,9 @@
     "@types/react": "18.2.12",
     "@types/react-dom": "18.2.5",
     "@types/three": "^0.152.1",
+    "concurrently": "^8.2.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.3.1",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.6",
     "prettier": "^2.8.8",

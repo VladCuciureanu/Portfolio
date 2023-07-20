@@ -37,7 +37,7 @@ export const Job = defineDocumentType(() => ({
       type: "list",
       required: false,
       of: defineNestedType(() => ({
-        name: "JobLink",
+        name: "RelevantLink",
         fields: {
           label: { type: "string", required: true },
           href: { type: "string", required: true },

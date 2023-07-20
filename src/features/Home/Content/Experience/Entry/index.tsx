@@ -2,7 +2,6 @@ import Link from "next/link";
 import styles from "./index.module.scss";
 import LinkIcon from "@/assets/graphics/LinkIcon";
 import { useMDXComponent } from "next-contentlayer/hooks";
-import { Suspense } from "react";
 import ExternalLinkArrow from "@/assets/graphics/ExternalLinkArrow";
 
 type EntryProps = {

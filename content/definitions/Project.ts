@@ -18,6 +18,17 @@ export const Project = defineDocumentType(() => ({
       description: "Repo owner's username",
       required: true,
     },
+    highlightOrderId: {
+      type: "number",
+      description:
+        "If not null, the project will be displayed on the home page and sorted by this number",
+      required: false,
+    },
+    imageUrl: {
+      type: "string",
+      description: "Used in home page presentation",
+      required: false,
+    },
     publishedAt: {
       type: "string",
       required: true,
@@ -26,6 +37,23 @@ export const Project = defineDocumentType(() => ({
       type: "list",
       of: { type: "string" },
       required: false,
+    },
+    additionalMetadata: {
+      type: "list",
+      of: defineNestedType(() => ({
+        name: "ProjectAdditionalMetadata",
+        fields: {
+          dataType: {
+            type: "enum",
+            options: ["stars", "forks", "downloads"],
+            required: true,
+          },
+          label: {
+            type: "string",
+            required: true,
+          },
+        },
+      })),
     },
   },
   computedFields: {
@@ -62,7 +90,6 @@ export const Project = defineDocumentType(() => ({
       })),
       resolve: async (doc) => {
         const id = doc._raw.sourceFileName.replace(/\.mdx$/, "");
-
         const data = await getGithubDetails(`${doc.author}/${id}`);
 
         return {
