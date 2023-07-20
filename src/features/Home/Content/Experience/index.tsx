@@ -1,6 +1,8 @@
 import { allJobs } from "contentlayer/generated";
 import HomeContentExperienceEntry from "./Entry";
 import styles from "./index.module.scss";
+import LinkArrow from "@/assets/graphics/LinkArrow";
+import Link from "next/link";
 
 const jobs = allJobs.sort(
   (a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime()
@@ -24,6 +26,9 @@ export default function HomeContentExperience() {
           />
         ))}
       </ol>
+      <Link className={styles.ViewMore} href="/resume" target="_blank">
+        <span>View Full Résumé</span> <LinkArrow />
+      </Link>
     </div>
   );
 }

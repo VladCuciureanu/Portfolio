@@ -8,4 +8,70 @@
   &:hover > * {
     opacity: 0.5;
   }
+
+  & > *:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
+
+.ViewMore {
+  margin-top: 3rem;
+
+  display: inline-flex;
+  align-items: center;
+
+  font-weight: 600;
+  line-height: 1.25;
+
+  color: rgb(226 232 240);
+
+  text-decoration: inherit;
+
+  & > span {
+    border-bottom: 1px solid transparent;
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition-property: border-color;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 0.15s;
+    }
+  }
+
+  & > svg {
+    height: 1rem;
+    width: 1rem;
+
+    margin-left: 0.25rem;
+
+    display: inline-block;
+    flex-shrink: 0;
+
+    transform: translateX(-1px);
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition-property: transform;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 0.15s;
+    }
+  }
+
+  &:hover {
+    & > span {
+      border-color: rgb(94 234 212);
+    }
+
+    & > svg {
+      transform: translateX(0.5rem);
+
+      &:focus-visible {
+        transform: translateX(0.5rem);
+
+        @media (prefers-reduced-motion: no-preference) {
+          transition-property: transform;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-duration: 0.15s;
+        }
+      }
+    }
+  }
 }

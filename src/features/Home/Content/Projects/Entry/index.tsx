@@ -1,6 +1,5 @@
 import Link from "next/link";
 import styles from "./index.module.scss";
-import LinkIcon from "@/assets/graphics/LinkIcon";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import ExternalLinkArrow from "@/assets/graphics/ExternalLinkArrow";
 import DownloadsIcon from "@/assets/graphics/DownloadsIcon";
