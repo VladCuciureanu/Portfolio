@@ -71,7 +71,7 @@
       }
 
       &:hover {
-        color: rgb(219 244 12);
+        color: rgb(var(--accent-color));
       }
 
       & > svg {

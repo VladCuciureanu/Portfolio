@@ -30,23 +30,23 @@ export default async function HomePage() {
               system.
             </p>
             <p>
-              Fast-forward a few years, at 16 years old, I got my first
-              internship at{" "}
+              Fast-forward a few years, I got my first internship at at 16 years
+              old, as a C++ game engine developer at{" "}
               <Link href="https://assist-software.net" target="_blank">
                 a small corporation
               </Link>{" "}
-              as a C++ game engine developer . Several years later, I
-              transitioned to full-stack web development, working on various
-              stacks until landing on React and Express, alongside Typescript.
+              . Several years later, I transitioned to full-stack web
+              development, working on various stacks until landing on React and
+              Express, alongside Typescript.
             </p>
             <p>
-              My main focus these days is building web products as a contractor
-              at{" "}
+              My main focus these days is building web products at{" "}
               <Link href="https://faith.software" target="_blank">
                 Faith
-              </Link>
-              . In my free time I&apos;m also working on various personal
-              projects. <Link href="#projects">Check them out below ↓</Link>
+              </Link>{" "}
+              as a contractor . In my free time I&apos;m also working on various
+              personal projects.{" "}
+              <Link href="#projects">Check them out below ↓</Link>
             </p>
             <p>
               When I&apos;m not at the computer, I&apos;m usually hanging out

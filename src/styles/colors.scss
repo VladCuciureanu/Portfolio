@@ -1,20 +1,21 @@
 @mixin light-colors {
-  // TODO: Change
-  --foreground-color: 226 232 240;
-  --secondary-text-color: 100 116 139;
-  --tertiary-text-color: 203 213 225;
-  --accent-color: 94 234 212;
-  --background-color: 15 23 42;
-  --link-color: 148 163 184;
-  --spotlight-color: 29 78 216;
+  --foreground-color: 41 37 36;
+  --secondary-text-color: 120 113 108;
+  --tertiary-text-color: 68 64 60;
+  --accent-color: 234 88 12;
+  --background-color: 255 237 213;
+  --link-color: 87 83 78;
+  --spotlight-color: 253 186 116;
+  --glass-color: var(--background-color);
 }
 
 @mixin dark-colors {
-  --foreground-color: 226 232 240;
-  --secondary-text-color: 100 116 139;
-  --tertiary-text-color: 203 213 225;
-  --accent-color: 94 234 212;
-  --background-color: 15 23 42;
-  --link-color: 148 163 184;
-  --spotlight-color: 29 78 216;
+  --foreground-color: 231 229 228;
+  --secondary-text-color: 120 113 108;
+  --tertiary-text-color: 214 211 209;
+  --accent-color: 253 186 116;
+  --background-color: 28 25 23;
+  --link-color: 168 162 158;
+  --spotlight-color: 194 65 12;
+  --glass-color: var(--secondary-text-color);
 }
