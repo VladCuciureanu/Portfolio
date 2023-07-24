@@ -6,7 +6,7 @@
   --background-color: 255 237 213;
   --link-color: 87 83 78;
   --spotlight-color: 253 186 116;
-  --glass-color: var(--background-color);
+  --glass-color: 245 227 203;
 }
 
 @mixin dark-colors {
@@ -17,5 +17,5 @@
   --background-color: 28 25 23;
   --link-color: 168 162 158;
   --spotlight-color: 194 65 12;
-  --glass-color: var(--secondary-text-color);
+  --glass-color: 79 74 70;
 }
