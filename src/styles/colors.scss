@@ -1,21 +1,21 @@
 @mixin light-colors {
   --foreground-color: 41 37 36;
-  --secondary-text-color: 120 113 108;
-  --tertiary-text-color: 68 64 60;
+  --secondary-text-color: 68 64 60;
+  --tertiary-text-color: 120 113 108;
   --accent-color: 234 88 12;
   --background-color: 255 237 213;
-  --link-color: 87 83 78;
+  --prose-color: 87 83 78;
   --spotlight-color: 253 186 116;
   --glass-color: 245 227 203;
 }
 
 @mixin dark-colors {
   --foreground-color: 231 229 228;
-  --secondary-text-color: 120 113 108;
-  --tertiary-text-color: 214 211 209;
+  --secondary-text-color: 214 211 209;
+  --tertiary-text-color: 120 113 108;
   --accent-color: 253 186 116;
   --background-color: 28 25 23;
-  --link-color: 168 162 158;
+  --prose-color: 168 162 158;
   --spotlight-color: 194 65 12;
   --glass-color: 79 74 70;
 }

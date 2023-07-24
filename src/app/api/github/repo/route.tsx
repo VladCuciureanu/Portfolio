@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export const config = {
-  runtime: "experimental-edge",
-};
+export const runtime = "edge";
 
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);

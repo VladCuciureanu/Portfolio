@@ -1,6 +1,6 @@
 .Row {
   &:not(:last-child) {
-    border-bottom: 1px solid rgb(var(--tertiary-text-color) / 0.1);
+    border-bottom: 1px solid rgb(var(--secondary-text-color) / 0.1);
   }
 
   & > td {
@@ -90,7 +90,7 @@
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.25;
-  color: rgb(var(--link-color));
+  color: rgb(var(--prose-color));
 
   text-decoration: inherit;
 

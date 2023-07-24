@@ -5,7 +5,7 @@
   font-size: 0.875rem;
   line-height: 1.25rem;
 
-  color: rgb(var(--secondary-text-color));
+  color: rgb(var(--tertiary-text-color));
 
   @media (min-width: 640px) {
     padding-bottom: 0;
@@ -15,7 +15,7 @@
     font-weight: 500;
     text-decoration: inherit;
 
-    color: rgb(var(--link-color));
+    color: rgb(var(--prose-color));
 
     @media (prefers-reduced-motion: no-preference) {
       transition-property: color;

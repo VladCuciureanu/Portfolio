@@ -55,7 +55,7 @@
 
     background-color: rgb(var(--glass-color) / 0.5);
 
-    box-shadow: inset 0 1px 0 0 rgb(var(--link-color) / 0.1);
+    box-shadow: inset 0 1px 0 0 rgb(var(--prose-color) / 0.1);
     filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
       drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
   }
@@ -70,7 +70,7 @@
   line-height: 1rem;
   letter-spacing: 0.025em;
 
-  color: rgb(var(--secondary-text-color));
+  color: rgb(var(--tertiary-text-color));
 
   text-transform: uppercase;
 
@@ -119,7 +119,7 @@
   }
 
   & > div {
-    color: rgb(var(--secondary-text-color));
+    color: rgb(var(--tertiary-text-color));
   }
 }
 
@@ -148,7 +148,7 @@
   font-weight: 500;
   line-height: 1.25rem;
 
-  color: rgb(var(--tertiary-text-color));
+  color: rgb(var(--secondary-text-color));
 
   text-decoration: inherit;
 
