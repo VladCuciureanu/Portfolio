@@ -1,5 +1,20 @@
 @mixin light-colors {
+  // TODO: Change
+  --foreground-color: 226 232 240;
+  --secondary-text-color: 100 116 139;
+  --tertiary-text-color: 203 213 225;
+  --accent-color: 94 234 212;
+  --background-color: 15 23 42;
+  --link-color: 148 163 184;
+  --spotlight-color: 29 78 216;
 }
 
 @mixin dark-colors {
+  --foreground-color: 226 232 240;
+  --secondary-text-color: 100 116 139;
+  --tertiary-text-color: 203 213 225;
+  --accent-color: 94 234 212;
+  --background-color: 15 23 42;
+  --link-color: 148 163 184;
+  --spotlight-color: 29 78 216;
 }

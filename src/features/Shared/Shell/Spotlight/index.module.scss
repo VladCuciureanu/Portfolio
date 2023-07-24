@@ -4,7 +4,7 @@
 
   background: radial-gradient(
     600px at var(--x-coord) var(--y-coord),
-    rgba(29, 78, 216, 0.15),
+    rgb(var(--spotlight-color) / 0.15),
     transparent 80%
   );
 

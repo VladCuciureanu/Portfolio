@@ -9,7 +9,7 @@ body {
   min-height: 100%;
   width: 100%;
 
-  color: rgb(148 163 184);
+  color: rgb(var(--link-color));
   line-height: 1.625;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
@@ -17,5 +17,5 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-color: rgb(15 23 42);
+  background-color: rgb(var(--background-color));
 }

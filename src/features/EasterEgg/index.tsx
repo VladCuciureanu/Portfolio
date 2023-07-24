@@ -5,6 +5,7 @@ import { Canvas } from "@react-three/fiber";
 import GameBoyAdvanceSP from "./Model";
 import styles from "./index.module.scss";
 import EasterEggProvider from "./Context";
+import { Perf } from "r3f-perf";
 
 export default function GameBoy() {
   const [, width] = useWindowSize();
@@ -41,6 +42,7 @@ export default function GameBoy() {
           maxAzimuthAngle={(Math.PI / 8) * 9}
           makeDefault
         />
+        <Perf position="top-left" />
       </Canvas>
       <canvas id="canvas" className={styles.OffscreenCanvas} />
     </EasterEggProvider>

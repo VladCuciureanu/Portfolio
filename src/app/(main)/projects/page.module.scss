@@ -14,7 +14,7 @@
   font-weight: 600;
   line-height: 1.25;
 
-  color: rgb(94 234 212);
+  color: rgb(var(--accent-color));
   text-decoration: inherit;
 
   & > svg {
@@ -45,7 +45,7 @@
   line-height: 2.5rem;
   letter-spacing: -0.025em;
 
-  color: rgb(226 232 240);
+  color: rgb(var(--foreground-color));
 
   @media (min-width: 640px) {
     font-size: 3rem;

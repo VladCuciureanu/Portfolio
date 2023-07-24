@@ -22,7 +22,7 @@
     line-height: 2.5rem;
     letter-spacing: -0.025em;
 
-    color: rgb(226 232 240);
+    color: rgb(var(--foreground-color));
 
     @media (min-width: 640px) {
       font-size: 3rem;
@@ -44,7 +44,7 @@
     line-height: 1.75rem;
     letter-spacing: -0.025em;
 
-    color: rgb(226 232 240);
+    color: rgb(var(--foreground-color));
 
     @media (min-width: 640px) {
       font-size: 1.25rem;
@@ -71,7 +71,7 @@
       }
 
       &:hover {
-        color: rgb(219, 244, 12);
+        color: rgb(219 244 12);
       }
 
       & > svg {
@@ -116,7 +116,7 @@
     }
 
     &:hover {
-      color: rgb(226 232 240);
+      color: rgb(var(--foreground-color));
     }
 
     & > a {

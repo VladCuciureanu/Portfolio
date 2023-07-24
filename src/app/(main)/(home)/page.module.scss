@@ -47,9 +47,9 @@
 
       text-transform: uppercase;
 
-      color: rgb(226 232 240);
+      color: rgb(var(--foreground-color));
 
-      background-color: rgba(15, 23, 42, 0.75);
+      background-color: rgb(var(--background-color) / 0.75);
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
 
@@ -97,7 +97,7 @@
       font-weight: 500;
       text-decoration: inherit;
 
-      color: rgb(226 232 240);
+      color: rgb(var(--foreground-color));
 
       @media (prefers-reduced-motion: no-preference) {
         transition-property: color;
@@ -106,7 +106,7 @@
       }
 
       &:hover {
-        color: rgb(94 234 212);
+        color: rgb(var(--accent-color));
       }
     }
   }

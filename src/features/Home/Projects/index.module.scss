@@ -23,7 +23,7 @@
   font-weight: 600;
   line-height: 1.25;
 
-  color: rgb(226 232 240);
+  color: rgb(var(--foreground-color));
 
   text-decoration: inherit;
 
@@ -57,7 +57,7 @@
 
   &:hover {
     & > span {
-      border-color: rgb(94 234 212);
+      border-color: rgb(var(--accent-color));
     }
 
     & > svg {

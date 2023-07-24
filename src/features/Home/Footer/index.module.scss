@@ -5,7 +5,7 @@
   font-size: 0.875rem;
   line-height: 1.25rem;
 
-  color: rgb(100 116 139);
+  color: rgb(var(--secondary-text-color));
 
   @media (min-width: 640px) {
     padding-bottom: 0;
@@ -15,7 +15,7 @@
     font-weight: 500;
     text-decoration: inherit;
 
-    color: rgb(148 163 184);
+    color: rgb(var(--link-color));
 
     @media (prefers-reduced-motion: no-preference) {
       transition-property: color;
@@ -24,7 +24,7 @@
     }
 
     &:hover {
-      color: rgb(94 234 212);
+      color: rgb(var(--accent-color));
     }
   }
 }
