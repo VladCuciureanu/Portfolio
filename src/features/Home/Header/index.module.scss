@@ -131,3 +131,13 @@
     }
   }
 }
+
+.LinksDivider {
+  height: 1.5rem;
+  min-height: 1.5rem;
+  width: 1px;
+
+  flex-shrink: 0;
+
+  background-color: rgb(var(--foreground-color) / 0.25);
+}

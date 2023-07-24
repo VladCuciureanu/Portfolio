@@ -4,6 +4,7 @@ import LinkedInIcon from "@/assets/graphics/LinkedInIcon";
 import MailIcon from "@/assets/graphics/MailIcon";
 import Link from "next/link";
 import styles from "./index.module.scss";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 export default function HomePageHeader() {
   return (
@@ -23,8 +24,8 @@ export default function HomePageHeader() {
       </div>
       <ul className={styles.Links} aria-label="Links">
         <li>
-          <Link href={"https://www.linkedin.com/in/VladCuciureanu"}>
-            <LinkedInIcon />
+          <Link href={"mailto:vlad.cuciureanu@pm.me"}>
+            <MailIcon />
           </Link>
         </li>
         <li>
@@ -33,9 +34,13 @@ export default function HomePageHeader() {
           </Link>
         </li>
         <li>
-          <Link href={"mailto:vlad.cuciureanu@pm.me"}>
-            <MailIcon />
+          <Link href={"https://www.linkedin.com/in/VladCuciureanu"}>
+            <LinkedInIcon />
           </Link>
+        </li>
+        <li className={styles.LinksDivider} />
+        <li>
+          <ThemeSwitcher />
         </li>
       </ul>
     </header>
