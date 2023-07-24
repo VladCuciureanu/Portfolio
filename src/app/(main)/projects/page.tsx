@@ -5,6 +5,7 @@ import { generateMetadata } from "@/libs/seo";
 import { Metadata } from "next";
 import { allProjects } from "contentlayer/generated";
 import ProjectsTable from "@/features/Projects/Table";
+import ThemeSwitcher from "@/features/Shared/Shell/ThemeSwitcher";
 
 export const metadata: Metadata = generateMetadata({
   title: "All Projects",
@@ -25,6 +26,9 @@ export default function ProjectsArchive() {
       </Link>
       <h1 className={styles.Title}>All Projects</h1>
       <ProjectsTable data={projects} />
+      <ThemeSwitcher
+        style={{ position: "fixed", zIndex: 30, bottom: "1rem", left: "1rem" }}
+      />
     </div>
   );
 }

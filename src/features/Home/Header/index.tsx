@@ -4,7 +4,7 @@ import LinkedInIcon from "@/assets/graphics/LinkedInIcon";
 import MailIcon from "@/assets/graphics/MailIcon";
 import Link from "next/link";
 import styles from "./index.module.scss";
-import ThemeSwitcher from "./ThemeSwitcher";
+import ThemeSwitcher from "../../Shared/Shell/ThemeSwitcher";
 
 export default function HomePageHeader() {
   return (

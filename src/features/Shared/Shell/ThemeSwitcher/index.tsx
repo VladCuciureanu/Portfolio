@@ -4,9 +4,9 @@ import styles from "./index.module.scss";
 import MoonIcon from "@/assets/graphics/MoonIcon";
 import SunIcon from "@/assets/graphics/SunIcon";
 import DesktopIcon from "@/assets/graphics/DesktopIcon";
-import { useEffect, useState } from "react";
+import { CSSProperties, useEffect, useState } from "react";
 
-export default function ThemeSwitcher() {
+export default function ThemeSwitcher({ style }: { style?: CSSProperties }) {
   const { theme, setTheme } = useTheme();
 
   const [mounted, setMounted] = useState(false);
@@ -24,7 +24,7 @@ export default function ThemeSwitcher() {
   }
 
   return (
-    <button className={styles.Button} onClick={toggleTheme}>
+    <button className={styles.Button} onClick={toggleTheme} style={style}>
       {theme === "dark" && <MoonIcon />}
       {theme === "light" && <SunIcon />}
       {theme === "system" && <DesktopIcon />}
