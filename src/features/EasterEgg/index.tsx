@@ -1,14 +1,27 @@
 "use client";
-import React, { Suspense, useLayoutEffect, useState } from "react";
-import { Environment, OrbitControls, Bounds } from "@react-three/drei";
+import React, { Suspense, useLayoutEffect, useRef, useState } from "react";
+import { Environment, Box, CameraControls, useHelper } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import GameBoyAdvanceSP from "./Model";
 import styles from "./index.module.scss";
 import EasterEggProvider from "./Context";
 import { Perf } from "r3f-perf";
+import {
+  Box3,
+  Box3Helper,
+  BufferGeometry,
+  Color,
+  Material,
+  Mesh,
+  NormalBufferAttributes,
+  Vector3,
+} from "three";
 
 export default function GameBoy() {
   const [, width] = useWindowSize();
+
+  const box = new Box3();
+  box.setFromCenterAndSize(new Vector3(1, 1, 1), new Vector3(2, 1, 3));
 
   return (
     <EasterEggProvider>
@@ -20,27 +33,18 @@ export default function GameBoy() {
       >
         <pointLight position={[10, 10, 10]} intensity={1} />
         <Suspense fallback={null}>
-          {/* <Bounds
-            fit
-            clip
-            observe
-            damping={6}
-            margin={Math.min((width / 390) * 0.6, 1)}
-          > */}
           <group rotation={[0, 0, -Math.PI / 3.5]} position={[0, 0, 0]}>
             <GameBoyAdvanceSP />
           </group>
-          {/* </Bounds> */}
           <Environment preset="city" />
         </Suspense>
-        <OrbitControls
-          enablePan={false}
-          enableZoom={false}
+        <CameraControls
           minPolarAngle={Math.PI / 2.2}
           maxPolarAngle={Math.PI / 2.2}
           minAzimuthAngle={-Math.PI / 8}
           maxAzimuthAngle={(Math.PI / 8) * 9}
           makeDefault
+          // fitToBox={boundingBoxRef.current?.geometry.boundingBox ?? undefined}
         />
         <Perf position="top-left" />
       </Canvas>
