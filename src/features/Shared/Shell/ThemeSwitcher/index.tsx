@@ -3,7 +3,7 @@ import { useTheme } from "next-themes";
 import styles from "./index.module.scss";
 import MoonIcon from "@/assets/graphics/MoonIcon";
 import SunIcon from "@/assets/graphics/SunIcon";
-import DesktopIcon from "@/assets/graphics/DesktopIcon";
+import DisplayIcon from "@/assets/graphics/DisplayIcon";
 import { CSSProperties, useEffect, useState } from "react";
 
 export default function ThemeSwitcher({ style }: { style?: CSSProperties }) {
@@ -27,7 +27,7 @@ export default function ThemeSwitcher({ style }: { style?: CSSProperties }) {
     <button className={styles.Button} onClick={toggleTheme} style={style}>
       {theme === "dark" && <MoonIcon />}
       {theme === "light" && <SunIcon />}
-      {theme === "system" && <DesktopIcon />}
+      {theme === "system" && <DisplayIcon />}
     </button>
   );
 }

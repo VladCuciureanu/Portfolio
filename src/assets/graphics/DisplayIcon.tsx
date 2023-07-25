@@ -1,6 +1,6 @@
 import { ComponentProps } from "react";
 
-export default function DesktopIcon(props: ComponentProps<"svg">) {
+export default function DisplayIcon(props: ComponentProps<"svg">) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
