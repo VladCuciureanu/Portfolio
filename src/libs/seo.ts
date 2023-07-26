@@ -32,11 +32,25 @@ export function generateMetadata(props: {
         ? `${protocol}//${domain}${props.path}`
         : `${protocol}//${domain}`,
       siteName: title,
+      description,
       images: [
         {
-          url: `/api/og?` + new URLSearchParams(props),
-          width: 1600,
-          height: 836,
+          url: `og.png`,
+          width: 2400,
+          height: 1260,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      title,
+      description,
+      card: "summary_large_image",
+      images: [
+        {
+          url: `og.png`,
+          width: 2400,
+          height: 1260,
           alt: title,
         },
       ],
