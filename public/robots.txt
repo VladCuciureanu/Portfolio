@@ -8,3 +8,4 @@ Disallow: /secret
 # Allow all crawlers
 User-agent: *
 Allow: /
+Allow: /api/og/*
