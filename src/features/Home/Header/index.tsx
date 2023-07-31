@@ -1,4 +1,3 @@
-import FaithSoftwareIcon from "@/assets/graphics/FaithSoftwareIcon";
 import GitHubIcon from "@/assets/graphics/GitHubIcon";
 import LinkedInIcon from "@/assets/graphics/LinkedInIcon";
 import MailIcon from "@/assets/graphics/MailIcon";
@@ -13,12 +12,7 @@ export default function HomePageHeader() {
         <h1>
           <Link href="/">Vlad Cuciureanu</Link>
         </h1>
-        <h2>
-          Full-Stack Dev at{" "}
-          <Link href="https://faith.software" target="_blank">
-            <FaithSoftwareIcon /> Faith
-          </Link>
-        </h2>
+        <h2>Full-Stack Developer (Contractor)</h2>
         <p>I like to make things.</p>
         <nav></nav>
       </div>

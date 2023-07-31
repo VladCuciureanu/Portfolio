@@ -98,7 +98,8 @@
     line-height: 1.375;
   }
 
-  & > a {
+  & > a,
+  & > span {
     text-decoration: inherit;
     color: rgb(var(--foreground-color));
 

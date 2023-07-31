@@ -40,13 +40,9 @@ export default async function HomePage() {
               Express, alongside Typescript.
             </p>
             <p>
-              My main focus these days is building web products at{" "}
-              <Link href="https://faith.software" target="_blank">
-                Faith
-              </Link>{" "}
-              as a contractor . In my free time I&apos;m also working on various
-              personal projects.{" "}
-              <Link href="#projects">Check them out below ↓</Link>
+              My main focus these days is building web products as a contractor.
+              In my free time I&apos;m also working on various personal
+              projects. <Link href="#projects">Check them out below ↓</Link>
             </p>
             <p>
               When I&apos;m not at the computer, I&apos;m usually hanging out

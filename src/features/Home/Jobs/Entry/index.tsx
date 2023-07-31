@@ -17,11 +17,16 @@ export default function HomeJobsListEntry({ data }: { data: Job }) {
       <header className={styles.Date}>{dateString}</header>
       <section className={styles.InfoWrapper}>
         <h3 className={styles.JobTitle}>
-          <Link href={data.company.href} target="_blank">
-            {`${data.title} · ${data.company.name}`}
-            <ExternalLinkArrow />
-            <div className={styles.LinkExpander} />
-          </Link>
+          {data.company.href && (
+            <Link href={data.company.href} target="_blank">
+              {`${data.title} · ${data.company.name}`}
+              <ExternalLinkArrow />
+              <div className={styles.LinkExpander} />
+            </Link>
+          )}
+          {!data.company.href && (
+            <span>{`${data.title} · ${data.company.name}`}</span>
+          )}
           {data.previousTitles?.map((title, index) => (
             <div key={index}>{title}</div>
           ))}

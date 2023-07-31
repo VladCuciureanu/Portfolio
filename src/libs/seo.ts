@@ -5,7 +5,7 @@ const protocol = isProd ? "https:" : "http:";
 
 export const DefaultMetadataValues = {
   title: "Vlad Cuciureanu",
-  description: "Full-Stack Developer at Faith Software",
+  description: "Full-Stack Developer",
   meta: "vladcuciureanu.com",
   domain: process.env.HOST,
 };

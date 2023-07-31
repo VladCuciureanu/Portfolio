@@ -28,7 +28,7 @@ export const Job = defineDocumentType(() => ({
         name: "Company",
         fields: {
           name: { type: "string", required: true },
-          href: { type: "string", required: true },
+          href: { type: "string", required: false },
         },
       })),
     },
