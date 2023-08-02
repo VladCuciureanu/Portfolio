@@ -1,5 +1,6 @@
 import { mGBAEmulator } from "@/libs/emulator";
 import { GameBoyAdvanceKey } from "@/libs/emulator/constants";
+import { useRouter } from "next/router";
 import { ReactNode, createContext, useEffect, useState } from "react";
 
 export const InitialEasterEggState: EasterEggState = {
@@ -38,12 +39,14 @@ export default function EasterEggProvider({
         })
         .then(() => {});
     } else {
-      if (emulator) {
-        emulator.quitGame();
-        initEmulator(null);
-      }
+      stopEmulation();
     }
   }, [isPowered]);
+
+  const stopEmulation = () => {
+    emulator?.quitGame();
+    initEmulator(null);
+  };
 
   useEffect(() => {
     emulator?.setVolume(volume / 100);
