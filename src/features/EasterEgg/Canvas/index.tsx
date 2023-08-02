@@ -1,13 +1,13 @@
 "use client";
-import { Environment, OrbitControls } from "@react-three/drei";
+import { Box, Environment, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { Suspense } from "react";
 import GameBoyAdvanceSP from "../Model";
 import styles from "./index.module.scss";
+import { Suspense } from "react";
 
 export default function EasterEggCanvas() {
   return (
-    <>
+    <Suspense fallback={<LoadingState />}>
       <Canvas
         className={styles.Canvas}
         camera={{
@@ -15,12 +15,10 @@ export default function EasterEggCanvas() {
         }}
       >
         <pointLight position={[10, 10, 10]} intensity={1} />
-        <Suspense fallback={null}>
-          <group rotation={[0, 0, -Math.PI / 3.5]} position={[0, 0, 0]}>
-            <GameBoyAdvanceSP />
-          </group>
-          <Environment preset="city" />
-        </Suspense>
+        <group rotation={[0, 0, -Math.PI / 3.5]} position={[0, 0, 0]}>
+          <GameBoyAdvanceSP />
+        </group>
+        <Environment preset="city" />
         <OrbitControls
           minPolarAngle={Math.PI / 2.2}
           maxPolarAngle={Math.PI / 2.2}
@@ -31,6 +29,10 @@ export default function EasterEggCanvas() {
         {/* <Perf position="top-left" /> */}
       </Canvas>
       <canvas id="canvas" className={styles.OffscreenCanvas} />
-    </>
+    </Suspense>
   );
+}
+
+function LoadingState() {
+  return <div className={styles.Loading}>Loading...</div>;
 }
