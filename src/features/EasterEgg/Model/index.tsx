@@ -1,5 +1,6 @@
+"use client";
 import * as THREE from "three";
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { ThreeEvent } from "@react-three/fiber";
 import { GLTF } from "three/examples/jsm/loaders/GLTFLoader";
 import { useGLTF } from "@react-three/drei";
@@ -8,7 +9,6 @@ import { EasterEggContext } from "../Context";
 import DPadMesh from "./DPad";
 import GameBoyAdvanceScreen from "./Screen";
 import { GameBoyAdvanceKey } from "@/libs/emulator/constants";
-import { usePathname } from "next/navigation";
 
 export const OccludingMeshes = ["gba-body", "gba-screen"];
 
@@ -45,16 +45,6 @@ export default function GameBoyAdvanceSP() {
     context.emulator?.simulateKeyUp(k);
     context.setPressedKeys(context.pressedKeys.filter((it) => it !== k));
   };
-
-  useEffect(() => {
-    const navigationHandler = () => {
-      window.location.reload(); // Needed to kill emulator on navigation away
-    };
-    addEventListener("popstate", navigationHandler);
-    return () => {
-      removeEventListener("popstate", navigationHandler);
-    };
-  }, []);
 
   return (
     <>

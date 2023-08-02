@@ -1,7 +1,8 @@
+"use client";
 import { mGBAEmulator } from "@/libs/emulator";
 import { GameBoyAdvanceKey } from "@/libs/emulator/constants";
-import { useRouter } from "next/router";
 import { ReactNode, createContext, useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export const InitialEasterEggState: EasterEggState = {
   emulator: null,
@@ -27,30 +28,39 @@ export default function EasterEggProvider({
     InitialEasterEggState.pressedKeys
   );
 
-  useEffect(() => {
-    if (isPowered) {
-      const _emulator = new mGBAEmulator();
-      fetch("/assets/binaries/zelda_minish.gba")
-        .then((res) => res.arrayBuffer())
-        .then((buffer) => _emulator.loadBuffer("zelda", buffer))
-        .then(() => initEmulator(_emulator))
-        .then(() => {
-          _emulator.setVolume(volume / 100);
-        })
-        .then(() => {});
-    } else {
-      stopEmulation();
-    }
-  }, [isPowered]);
+  // Power on
+  if (isPowered && emulator === null) {
+    const _emulator = new mGBAEmulator();
+    fetch("/assets/binaries/zelda_minish.gba")
+      .then((res) => res.arrayBuffer())
+      .then((buffer) => _emulator.loadBuffer("zelda", buffer))
+      .then(() => initEmulator(_emulator))
+      .then(() => {
+        _emulator.setVolume(volume / 100);
+      })
+      .then(() => {});
+  }
 
-  const stopEmulation = () => {
+  // Power off
+  if (!isPowered && emulator !== null) {
     emulator?.quitGame();
     initEmulator(null);
-  };
+  }
+
+  // Volume
+  emulator?.setVolume(volume / 100);
 
   useEffect(() => {
-    emulator?.setVolume(volume / 100);
-  }, [volume]);
+    const event = "popstate";
+    const handler = () => {
+      console.log("test");
+      window.location.reload();
+    };
+    addEventListener(event, handler);
+    return () => {
+      removeEventListener(event, handler);
+    };
+  }, []);
 
   return (
     <EasterEggContext.Provider
