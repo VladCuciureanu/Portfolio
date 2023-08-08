@@ -1,6 +1,6 @@
 import { Project } from "contentlayer/generated";
 import styles from "./index.module.scss";
-import PillsList from "@/features/Shared/PillsList";
+import PillsList from "@/components/Shared/PillsList";
 import Link from "next/link";
 import GitHubIcon from "@/assets/graphics/GitHubIcon";
 import DownloadsIcon from "@/assets/graphics/DownloadsIcon";

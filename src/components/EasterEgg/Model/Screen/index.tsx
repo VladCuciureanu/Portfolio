@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { EasterEggContext } from "@/features/EasterEgg/Context";
+import { EasterEggContext } from "@/components/EasterEgg/Context";
 import { useContext } from "react";
 import { useFrame } from "@react-three/fiber";
 

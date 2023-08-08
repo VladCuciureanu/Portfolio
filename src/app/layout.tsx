@@ -1,5 +1,5 @@
 import { DefaultMetadata } from "@/libs/seo";
-import Providers from "@/features/Shared/Providers";
+import Providers from "@/components/Shared/Providers";
 import "@/styles/globals.scss";
 
 import { Inter } from "next/font/google";

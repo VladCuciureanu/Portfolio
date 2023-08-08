@@ -6,7 +6,7 @@ import DownloadsIcon from "@/assets/graphics/DownloadsIcon";
 import StarsIcon from "@/assets/graphics/StarsIcon";
 import ForksIcon from "@/assets/graphics/ForksIcon";
 import { Project } from "contentlayer/generated";
-import PillsList from "@/features/Shared/PillsList";
+import PillsList from "@/components/Shared/PillsList";
 
 export default function HomeProjectsListEntry({ data }: { data: Project }) {
   const Description = useMDXComponent(data.body.code);

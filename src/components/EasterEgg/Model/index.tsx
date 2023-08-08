@@ -4,7 +4,7 @@ import React, { useContext } from "react";
 import { ThreeEvent } from "@react-three/fiber";
 import { GLTF } from "three/examples/jsm/loaders/GLTFLoader";
 import { useGLTF } from "@react-three/drei";
-import InteractiveMesh from "@/components/InteractiveMesh";
+import InteractiveMesh from "@/components/EasterEgg/InteractiveMesh";
 import { EasterEggContext } from "../Context";
 import DPadMesh from "./DPad";
 import GameBoyAdvanceScreen from "./Screen";

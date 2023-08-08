@@ -4,8 +4,8 @@ import LinkArrow from "@/assets/graphics/LinkArrow";
 import { generateMetadata } from "@/libs/seo";
 import { Metadata } from "next";
 import { allProjects } from "contentlayer/generated";
-import ProjectsTable from "@/features/Projects/Table";
-import ThemeSwitcher from "@/features/Shared/Shell/ThemeSwitcher";
+import ProjectsTable from "@/components/Projects/Table";
+import ThemeSwitcher from "@/components/Shared/Shell/ThemeSwitcher";
 
 export const metadata: Metadata = generateMetadata({
   title: "All Projects",

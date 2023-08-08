@@ -1,6 +1,6 @@
-import InteractiveMesh from "@/components/InteractiveMesh";
+import InteractiveMesh from "@/components/EasterEgg/InteractiveMesh";
 import { OccludingMeshes } from "..";
-import { EasterEggContext } from "@/features/EasterEgg/Context";
+import { EasterEggContext } from "@/components/EasterEgg/Context";
 import { useContext } from "react";
 import * as THREE from "three";
 import { ThreeEvent } from "@react-three/fiber";

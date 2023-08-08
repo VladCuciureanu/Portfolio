@@ -1,6 +1,6 @@
 import LinkArrow from "@/assets/graphics/LinkArrow";
-import EasterEgg from "@/features/EasterEgg";
-import ThemeSwitcher from "@/features/Shared/Shell/ThemeSwitcher";
+import EasterEgg from "@/components/EasterEgg";
+import ThemeSwitcher from "@/components/Shared/Shell/ThemeSwitcher";
 import { generateMetadata } from "@/libs/seo";
 import { Metadata } from "next";
 import Link from "next/link";

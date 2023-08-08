@@ -1,8 +1,8 @@
-import Header from "@/features/Home/Header";
+import Header from "@/components/Home/Header";
 import styles from "./page.module.scss";
-import Experience from "@/features/Home/Jobs";
-import Projects from "@/features/Home/Projects";
-import Footer from "@/features/Home/Footer";
+import Experience from "@/components/Home/Jobs";
+import Projects from "@/components/Home/Projects";
+import Footer from "@/components/Home/Footer";
 import Link from "next/link";
 import { allJobs, allProjects } from "contentlayer/generated";
 
@@ -34,7 +34,7 @@ export default async function HomePage() {
               old, as a C++ game engine developer at{" "}
               <Link href="https://assist-software.net" target="_blank">
                 a small corporation
-              </Link>{" "}
+              </Link>
               . Several years later, I transitioned to full-stack web
               development, working on various stacks until landing on React and
               Express, alongside Typescript.
