@@ -23,26 +23,28 @@ export default async function HomePage() {
           <h2>About</h2>
           <div className={styles.ProseBlock}>
             <p>
-              Since before I can remember, I loved anything tech. I would spend
-              hours exploring the depths of my father&apos;s desktop, trying to
-              figure out how the games I used to play and Windows (the operating
-              system) functioned. Lost count of how many times I bricked the
-              system.
+              Since before I can remember, I loved <i>anything</i> tech. I would
+              spend <strong>hours</strong> exploring the depths of my
+              father&apos;s desktop, trying to figure out how the games I used
+              to play and Windows (the operating system) functioned. Lost count
+              of how many times I bricked the system.
             </p>
             <p>
               Fast-forward a few years, I got my first internship at at 16 years
-              old, as a C++ game engine developer at{" "}
+              old, as a <i>C++ game engine developer</i> at{" "}
               <Link href="https://assist-software.net" target="_blank">
                 a small corporation
               </Link>
-              . Several years later, I transitioned to full-stack web
-              development, working on various stacks until landing on React and
-              Express, alongside Typescript.
+              . Several years later, I transitioned to{" "}
+              <i>full-stack web development</i>, working on various stacks until
+              landing on <u>React</u> and <u>Express</u>, alongside{" "}
+              <u>Typescript</u>.
             </p>
             <p>
-              My main focus these days is building web products as a contractor.
-              In my free time I&apos;m also working on various personal
-              projects. <Link href="#projects">Check them out below ↓</Link>
+              My main focus these days is building <i>web products</i> as a{" "}
+              <u>contractor</u>. In my free time I&apos;m also working on
+              various personal projects.{" "}
+              <Link href="#projects">Check them out below ↓</Link>
             </p>
             <p>
               When I&apos;m not at the computer, I&apos;m usually hanging out

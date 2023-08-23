@@ -12,7 +12,12 @@ export default function HomePageHeader() {
         <h1>
           <Link href="/">Vlad Cuciureanu</Link>
         </h1>
-        <h2>Full-Stack Developer (Contractor)</h2>
+        <h2>
+          Full-Stack Developer
+          <div style={{ marginLeft: ".25rem", opacity: 0.35 }}>
+            (Contractor)
+          </div>
+        </h2>
         <p>I like to make things.</p>
         <nav></nav>
       </div>
