@@ -1,4 +1,4 @@
-import Header from "@/components/Home/Header";
+import Sidebar from "@/components/Home/Sidebar";
 import styles from "./page.module.scss";
 import Experience from "@/components/Home/Jobs";
 import Projects from "@/components/Home/Projects";
@@ -17,7 +17,7 @@ const projects = allProjects
 export default async function HomePage() {
   return (
     <div className={styles.Wrapper}>
-      <Header />
+      <Sidebar />
       <main className={styles.Container}>
         <section id="about">
           <h2>About</h2>
@@ -30,19 +30,19 @@ export default async function HomePage() {
               of how many times I bricked the system.
             </p>
             <p>
-              Fast-forward a few years, I got my first internship at at 16 years
+              Fast-forward a few years, I got my first internship at 16 years
               old, as a <i>C++ game engine developer</i> at{" "}
               <Link href="https://assist-software.net" target="_blank">
                 a small corporation
               </Link>
               . Several years later, I transitioned to{" "}
               <i>full-stack web development</i>, working on various stacks until
-              landing on <u>React</u> and <u>Express</u>, alongside{" "}
-              <u>Typescript</u>.
+              landing on <i>React</i> and <i>Express</i>, alongside{" "}
+              <i>Typescript</i>.
             </p>
             <p>
               My main focus these days is building <i>web products</i> as a{" "}
-              <u>contractor</u>. In my free time I&apos;m also working on
+              <i>contractor</i>. In my free time I&apos;m also working on
               various personal projects.{" "}
               <Link href="#projects">Check them out below ↓</Link>
             </p>

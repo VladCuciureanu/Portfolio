@@ -5,9 +5,9 @@ import Link from "next/link";
 import styles from "./index.module.scss";
 import ThemeSwitcher from "../../Shared/Shell/ThemeSwitcher";
 
-export default function HomePageHeader() {
+export default function HomePageSidebar() {
   return (
-    <header className={styles.Header}>
+    <header className={styles.Sidebar}>
       <div className={styles.Bio}>
         <h1>
           <Link href="/">Vlad Cuciureanu</Link>
