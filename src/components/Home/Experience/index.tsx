@@ -1,10 +1,10 @@
-import { Job, allJobs } from "contentlayer/generated";
+import { Job } from "contentlayer/generated";
 import Entry from "./Entry";
 import LinkArrow from "@/assets/graphics/LinkArrow";
 import Link from "next/link";
 import styles from "./index.module.scss";
 
-export default function HomeJobsList({ data }: { data: Job[] }) {
+export default function Experience({ data }: { data: Job[] }) {
   return (
     <div>
       <ol className={styles.Container}>

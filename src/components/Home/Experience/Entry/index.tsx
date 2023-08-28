@@ -6,7 +6,7 @@ import ExternalLinkArrow from "@/assets/graphics/ExternalLinkArrow";
 import { Job } from "contentlayer/generated";
 import PillsList from "@/components/Shared/PillsList";
 
-export default function HomeJobsListEntry({ data }: { data: Job }) {
+export default function ExperienceEntry({ data }: { data: Job }) {
   const dateString = getJobDateString(data);
 
   const Description = useMDXComponent(data.body.code);

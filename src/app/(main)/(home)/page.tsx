@@ -1,6 +1,6 @@
 import Sidebar from "@/components/Home/Sidebar";
 import styles from "./page.module.scss";
-import Experience from "@/components/Home/Jobs";
+import Experience from "@/components/Home/Experience";
 import Projects from "@/components/Home/Projects";
 import Footer from "@/components/Home/Footer";
 import Link from "next/link";
