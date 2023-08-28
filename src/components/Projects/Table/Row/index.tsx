@@ -25,19 +25,19 @@ export default function ProjectsTableRow({ data }: { data: Project }) {
               <li key={index} className={styles.Metadata}>
                 {md.dataType === "downloads" && (
                   <>
-                    {/* <DownloadsIcon /> */}
+                    <DownloadsIcon />
                     {md.label}
                   </>
                 )}
                 {md.dataType === "stars" && (
                   <>
-                    {/* <StarsIcon /> */}
+                    <StarsIcon />
                     {data.github.stars ?? 0}
                   </>
                 )}
                 {md.dataType === "forks" && (
                   <>
-                    {/* <ForksIcon /> */}
+                    <ForksIcon />
                     {data.github.forks ?? 0}
                   </>
                 )}

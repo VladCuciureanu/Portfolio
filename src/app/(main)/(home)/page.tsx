@@ -31,11 +31,8 @@ export default async function HomePage() {
             </p>
             <p>
               Fast-forward a few years, I got my first internship at 16 years
-              old, as a <i>C++ game engine developer</i> at{" "}
-              <Link href="https://assist-software.net" target="_blank">
-                a small corporation
-              </Link>
-              . Several years later, I transitioned to{" "}
+              old, as a <i>C++ game engine developer</i> at a small corporation.
+              Several years later, I transitioned to{" "}
               <i>full-stack web development</i>, working on various stacks until
               landing on <i>React</i> and <i>Express</i>, alongside{" "}
               <i>Typescript</i>.
