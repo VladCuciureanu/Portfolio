@@ -48,10 +48,7 @@ export default function ProjectsTableRow({ data }: { data: Project }) {
       </td>
       <td>
         {data.builtWith && data.builtWith.length > 0 && (
-          <PillsList
-            data={data.builtWith}
-            style={{ transform: "translateY(-0.375rem)" }}
-          />
+          <PillsList data={data.builtWith} />
         )}
       </td>
       <td>
