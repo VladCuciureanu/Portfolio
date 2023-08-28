@@ -14,7 +14,9 @@ export default function HomeProjectsListEntry({ data }: { data: Project }) {
   return (
     <li className={styles.Container}>
       <div className={styles.Glass} />
-      {/* <header className={styles.Date}>{dateString}</header> */}
+      <header className={styles.Image}>
+        <PlaceholderImage />
+      </header>
       <section className={styles.InfoWrapper}>
         <h3 className={styles.ProjectTitle}>
           <Link href={data.github.url} target="_blank">
@@ -58,4 +60,8 @@ export default function HomeProjectsListEntry({ data }: { data: Project }) {
       </section>
     </li>
   );
+}
+
+function PlaceholderImage() {
+  return <div className={styles.PlaceholderImage} />;
 }
