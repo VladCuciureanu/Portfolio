@@ -4,7 +4,7 @@ export const Projects: Project[] = [
   {
     label: "Toothpick",
     href: "https://github.com/VladCuciureanu/Toothpick",
-    decorations: { downloads: "10.000+ Installs" },
+    decorations: { downloads: "14.500+ Installs" },
     tags: ["React", "Node.js"],
     year: 2022,
     showcase: {
@@ -65,7 +65,7 @@ export const Projects: Project[] = [
   {
     label: "Lyra",
     href: "https://github.com/VladCuciureanu/Lyra",
-    tags: ["React", "Node.js", "WebRTC", "Redis"],
+    tags: ["React", "Next.js", "Node.js", "WebRTC", "Redis"],
     year: 2021,
     showcase: {
       orderId: 5,
@@ -76,5 +76,29 @@ export const Projects: Project[] = [
         </>
       ),
     },
+  },
+  {
+    label: "SwaggerUI Watch",
+    href: "https://github.com/VladCuciureanu/SwaggerUiWatch",
+    tags: ["TypeScript"],
+    year: 2023,
+  },
+  {
+    label: "UnitBuddy",
+    href: "https://github.com/VladCuciureanu/UnitBuddy",
+    tags: ["Browser Extension", "TypeScript"],
+    year: 2023,
+  },
+  {
+    label: "Khora",
+    href: "https://github.com/VladCuciureanu/Khora",
+    tags: ["C++", "CMake", "ImGUI"],
+    year: 2020,
+  },
+  {
+    label: "Garlic Bread",
+    href: "https://github.com/VladCuciureanu/GarlicBread",
+    tags: ["Node.js", "PostgreSQL"],
+    year: 2020,
   },
 ];

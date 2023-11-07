@@ -2,6 +2,10 @@ import ProjectsArchiveRow from "@/components/projects/projects-archive-row";
 import { Projects } from "@/constants/projects";
 
 export default function ProjectsArchive() {
+  const SortedProjects = Projects.sort(
+    (a, b) => b.year - a.year || a.label.localeCompare(b.label),
+  );
+
   return (
     <div className="lg:py-24">
       <a
@@ -47,7 +51,7 @@ export default function ProjectsArchive() {
           </tr>
         </thead>
         <tbody>
-          {Projects.map((project, idx) => (
+          {SortedProjects.map((project, idx) => (
             <ProjectsArchiveRow key={idx} data={project} />
           ))}
         </tbody>
