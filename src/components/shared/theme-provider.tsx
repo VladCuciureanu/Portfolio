@@ -4,6 +4,8 @@ import { ReactNode } from "react";
 
 export default function ThemeProvider({ children }: { children: ReactNode }) {
   return (
-    <NextThemesProvider defaultTheme="dark">{children}</NextThemesProvider>
+    <NextThemesProvider defaultTheme="dark" attribute="class">
+      {children}
+    </NextThemesProvider>
   );
 }

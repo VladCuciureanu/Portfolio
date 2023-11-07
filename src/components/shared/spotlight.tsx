@@ -19,7 +19,7 @@ export default function Spotlight(props: ComponentProps<"div">) {
           : undefined
       }
     >
-      <div className="pointer-events-none fixed inset-0 z-30 transition duration-300 bg-spotlight" />
+      <div className="pointer-events-none fixed inset-0 z-30 transition duration-300 bg-lightSpotlight dark:bg-darkSpotlight" />
       {props.children}
     </div>
   );

@@ -9,7 +9,7 @@ export default function ProjectsArchive() {
   return (
     <div className="lg:py-24">
       <a
-        className="group mb-2 inline-flex items-center font-semibold leading-tight text-orange-300"
+        className="group mb-2 inline-flex items-center font-semibold leading-tight text-orange-500 dark:text-orange-300"
         href="/"
       >
         <svg
@@ -27,25 +27,25 @@ export default function ProjectsArchive() {
         </svg>
         Vlad Cuciureanu
       </a>
-      <h1 className="text-4xl font-bold tracking-tight text-neutral-200 sm:text-5xl">
+      <h1 className="text-4xl font-bold tracking-tight text-stone-800 dark:text-stone-200 sm:text-5xl">
         All Projects
       </h1>
       <table id="content" className="mt-12 w-full border-collapse text-left">
-        <thead className="sticky top-0 z-10 border-b border-neutral-300/10 bg-neutral-900/75 px-6 py-5 backdrop-blur">
+        <thead className="sticky top-0 z-10 border-b border-stone-700/10 dark:border-stone-300/10 bg-sand/75 dark:bg-stone-900/75 px-6 py-5 backdrop-blur">
           <tr>
-            <th className="py-4 pr-8 text-sm font-semibold text-neutral-200">
+            <th className="py-4 pr-8 text-sm font-semibold text-stone-800 dark:text-stone-200">
               Year
             </th>
-            <th className="py-4 pr-8 text-sm font-semibold text-neutral-200">
+            <th className="py-4 pr-8 text-sm font-semibold text-stone-800 dark:text-stone-200">
               Project
             </th>
-            <th className="hidden py-4 pr-8 text-sm font-semibold text-neutral-200 md:table-cell">
+            <th className="hidden py-4 pr-8 text-sm font-semibold text-stone-800 dark:text-stone-200 md:table-cell">
               Notes
             </th>
-            <th className="hidden py-4 pr-8 text-sm font-semibold text-neutral-200 lg:table-cell">
+            <th className="hidden py-4 pr-8 text-sm font-semibold text-stone-800 dark:text-stone-200 lg:table-cell">
               Built with
             </th>
-            <th className="hidden py-4 pr-8 text-sm font-semibold text-neutral-200 sm:table-cell">
+            <th className="hidden py-4 pr-8 text-sm font-semibold text-stone-800 dark:text-stone-200 sm:table-cell">
               Link
             </th>
           </tr>

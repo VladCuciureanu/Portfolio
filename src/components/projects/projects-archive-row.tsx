@@ -5,15 +5,15 @@ export default function ProjectsArchiveRow({ data }: { data: Project }) {
   const url = new URL(data.href);
 
   return (
-    <tr className="border-b border-neutral-300/10 last:border-none">
+    <tr className="border-b border-stone-700/10 dark:border-stone-300/10 last:border-none">
       <td className="py-4 pr-4 align-top text-sm">
         <div className="translate-y-px">{data.year}</div>
       </td>
-      <td className="py-4 pr-4 align-top font-semibold leading-snug text-neutral-200">
+      <td className="py-4 pr-4 align-top font-semibold leading-snug text-stone-800 dark:text-stone-200">
         <div>
           <div className="block sm:hidden">
             <Link
-              className="inline-flex items-baseline font-medium leading-tight text-neutral-200 hover:text-neutral-200 focus-visible:text-orange-300 sm:hidden group/link text-base"
+              className="inline-flex items-baseline font-medium leading-tight text-stone-800 dark:text-stone-200 hover:text-stone-800 dark:hover:text-stone-200 focus-visible:text-orange-500 dark:focus-visible:text-orange-300 sm:hidden group/link text-base"
               href="https://apps.apple.com/app/apple-store/id1550995547?pt=122219983&ct=threadablebooks.com%20header&mt=8"
               target="_blank"
               aria-label={data.label}
@@ -45,7 +45,7 @@ export default function ProjectsArchiveRow({ data }: { data: Project }) {
         <div className="whitespace-nowrap">
           {data.decorations?.stars && (
             <span
-              className="relative inline-flex items-center text-sm font-medium text-neutral-400"
+              className="relative inline-flex items-center text-sm font-medium text-stone-600 dark:text-stone-400"
               aria-label={`${data.decorations.stars} stars`}
             >
               <svg
@@ -66,7 +66,7 @@ export default function ProjectsArchiveRow({ data }: { data: Project }) {
           )}
           {data.decorations?.downloads && (
             <span
-              className="relative inline-flex items-center text-sm font-medium text-neutral-400"
+              className="relative inline-flex items-center text-sm font-medium text-stone-600 dark:text-stone-400"
               aria-label={`${data.decorations.downloads} downloads`}
             >
               <svg
@@ -84,7 +84,7 @@ export default function ProjectsArchiveRow({ data }: { data: Project }) {
           )}
           {data.decorations?.forks && (
             <span
-              className="relative inline-flex items-center text-sm font-medium text-neutral-400"
+              className="relative inline-flex items-center text-sm font-medium text-stone-600 dark:text-stone-400"
               aria-label={`${data.decorations.forks} downloads`}
             >
               <svg
@@ -105,7 +105,7 @@ export default function ProjectsArchiveRow({ data }: { data: Project }) {
         <ul className="flex -translate-y-1.5 flex-wrap">
           {data.tags.map((tag, idx) => (
             <li key={idx} className="my-1 mr-1.5">
-              <div className="flex items-center rounded-full bg-orange-400/10 px-3 py-1 text-xs font-medium leading-5 text-orange-300 ">
+              <div className="flex items-center rounded-full bg-orange-600/10 dark:bg-orange-400/10 px-3 py-1 text-xs font-medium leading-5 text-orange-500 dark:text-orange-300 ">
                 {tag}
               </div>
             </li>
@@ -116,7 +116,7 @@ export default function ProjectsArchiveRow({ data }: { data: Project }) {
         <ul className="translate-y-px">
           <li className="mb-1 flex items-center">
             <Link
-              className="inline-flex items-baseline font-medium leading-tight text-neutral-400 hover:text-neutral-200 focus-visible:text-orange-300 group/link text-sm"
+              className="inline-flex items-baseline font-medium leading-tight text-stone-600 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 focus-visible:text-orange-500 dark:focus-visible:text-orange-300 group/link text-sm"
               href={data.href}
               target="_blank"
               aria-label={url.hostname}

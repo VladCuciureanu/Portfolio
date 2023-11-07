@@ -5,12 +5,14 @@ export default function Header() {
   return (
     <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
       <div>
-        <h1 className="text-4xl font-bold tracking-tight text-neutral-200 sm:text-5xl">
+        <h1 className="text-4xl font-bold tracking-tight text-stone-800 dark:text-stone-200 sm:text-5xl">
           <Link href="/">Vlad Cuciureanu</Link>
         </h1>
-        <h2 className="mt-3 text-lg font-medium tracking-tight text-neutral-200 sm:text-xl">
+        <h2 className="mt-3 text-lg font-medium tracking-tight text-stone-800 dark:text-stone-200 sm:text-xl">
           Full-Stack Developer{" "}
-          <span className="text-neutral-500">(Contractor)</span>
+          <span className="text-stone-500 dark:text-stone-500">
+            (Contractor)
+          </span>
         </h2>
         <p className="mt-4 max-w-xs leading-normal">I like to build things.</p>
         <nav className="nav hidden lg:block" aria-label="In-page jump links">
@@ -20,24 +22,24 @@ export default function Header() {
                 className="group flex items-center py-3 active"
                 href="#about"
               >
-                <span className="nav-indicator mr-4 h-px w-8 bg-neutral-600 transition-all group-hover:w-16 group-hover:bg-neutral-200 group-focus-visible:w-16 group-focus-visible:bg-neutral-200 motion-reduce:transition-none" />
-                <span className="nav-text text-xs font-bold uppercase tracking-widest text-neutral-500 group-hover:text-neutral-200 group-focus-visible:text-neutral-200">
+                <span className="nav-indicator mr-4 h-px w-8 bg-stone-400 dark:bg-stone-600 transition-all group-hover:w-16 group-hover:bg-stone-800 dark:group-hover:bg-stone-200 group-focus-visible:w-16 group-focus-visible:bg-stone-800 dark:group-focus-visible:bg-stone-200 motion-reduce:transition-none" />
+                <span className="nav-text text-xs font-bold uppercase tracking-widest text-stone-500 dark:text-stone-500 group-hover:text-stone-800 dark:group-hover:text-stone-200 group-focus-visible:text-stone-800 dark:group-focus-visible:text-stone-200">
                   About
                 </span>
               </Link>
             </li>
             <li>
               <Link className="group flex items-center py-3" href="#experience">
-                <span className="nav-indicator mr-4 h-px w-8 bg-neutral-600 transition-all group-hover:w-16 group-hover:bg-neutral-200 group-focus-visible:w-16 group-focus-visible:bg-neutral-200 motion-reduce:transition-none" />
-                <span className="nav-text text-xs font-bold uppercase tracking-widest text-neutral-500 group-hover:text-neutral-200 group-focus-visible:text-neutral-200">
+                <span className="nav-indicator mr-4 h-px w-8 bg-stone-400 dark:bg-stone-600 transition-all group-hover:w-16 group-hover:bg-stone-800 dark:group-hover:bg-stone-200 group-focus-visible:w-16 group-focus-visible:bg-stone-800 dark:group-focus-visible:bg-stone-200 motion-reduce:transition-none" />
+                <span className="nav-text text-xs font-bold uppercase tracking-widest text-stone-500 dark:text-stone-500 group-hover:text-stone-800 dark:group-hover:text-stone-200 group-focus-visible:text-stone-800 dark:group-focus-visible:text-stone-200">
                   Experience
                 </span>
               </Link>
             </li>
             <li>
               <Link className="group flex items-center py-3" href="#projects">
-                <span className="nav-indicator mr-4 h-px w-8 bg-neutral-600 transition-all group-hover:w-16 group-hover:bg-neutral-200 group-focus-visible:w-16 group-focus-visible:bg-neutral-200 motion-reduce:transition-none" />
-                <span className="nav-text text-xs font-bold uppercase tracking-widest text-neutral-500 group-hover:text-neutral-200 group-focus-visible:text-neutral-200">
+                <span className="nav-indicator mr-4 h-px w-8 bg-stone-400 dark:bg-stone-600 transition-all group-hover:w-16 group-hover:bg-stone-800 dark:group-hover:bg-stone-200 group-focus-visible:w-16 group-focus-visible:bg-stone-800 dark:group-focus-visible:bg-stone-200 motion-reduce:transition-none" />
+                <span className="nav-text text-xs font-bold uppercase tracking-widest text-stone-500 dark:text-stone-500 group-hover:text-stone-800 dark:group-hover:text-stone-200 group-focus-visible:text-stone-800 dark:group-focus-visible:text-stone-200">
                   Projects
                 </span>
               </Link>
@@ -51,7 +53,7 @@ export default function Header() {
       >
         <li>
           <Link
-            className="block hover:text-neutral-200"
+            className="block hover:text-stone-800 dark:hover:text-stone-200"
             href="mailto:vlad.cuciureanu@pm.me"
             target="_blank"
           >
@@ -68,7 +70,7 @@ export default function Header() {
         </li>
         <li>
           <Link
-            className="block hover:text-neutral-200"
+            className="block hover:text-stone-800 dark:hover:text-stone-200"
             href="https://github.com/VladCuciureanu"
             target="_blank"
           >
@@ -86,7 +88,7 @@ export default function Header() {
         </li>
         <li>
           <Link
-            className="block hover:text-neutral-200"
+            className="block hover:text-stone-800 dark:hover:text-stone-200"
             href="https://www.linkedin.com/in/VladCuciureanu"
             target="_blank"
           >
@@ -102,7 +104,7 @@ export default function Header() {
             </svg>
           </Link>
         </li>
-        <li className="h-full w-px bg-neutral-600" />
+        <li className="h-full w-px bg-stone-400 dark:bg-stone-600" />
         <li>
           <ThemeSwitcher />
         </li>

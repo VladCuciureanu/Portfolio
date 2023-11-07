@@ -19,7 +19,10 @@ export default function ThemeSwitcher() {
   }
 
   return (
-    <button className="block hover:text-neutral-200" onClick={toggleTheme}>
+    <button
+      className="block hover:text-stone-800 dark:hover:text-stone-200"
+      onClick={toggleTheme}
+    >
       <span className="sr-only">Toggle light/dark theme</span>
       {theme === "dark" && (
         <svg

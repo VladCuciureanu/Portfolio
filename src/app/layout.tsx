@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body
         className={twMerge(
-          "bg-neutral-900 leading-relaxed text-neutral-400 antialiased selection:bg-orange-300 selection:text-orange-900 relative",
+          "bg-sand dark:bg-stone-900 leading-relaxed text-stone-600 dark:text-stone-400 antialiased selection:bg-orange-500 dark:selection:bg-orange-300 selection:text-orange-100 dark:selection:text-orange-900 relative",
           inter.className,
         )}
       >

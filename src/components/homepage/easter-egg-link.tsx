@@ -7,14 +7,14 @@ const Colors = [
   "stroke-green-500",
   "stroke-blue-600",
   "stroke-amber-300",
-  "stroke-neutral-300",
+  "stroke-stone-300",
 ];
 
 export default function EasterEggLink() {
   const [colorIndex, setColorIndex] = useState(-1);
 
   const currentColor =
-    colorIndex > -1 ? Colors[colorIndex] : "stroke-neutral-700";
+    colorIndex > -1 ? Colors[colorIndex] : "stroke-stone-700";
 
   const scrambleColor = () => {
     setColorIndex(Math.floor(Math.random() * Colors.length));
@@ -24,7 +24,7 @@ export default function EasterEggLink() {
 
   return (
     <button
-      className={`absolute bottom-0 right-0 inline-flex items-center px-2 py-4 font-medium text-neutral-400 focus-visible:text-orange-300`}
+      className={`absolute bottom-0 right-0 inline-flex items-center px-2 py-4 font-medium text-stone-600 dark:text-stone-400 focus-visible:text-orange-500 dark:focus-visible:text-orange-300`}
       onMouseEnter={scrambleColor}
       onMouseLeave={() => setColorIndex(-1)}
       onClick={() => router.push("/zelda")}

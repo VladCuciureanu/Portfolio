@@ -3,8 +3,8 @@ import Section from "../section";
 export default function AboutMeSection() {
   return (
     <Section id="about" aria-label="About me">
-      <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-neutral-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
-        <h2 className="text-sm font-bold uppercase tracking-widest text-neutral-200 lg:sr-only">
+      <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-sand/75 dark:bg-stone-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+        <h2 className="text-sm font-bold uppercase tracking-widest text-stone-800 dark:text-stone-200 lg:sr-only">
           About
         </h2>
       </div>
@@ -29,7 +29,7 @@ export default function AboutMeSection() {
           personal projects.{" "}
           <a
             href="#projects"
-            className="font-medium text-neutral-200 hover:text-orange-300"
+            className="font-medium text-stone-800 dark:text-stone-200 hover:text-orange-500 dark:hover:text-orange-300"
           >
             Check them out below ↓
           </a>

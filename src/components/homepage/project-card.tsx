@@ -7,11 +7,11 @@ export default function ProjectCard({ data }: { data: Project }) {
   return (
     <li>
       <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-        <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-neutral-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg" />
+        <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-orange-200/[.15] dark:lg:group-hover:bg-stone-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg" />
         <div className="z-10 sm:order-2 sm:col-span-6">
           <h3>
             <OptionalLink
-              className="inline-flex items-baseline font-medium leading-tight text-neutral-200 hover:text-orange-300 focus-visible:text-orange-300  group/link text-base"
+              className="inline-flex items-baseline font-medium leading-tight text-stone-800 dark:text-stone-200 hover:text-orange-500 dark:hover:text-orange-300 focus-visible:text-orange-500 dark:focus-visible:text-orange-300  group/link text-base"
               href={data.href}
               target="_blank"
               rel="noreferrer"
@@ -41,7 +41,7 @@ export default function ProjectCard({ data }: { data: Project }) {
           </p>
           {data.decorations?.stars && (
             <span
-              className="relative mt-2 inline-flex items-center text-sm font-medium text-neutral-300 hover:text-orange-300 focus-visible:text-orange-300"
+              className="relative mt-2 inline-flex items-center text-sm font-medium text-stone-700 dark:text-stone-300 hover:text-orange-500 dark:hover:text-orange-300 focus-visible:text-orange-500 dark:focus-visible:text-orange-300"
               aria-label={`${data.decorations.stars} stars`}
             >
               <svg
@@ -62,7 +62,7 @@ export default function ProjectCard({ data }: { data: Project }) {
           )}
           {data.decorations?.downloads && (
             <span
-              className="relative mt-2 inline-flex items-center text-sm font-medium text-neutral-300 hover:text-orange-300 focus-visible:text-orange-300"
+              className="relative mt-2 inline-flex items-center text-sm font-medium text-stone-700 dark:text-stone-300 hover:text-orange-500 dark:hover:text-orange-300 focus-visible:text-orange-500 dark:focus-visible:text-orange-300"
               aria-label={`${data.decorations.downloads} downloads`}
             >
               <svg
@@ -80,7 +80,7 @@ export default function ProjectCard({ data }: { data: Project }) {
           )}
           {data.decorations?.forks && (
             <span
-              className="relative mt-2 inline-flex items-center text-sm font-medium text-neutral-300 hover:text-orange-300 focus-visible:text-orange-300"
+              className="relative mt-2 inline-flex items-center text-sm font-medium text-stone-700 dark:text-stone-300 hover:text-orange-500 dark:hover:text-orange-300 focus-visible:text-orange-500 dark:focus-visible:text-orange-300"
               aria-label={`${data.decorations.forks} downloads`}
             >
               <svg
@@ -98,7 +98,7 @@ export default function ProjectCard({ data }: { data: Project }) {
           <ul className="mt-2 flex flex-wrap" aria-label="Technologies used:">
             {data.tags.map((tag, idx) => (
               <li key={idx} className="mr-1.5 mt-2">
-                <div className="flex items-center rounded-full bg-orange-400/10 px-3 py-1 text-xs font-medium leading-5 text-orange-300 ">
+                <div className="flex items-center rounded-full bg-orange-600/10 dark:bg-orange-400/10 px-3 py-1 text-xs font-medium leading-5 text-orange-500 dark:text-orange-300 ">
                   {tag}
                 </div>
               </li>
@@ -111,13 +111,13 @@ export default function ProjectCard({ data }: { data: Project }) {
             loading="lazy"
             width={200}
             height={48}
-            className="rounded border-2 border-neutral-200/10 transition group-hover:border-neutral-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
+            className="rounded border-2 border-stone-800/10 dark:border-stone-200/10 transition group-hover:border-stone-800/30 dark:group-hover:border-stone-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
             src={data.showcase.imgSrc}
           />
         )}
         {!data.showcase ||
           (!data.showcase.imgSrc && (
-            <div className="rounded border-2 border-neutral-200/10 transition group-hover:border-neutral-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1 aspect-video" />
+            <div className="rounded border-2 border-stone-800/10 dark:border-stone-200/10 transition group-hover:border-stone-800/30 dark:group-hover:border-stone-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1 aspect-video" />
           ))}
       </div>
     </li>
