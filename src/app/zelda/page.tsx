@@ -1,5 +1,5 @@
 import GameBoy from "@/components/easter-egg";
-import ThemeSwitcher from "@/components/shared/header/theme-switcher";
+import ThemeSwitcher from "@/components/homepage/header/theme-switcher";
 
 export default function ProjectsArchive() {
   return (

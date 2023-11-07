@@ -14,7 +14,7 @@ export default function ProjectsArchiveRow({ data }: { data: Project }) {
           <div className="block sm:hidden">
             <Link
               className="inline-flex items-baseline font-medium leading-tight text-stone-800 dark:text-stone-200 hover:text-stone-800 dark:hover:text-stone-200 focus-visible:text-orange-500 dark:focus-visible:text-orange-300 sm:hidden group/link text-base"
-              href="https://apps.apple.com/app/apple-store/id1550995547?pt=122219983&ct=threadablebooks.com%20header&mt=8"
+              href={data.href}
               target="_blank"
               aria-label={data.label}
             >

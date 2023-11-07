@@ -1,5 +1,5 @@
+import ThemeSwitcher from "@/components/homepage/header/theme-switcher";
 import ProjectsArchiveRow from "@/components/projects/projects-archive-row";
-import ThemeSwitcher from "@/components/shared/header/theme-switcher";
 import { Projects } from "@/constants/projects";
 import Link from "next/link";
 
