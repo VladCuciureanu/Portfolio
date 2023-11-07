@@ -1,5 +1,7 @@
 import ProjectsArchiveRow from "@/components/projects/projects-archive-row";
+import ThemeSwitcher from "@/components/shared/header/theme-switcher";
 import { Projects } from "@/constants/projects";
+import Link from "next/link";
 
 export default function ProjectsArchive() {
   const SortedProjects = Projects.sort(
@@ -8,7 +10,7 @@ export default function ProjectsArchive() {
 
   return (
     <div className="lg:py-24">
-      <a
+      <Link
         className="group mb-2 inline-flex items-center font-semibold leading-tight text-orange-500 dark:text-orange-300"
         href="/"
       >
@@ -26,7 +28,7 @@ export default function ProjectsArchive() {
           />
         </svg>
         Vlad Cuciureanu
-      </a>
+      </Link>
       <h1 className="text-4xl font-bold tracking-tight text-stone-800 dark:text-stone-200 sm:text-5xl">
         All Projects
       </h1>
@@ -56,6 +58,7 @@ export default function ProjectsArchive() {
           ))}
         </tbody>
       </table>
+      <ThemeSwitcher className="fixed z-30 bottom-4 left-4" />
     </div>
   );
 }

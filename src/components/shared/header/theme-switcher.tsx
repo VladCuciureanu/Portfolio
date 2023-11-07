@@ -1,9 +1,10 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
+import { useState, useEffect, ComponentProps } from "react";
+import { twMerge } from "tailwind-merge";
 
-export default function ThemeSwitcher() {
+export default function ThemeSwitcher(props: ComponentProps<"button">) {
   const { theme, setTheme } = useTheme();
 
   const [mounted, setMounted] = useState(false);
@@ -15,12 +16,16 @@ export default function ThemeSwitcher() {
   }, []);
 
   if (!mounted) {
-    return <button className="">Loading...</button>;
+    return <button className={props.className}>Loading...</button>;
   }
 
   return (
     <button
-      className="block hover:text-stone-800 dark:hover:text-stone-200"
+      {...props}
+      className={twMerge(
+        "block hover:text-stone-800 dark:hover:text-stone-200",
+        props.className,
+      )}
       onClick={toggleTheme}
     >
       <span className="sr-only">Toggle light/dark theme</span>
