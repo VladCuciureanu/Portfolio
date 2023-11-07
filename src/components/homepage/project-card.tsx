@@ -1,21 +1,9 @@
 import { ReactNode } from "react";
 import OptionalLink from "./optional-link";
 import Image from "next/image";
+import { Project } from "@/types/project";
 
-type ProjectCardProps = {
-  label: string;
-  imgSrc?: string;
-  href: string;
-  children: ReactNode;
-  decorations?: {
-    stars?: string;
-    forks?: string;
-    downloads?: string;
-  };
-  tags: string[];
-};
-
-export default function ProjectCard(props: ProjectCardProps) {
+export default function ProjectCard({ data }: { data: Project }) {
   return (
     <li>
       <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
@@ -24,14 +12,14 @@ export default function ProjectCard(props: ProjectCardProps) {
           <h3>
             <OptionalLink
               className="inline-flex items-baseline font-medium leading-tight text-neutral-200 hover:text-orange-300 focus-visible:text-orange-300  group/link text-base"
-              href={props.href}
+              href={data.href}
               target="_blank"
               rel="noreferrer"
-              aria-label={props.label}
+              aria-label={data.label}
             >
               <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block" />
               <span className="inline-block">
-                {props.label}{" "}
+                {data.label}{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
@@ -48,11 +36,13 @@ export default function ProjectCard(props: ProjectCardProps) {
               </span>
             </OptionalLink>
           </h3>
-          <p className="mt-2 text-sm leading-normal">{props.children}</p>
-          {props.decorations?.stars && (
+          <p className="mt-2 text-sm leading-normal">
+            {data.showcase?.description}
+          </p>
+          {data.decorations?.stars && (
             <span
               className="relative mt-2 inline-flex items-center text-sm font-medium text-neutral-300 hover:text-orange-300 focus-visible:text-orange-300"
-              aria-label={`${props.decorations.stars} stars`}
+              aria-label={`${data.decorations.stars} stars`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -67,13 +57,13 @@ export default function ProjectCard(props: ProjectCardProps) {
                   clipRule="evenodd"
                 />
               </svg>
-              <span>{props.decorations.stars}</span>
+              <span>{data.decorations.stars}</span>
             </span>
           )}
-          {props.decorations?.downloads && (
+          {data.decorations?.downloads && (
             <span
               className="relative mt-2 inline-flex items-center text-sm font-medium text-neutral-300 hover:text-orange-300 focus-visible:text-orange-300"
-              aria-label={`${props.decorations.downloads} downloads`}
+              aria-label={`${data.decorations.downloads} downloads`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -85,13 +75,13 @@ export default function ProjectCard(props: ProjectCardProps) {
                 <path d="M10.75 2.75a.75.75 0 00-1.5 0v8.614L6.295 8.235a.75.75 0 10-1.09 1.03l4.25 4.5a.75.75 0 001.09 0l4.25-4.5a.75.75 0 00-1.09-1.03l-2.955 3.129V2.75z"></path>
                 <path d="M3.5 12.75a.75.75 0 00-1.5 0v2.5A2.75 2.75 0 004.75 18h10.5A2.75 2.75 0 0018 15.25v-2.5a.75.75 0 00-1.5 0v2.5c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25v-2.5z"></path>
               </svg>
-              <span>{props.decorations.downloads}</span>
+              <span>{data.decorations.downloads}</span>
             </span>
           )}
-          {props.decorations?.forks && (
+          {data.decorations?.forks && (
             <span
               className="relative mt-2 inline-flex items-center text-sm font-medium text-neutral-300 hover:text-orange-300 focus-visible:text-orange-300"
-              aria-label={`${props.decorations.forks} downloads`}
+              aria-label={`${data.decorations.forks} downloads`}
             >
               <svg
                 aria-hidden="true"
@@ -102,11 +92,11 @@ export default function ProjectCard(props: ProjectCardProps) {
               >
                 <path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"></path>
               </svg>
-              <span>{props.decorations.forks}</span>
+              <span>{data.decorations.forks}</span>
             </span>
           )}
           <ul className="mt-2 flex flex-wrap" aria-label="Technologies used:">
-            {props.tags.map((tag, idx) => (
+            {data.tags.map((tag, idx) => (
               <li key={idx} className="mr-1.5 mt-2">
                 <div className="flex items-center rounded-full bg-orange-400/10 px-3 py-1 text-xs font-medium leading-5 text-orange-300 ">
                   {tag}
@@ -115,19 +105,20 @@ export default function ProjectCard(props: ProjectCardProps) {
             ))}
           </ul>
         </div>
-        {props.imgSrc && (
+        {data.showcase && data.showcase.imgSrc && (
           <Image
             alt=""
             loading="lazy"
             width={200}
             height={48}
             className="rounded border-2 border-neutral-200/10 transition group-hover:border-neutral-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
-            src={props.imgSrc}
+            src={data.showcase.imgSrc}
           />
         )}
-        {!props.imgSrc && (
-          <div className="rounded border-2 border-neutral-200/10 transition group-hover:border-neutral-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1 aspect-video" />
-        )}
+        {!data.showcase ||
+          (!data.showcase.imgSrc && (
+            <div className="rounded border-2 border-neutral-200/10 transition group-hover:border-neutral-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1 aspect-video" />
+          ))}
       </div>
     </li>
   );

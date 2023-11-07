@@ -1,26 +1,10 @@
-import { ComponentProps, ReactNode } from "react";
 import OptionalLink from "./optional-link";
+import { Job } from "@/types/job";
 
-type ExperienceCardProps = {
-  position: string;
-  company: {
-    name: string;
-    href?: string;
-  };
-  children: ReactNode;
-  links?: {
-    label: string;
-    href: string;
-  }[];
-  startDate: Date;
-  endDate?: Date;
-  tags: string[];
-};
-
-export default function ExperienceCard(props: ExperienceCardProps) {
+export default function ExperienceCard({ data }: { data: Job }) {
   const dateString = getDateString({
-    startDate: props.startDate,
-    endDate: props.endDate,
+    startDate: data.startDate,
+    endDate: data.endDate,
   });
   return (
     <li>
@@ -37,16 +21,16 @@ export default function ExperienceCard(props: ExperienceCardProps) {
             <div>
               <OptionalLink
                 className="inline-flex items-baseline font-medium leading-tight text-neutral-200 hover:text-orange-300 focus-visible:text-orange-300  group/link text-base"
-                href={props.company.href}
+                href={data.company.href}
                 target="_blank"
-                aria-label={`${props.position} at ${props.company.name}`}
+                aria-label={`${data.position} at ${data.company.name}`}
               >
                 <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block" />
                 <span>
-                  {props.position} ·{/* */}{" "}
+                  {data.position} ·{/* */}{" "}
                   <span className="inline-block">
-                    {props.company.name}
-                    {props.company.href && (
+                    {data.company.name}
+                    {data.company.href && (
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
@@ -66,9 +50,9 @@ export default function ExperienceCard(props: ExperienceCardProps) {
               </OptionalLink>
             </div>
           </h3>
-          <div className="mt-2 text-sm leading-relaxed">{props.children}</div>
+          <div className="mt-2 text-sm leading-relaxed">{data.description}</div>
           <ul className="mt-2 flex flex-wrap" aria-label="Related links">
-            {props.links?.map((link, idx) => (
+            {data.links?.map((link, idx) => (
               <li key={idx} className="mr-4">
                 <OptionalLink
                   className="relative mt-2 inline-flex items-center text-sm font-medium text-neutral-300 hover:text-orange-300 focus-visible:text-orange-300"
@@ -91,7 +75,7 @@ export default function ExperienceCard(props: ExperienceCardProps) {
             ))}
           </ul>
           <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
-            {props.tags.map((tag, idx) => (
+            {data.tags.map((tag, idx) => (
               <li key={idx} className="mr-1.5 mt-2">
                 <div className="flex items-center rounded-full bg-orange-400/10 px-3 py-1 text-xs font-medium leading-5 text-orange-300 ">
                   {tag}

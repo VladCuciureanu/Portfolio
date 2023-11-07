@@ -1,7 +1,12 @@
+import { Projects } from "@/constants/projects";
 import ProjectCard from "../project-card";
 import Section from "../section";
 
 export default function ProjectsSection() {
+  const ShowcasedProjects = Projects.filter(
+    (it) => it.showcase !== undefined,
+  ).sort((a, b) => a.showcase!.orderId - b.showcase!.orderId);
+
   return (
     <Section id="projects" aria-label="Selected projects">
       <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-neutral-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
@@ -11,59 +16,15 @@ export default function ProjectsSection() {
       </div>
       <div>
         <ul className="group/list flex flex-col gap-12">
-          <ProjectCard
-            label={"Toothpick"}
-            href={"https://github.com/VladCuciureanu/Toothpick"}
-            decorations={{ downloads: "10.000+ Installs" }}
-            tags={["React", "Node.js"]}
-          >
-            Bluetooth extension for Raycast. Provides shortcuts for quick
-            Bluetooth management.
-          </ProjectCard>
-          <ProjectCard
-            label={"CheckIt"}
-            href={"https://github.com/VladCuciureanu/CheckIt"}
-            tags={["React", "Next.js", "TypeScript", "Sass"]}
-          >
-            Minimalist, local-first checklist app created for quickly writing
-            down action points.
-          </ProjectCard>
-          <ProjectCard
-            label={"Portfolio"}
-            href={"https://github.com/VladCuciureanu/Portfolio"}
-            tags={[
-              "React",
-              "Next.js",
-              "TypeScript",
-              "Tailwind",
-              "Edge Functions",
-            ]}
-          >
-            My personal website, serving as a digital garden and portfolio,
-            showcasing my thoughts, experiences, and projects.
-          </ProjectCard>
-          <ProjectCard
-            label={"Hymn"}
-            href={"https://github.com/VladCuciureanu/Hymn"}
-            tags={["React", "Next.js", "TypeScript", "Tailwind", "Supabase"]}
-          >
-            Open-source, non-profit, free-access christian music tabs repository
-            with user friendliness and ease of use in mind.
-          </ProjectCard>
-          <ProjectCard
-            label={"Lyra"}
-            href={"https://github.com/VladCuciureanu/Lyra"}
-            tags={["React", "Node.js", "WebRTC", "Redis"]}
-          >
-            Self‑hosted music streaming service that allows you to take your
-            high‑fidelity music collection anywhere.
-          </ProjectCard>
+          {ShowcasedProjects.map((project, idx) => (
+            <ProjectCard key={idx} data={project} />
+          ))}
         </ul>
         <div className="mt-12">
           <a
             className="inline-flex items-center leading-tight font-semibold text-neutral-200 group"
             aria-label="View Full Project Archive"
-            href="/archive"
+            href="/projects"
           >
             <span>
               <span className="border-b border-transparent pb-px transition group-hover:border-orange-300 motion-reduce:transition-none">
