@@ -13,7 +13,7 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         spotlight:
-          "radial-gradient(600px at 1403px 443px, rgb(194 65 12 / 0.15), transparent 80%)",
+          "radial-gradient(600px at var(--spotlight-x) var(--spotlight-y), rgb(194 65 12 / 0.15), transparent 80%)",
       },
     },
   },
