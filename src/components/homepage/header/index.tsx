@@ -104,7 +104,7 @@ export default function Header() {
             </svg>
           </Link>
         </li>
-        <li className="h-full w-px bg-stone-400 dark:bg-stone-600" />
+        <li className="h-full w-px bg-stone-400 dark:bg-stone-600 hidden lg:block" />
         <li>
           <ThemeSwitcher />
         </li>

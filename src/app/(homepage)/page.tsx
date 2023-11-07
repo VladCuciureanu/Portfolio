@@ -3,7 +3,7 @@ import Footer from "@/components/homepage/footer";
 import AboutMeSection from "@/components/homepage/sections/about-me";
 import WorkExperienceSection from "@/components/homepage/sections/experience";
 import ProjectsSection from "@/components/homepage/sections/projects";
-import Header from "@/components/shared/header";
+import Header from "@/components/homepage/header";
 
 export default function Homepage() {
   return (
