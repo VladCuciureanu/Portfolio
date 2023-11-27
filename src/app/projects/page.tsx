@@ -1,7 +1,14 @@
 import ThemeSwitcher from "@/components/homepage/header/theme-switcher";
 import ProjectsArchiveRow from "@/components/projects/projects-archive-row";
 import { Projects } from "@/constants/projects";
+import { DefaultMetadata } from "@/constants/seo";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  ...DefaultMetadata,
+  title: `${DefaultMetadata.title} - Projects`,
+};
 
 export default function ProjectsArchive() {
   const SortedProjects = Projects.sort(

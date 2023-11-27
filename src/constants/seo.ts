@@ -4,7 +4,7 @@ const isProd = process.env.NODE_ENV === "production";
 const protocol = isProd ? "https:" : "http:";
 
 export const DefaultMetadataValues = {
-  title: "Vlad Cuciureanu",
+  title: isProd ? "Vlad Cuciureanu" : "[Dev] Vlad Cuciureanu",
   description:
     "A software engineer from Romania, with an interest in web development and open source software; currently working as a contractor.",
   meta: "vladcuciureanu.com",

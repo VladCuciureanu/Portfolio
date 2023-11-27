@@ -4,14 +4,11 @@ import "@/styles/globals.css";
 import { twMerge } from "tailwind-merge";
 import Spotlight from "@/components/shared/spotlight";
 import ThemeProvider from "@/components/shared/theme-provider";
+import { DefaultMetadata } from "@/constants/seo";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Vlad Cuciureanu",
-  description:
-    "A software engineer from Romania, with an interest in web development and open source software; currently working as a contractor.",
-};
+export const metadata: Metadata = DefaultMetadata;
 
 export default function RootLayout({
   children,
@@ -22,7 +19,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body
         className={twMerge(
-          "bg-sand dark:bg-stone-900 leading-relaxed text-stone-600 dark:text-stone-400 antialiased selection:bg-orange-500 dark:selection:bg-orange-300 selection:text-orange-100 dark:selection:text-orange-900 relative",
+          "bg-background-light dark:bg-background-dark leading-relaxed text-stone-600 dark:text-stone-400 antialiased selection:bg-orange-500 dark:selection:bg-orange-300 selection:text-orange-100 dark:selection:text-orange-900 relative",
           inter.className,
         )}
       >

@@ -1,5 +1,12 @@
 import GameBoy from "@/components/easter-egg";
 import ThemeSwitcher from "@/components/homepage/header/theme-switcher";
+import { DefaultMetadata } from "@/constants/seo";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  ...DefaultMetadata,
+  title: `${DefaultMetadata.title} - Easter Egg`,
+};
 
 export default function ProjectsArchive() {
   return (
