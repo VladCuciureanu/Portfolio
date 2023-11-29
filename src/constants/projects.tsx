@@ -84,12 +84,6 @@ export const Projects: Project[] = [
     year: 2023,
   },
   {
-    label: "UnitBuddy",
-    href: "https://github.com/VladCuciureanu/UnitBuddy",
-    tags: ["Browser Extension", "TypeScript"],
-    year: 2023,
-  },
-  {
     label: "Khora",
     href: "https://github.com/VladCuciureanu/Khora",
     tags: ["C++", "CMake", "ImGUI"],
