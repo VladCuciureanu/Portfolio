@@ -8,6 +8,7 @@ export const Projects: Project[] = [
     tags: ["React", "Node.js"],
     year: 2022,
     showcase: {
+      imgSrc: "/images/projects/toothpick.png",
       orderId: 1,
       description: (
         <>
@@ -23,6 +24,7 @@ export const Projects: Project[] = [
     tags: ["React", "Next.js", "TypeScript", "Sass"],
     year: 2023,
     showcase: {
+      imgSrc: "/images/projects/checkit.png",
       orderId: 2,
       description: (
         <>
@@ -38,6 +40,7 @@ export const Projects: Project[] = [
     tags: ["React", "Next.js", "TypeScript", "Tailwind", "Edge Functions"],
     year: 2022,
     showcase: {
+      imgSrc: "/images/projects/portfolio.png",
       orderId: 3,
       description: (
         <>

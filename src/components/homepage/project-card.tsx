@@ -110,7 +110,7 @@ export default function ProjectCard({ data }: { data: Project }) {
             alt=""
             loading="lazy"
             width={200}
-            height={48}
+            height={112}
             className="rounded border-2 border-stone-800/10 dark:border-stone-200/10 transition group-hover:border-stone-800/30 dark:group-hover:border-stone-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
             src={data.showcase.imgSrc}
           />
