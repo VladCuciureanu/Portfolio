@@ -18,8 +18,8 @@ export default function AboutMeSection() {
         </p>
         <p>
           Fast-forward a few years, I got my first internship at 16 years old,
-          as a <i>C++ game engine developer</i> at a small corporation. Several
-          years later, I transitioned to <i>full-stack web development</i>,
+          as a <i>C++ game engine developer</i> at a small corporation.
+          Afterwards, I transitioned to <i>full-stack web development</i>,
           working on various stacks until landing on <i>React</i> and{" "}
           <i>Express</i>, alongside <i>Typescript</i>.
         </p>
