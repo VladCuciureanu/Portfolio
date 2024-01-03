@@ -1,8 +1,8 @@
 //robots.txt
 
-# Block all crawlers for /zelda
+# Block all crawlers for /macintosh
 User-agent: *
-Disallow: /zelda
+Disallow: /macintosh
 
 # Allow all crawlers
 User-agent: *

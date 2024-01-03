@@ -14,6 +14,9 @@ const nextConfig = {
       permanent: true,
     },
   ],
+  compiler: {
+    styledComponents: true,
+  },
 };
 
 module.exports = nextConfig;
