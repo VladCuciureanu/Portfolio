@@ -20,7 +20,7 @@ export const Projects: Project[] = [
   },
   {
     label: "CheckIt",
-    href: "https://checkit.vladcuciureanu.com",
+    href: "https://checkit.vlad.cuciureanu.me",
     tags: ["React", "Next.js", "TypeScript", "Sass"],
     year: 2023,
     showcase: {

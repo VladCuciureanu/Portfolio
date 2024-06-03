@@ -54,7 +54,7 @@ export default function Header() {
         <li>
           <Link
             className="block hover:text-stone-800 dark:hover:text-stone-200"
-            href="mailto:vlad.cuciureanu@pm.me"
+            href="mailto:vlad@cuciureanu.me"
             target="_blank"
           >
             <span className="sr-only">Mail</span>
