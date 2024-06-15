@@ -1,9 +1,4 @@
-<div align="center">
-  <div>&nbsp;</div>
-  <img src="public/portfolio-logo.png" width="402"/> 
-</div>
-
-## Introduction
+# 📁 Portfolio
 
 This repository hosts the source code for my personal website, which serves as a comprehensive portfolio showcasing my skills, projects, and experiences. Designed with simplicity and elegance in mind, this website provides visitors with a glimpse into my professional journey, projects I've worked on, and the technologies I'm proficient in.
 
