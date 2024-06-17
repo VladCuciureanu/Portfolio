@@ -31,7 +31,7 @@ export const Jobs: Job[] = [
           easier deployment and scalability for our infrastructure.
         </li>
         <li>
-          Developed the company's website using Next.js, ensuring a fast,
+          Developed the company&apos;s website using Next.js, ensuring a fast,
           responsive, and dynamic user experience tailored to our brand.
         </li>
       </ul>
