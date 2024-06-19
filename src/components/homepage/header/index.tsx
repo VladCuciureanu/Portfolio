@@ -9,9 +9,8 @@ export default function Header() {
           <Link href="/">Vlad Cuciureanu</Link>
         </h1>
         <h2 className="mt-3 text-lg font-medium tracking-tight text-stone-800 dark:text-stone-200 sm:text-xl">
-          Full-Stack Developer{" "}
           <span className="text-stone-500 dark:text-stone-500">
-            (Contractor)
+            Full-Stack Developer
           </span>
         </h2>
         <p className="mt-4 max-w-xs leading-normal">I like to build things.</p>
