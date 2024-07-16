@@ -81,7 +81,7 @@ export const Projects: Project[] = [
   },
   {
     label: "CheckIt",
-    href: "https://checkit.vlad.cuciureanu.me",
+    href: "https://checkit.vlad.cuciureanu.net",
     tags: ["React", "Next.js", "TypeScript", "Sass"],
     year: 2020,
     showcase: {

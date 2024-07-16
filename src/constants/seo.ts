@@ -7,7 +7,7 @@ export const DefaultMetadataValues = {
   title: isProd ? "Vlad Cuciureanu" : "[Dev] Vlad Cuciureanu",
   description:
     "A software engineer from Romania, with an interest in web development and open source software; currently working as a contractor.",
-  meta: "vlad.cuciureanu.me",
+  meta: "vlad.cuciureanu.net",
   domain: process.env.HOST,
 };
 
