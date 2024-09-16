@@ -11,7 +11,7 @@ const slug = title.replaceAll(" ", "-").toLowerCase() + "-section";
 ---
 
 <section id={`${slug}-section`} class={cn("flex flex-col gap-9", className)}>
-  <h3 class="text-neutral-900 -mb-3">
+  <h3 class="text-primary -mb-3">
     {title}
   </h3>
   <slot />

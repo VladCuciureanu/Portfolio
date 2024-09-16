@@ -1,5 +1,18 @@
 :root {
   --font-size: 14px;
+  --color-background: #fff;
+  --color-primary: #111;
+  --color-secondary: #555;
+  --color-tertiary: #999;
+  --color-underline: #e5e5e5;
+}
+
+:root[data-theme="dark"] {
+  --color-background: #111;
+  --color-primary: #ff7b00;
+  --color-secondary: #666;
+  --color-tertiary: #444;
+  --color-underline: #222;
 }
 
 body {
