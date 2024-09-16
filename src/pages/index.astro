@@ -6,6 +6,7 @@ import ProfileExperience from "../components/ExperienceSection.astro";
 import ProfileHeader from "../components/HeaderSection.astro";
 import ProfileSideProjects from "../components/SideProjectSection.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { Spotlight } from "../components/Spotlight";
 ---
 
 <!doctype html>
@@ -17,7 +18,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
     class="bg-background antialiased text-secondary before:[&_li]:content-['-'] before:[&_li]:-ml-[1.1em] before:[&_li]:absolute"
   >
     <main
-      class="min-h-[920px] w-full max-w-[540px] mx-auto flex flex-col gap-[3.75rem] py-[72px] px-6 sm:px-0"
+      class="min-h-[920px] w-full max-w-[540px] mx-auto flex flex-col gap-[3.75rem] py-[72px] px-6 sm:px-0 z-10"
     >
       <ProfileHeader />
       <ProfileAbout />
@@ -25,5 +26,27 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
       <ProfileSideProjects />
       <ProfileContact />
     </main>
+    <script is:inline>
+      const theme = (() => {
+        if (
+          typeof localStorage !== "undefined" &&
+          localStorage.getItem("theme")
+        ) {
+          return localStorage.getItem("theme");
+        }
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          return "dark";
+        }
+        return "light";
+      })();
+
+      if (theme === "light") {
+        document.documentElement.classList.remove("dark");
+      } else {
+        document.documentElement.classList.add("dark");
+      }
+      window.localStorage.setItem("theme", theme);
+    </script>
+    <Spotlight client:load />
   </body>
 </html>

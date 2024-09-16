@@ -5,14 +5,18 @@
   --color-secondary: #555;
   --color-tertiary: #999;
   --color-underline: #e5e5e5;
+  --spotlight-color: var(--color-background);
+  --spotlight-x: 50%;
+  --spotlight-y: 50%;
 }
 
-:root[data-theme="dark"] {
+:root.dark {
   --color-background: #111;
   --color-primary: #ff7b00;
-  --color-secondary: #666;
-  --color-tertiary: #444;
-  --color-underline: #222;
+  --color-secondary: #777;
+  --color-tertiary: #555;
+  --color-underline: #333;
+  --spotlight-color: rgba(255, 123, 0, 0.125);
 }
 
 body {

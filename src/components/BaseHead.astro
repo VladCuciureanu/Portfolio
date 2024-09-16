@@ -23,11 +23,12 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
 <!-- Font preloads -->
 <link
   rel="preload"
-  href="/fonts/graphik-regular.woff"
+  href="/fonts/graphik-regular.woff2"
   as="font"
   type="font/woff"
   crossorigin
 />
+<link rel="preload" as="image" href="https://github.com/VladCuciureanu.png" />
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
