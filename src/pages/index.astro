@@ -1,0 +1,29 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import ProfileAbout from "../components/AboutSection.astro";
+import ProfileContact from "../components/ContactSection.astro";
+import ProfileExperience from "../components/ExperienceSection.astro";
+import ProfileHeader from "../components/HeaderSection.astro";
+import ProfileSideProjects from "../components/SideProjectSection.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body
+    class="antialiased [&_p]:text-neutral-500 [&_li]:text-neutral-500 before:[&_li]:content-['-'] before:[&_li]:-ml-[1.1em] before:[&_li]:absolute"
+  >
+    <main
+      class="min-h-[920px] w-full max-w-lg mx-auto flex flex-col gap-[3.75rem] py-[72px] px-6"
+    >
+      <ProfileHeader />
+      <ProfileAbout />
+      <ProfileExperience />
+      <ProfileSideProjects />
+      <ProfileContact />
+    </main>
+  </body>
+</html>

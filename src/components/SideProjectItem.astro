@@ -1,0 +1,29 @@
+---
+import type { CollectionEntry } from "astro:content";
+import ProfileItem from "./SectionItem.astro";
+
+type Props = {
+  data: CollectionEntry<"sideProjects">;
+};
+
+const { data: project } = Astro.props;
+
+const dateString =
+  project.data.startDate.getFullYear() === project.data.endDate?.getFullYear()
+    ? `${project.data.startDate.getFullYear()}`
+    : `${project.data.startDate.getFullYear()} - ${
+        project.data.endDate ? project.data.endDate.getFullYear() : "Now"
+      }`;
+
+const { Content, headings } = await project.render();
+---
+
+<ProfileItem
+  title={project.data.title}
+  aside={dateString}
+  href={project.data.href}
+>
+  <p>
+    <Content />
+  </p>
+</ProfileItem>

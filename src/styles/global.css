@@ -1,0 +1,16 @@
+:root {
+  --font-size: 14px;
+}
+
+body {
+  font-size: var(--font-size);
+  font-family: Graphik, sans-serif;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("/fonts/graphik-regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,15 @@
+---
+import { getCollection } from "astro:content";
+import ProfileExperienceItem from "./ExperienceItem.astro";
+import Section from "./Section.astro";
+
+const allJobs = await getCollection("jobs");
+---
+
+<Section title="Work Experience">
+  {
+    allJobs
+      .sort((a, b) => b.data.startDate.getTime() - a.data.startDate.getTime())
+      .map((job) => <ProfileExperienceItem data={job} />)
+  }
+</Section>

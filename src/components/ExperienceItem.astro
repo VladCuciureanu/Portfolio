@@ -1,0 +1,23 @@
+---
+import type { CollectionEntry } from "astro:content";
+import ProfileItem from "./SectionItem.astro";
+
+type Props = {
+  data: CollectionEntry<"jobs">;
+};
+
+const { data: job } = Astro.props;
+
+const dateString =
+  job.data.startDate.getFullYear() === job.data.endDate?.getFullYear()
+    ? `${job.data.startDate.getFullYear()}`
+    : `${job.data.startDate.getFullYear()} - ${
+        job.data.endDate ? job.data.endDate.getFullYear() : "Now"
+      }`;
+
+const { Content, headings } = await job.render();
+---
+
+<ProfileItem title={job.data.title} aside={dateString} href={job.data.href}>
+  <Content />
+</ProfileItem>

@@ -1,0 +1,16 @@
+---
+import { getCollection } from "astro:content";
+import Section from "./Section.astro";
+import ProfileSideProjectsItem from "./SideProjectItem.astro";
+
+const sideProjects = await getCollection("sideProjects");
+---
+
+<Section title="Side Projects">
+  {
+    sideProjects
+      .filter((project) => project.data.showcaseIdx !== undefined)
+      .sort((a, b) => a.data.showcaseIdx! - b.data.showcaseIdx!)
+      .map((project) => <ProfileSideProjectsItem data={project} />)
+  }
+</Section>
