@@ -12,9 +12,9 @@
   :root {
     --font-size: 14px;
     --color-background: #111;
-    --color-primary: #ff7b00;
-    --color-secondary: #777;
-    --color-tertiary: #555;
+    --color-primary: #ff7700;
+    --color-secondary: #bbb;
+    --color-tertiary: #888;
     --color-underline: #333;
     --spotlight-color: rgba(255, 123, 0, 0.125);
   }
