@@ -50,7 +50,7 @@ export default function ExperienceCard({ data }: { data: Job }) {
               </OptionalLink>
             </div>
           </h3>
-          <div className="mt-2 text-sm leading-relaxed [&_li]:list-disc">
+          <div className="mt-2 text-sm leading-relaxed [&_li]:list-none [&_li]:before:content-['-'] [&_li]:before:-ml-3 [&_li]:before:absolute">
             {data.description}
           </div>
           <ul className="mt-2 flex flex-wrap" aria-label="Related links">

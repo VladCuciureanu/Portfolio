@@ -24,8 +24,8 @@ export default function AboutMeSection() {
           <i>Express</i>, alongside <i>Typescript</i>.
         </p>
         <p>
-          My main focus these days is building <i>web products</i>. In my free time I&apos;m also working on various
-          personal projects.{" "}
+          My main focus these days is building <i>web products</i>. In my free
+          time I&apos;m also working on various personal projects.{" "}
           <a
             href="#projects"
             className="font-medium text-stone-800 dark:text-stone-200 hover:text-orange-500 dark:hover:text-orange-300"
