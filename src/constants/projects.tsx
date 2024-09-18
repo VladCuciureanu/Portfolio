@@ -6,7 +6,7 @@ export const Projects: Project[] = [
     href: "https://github.com/VladCuciureanu/Toothpick",
     decorations: { downloads: "22.0k+ Installs" },
     tags: ["React", "Node.js"],
-    year: 2022,
+    startYear: 2022,
     showcase: {
       imgSrc: "/images/projects/toothpick.png",
       orderId: 1,
@@ -22,7 +22,7 @@ export const Projects: Project[] = [
     label: "Portfolio",
     href: "https://github.com/VladCuciureanu/Portfolio",
     tags: ["React", "Next.js", "TypeScript", "Tailwind", "Edge Functions"],
-    year: 2022,
+    startYear: 2022,
     showcase: {
       imgSrc: "/images/projects/portfolio.png",
       orderId: 2,
@@ -38,7 +38,7 @@ export const Projects: Project[] = [
     label: "Lyra",
     href: "https://github.com/VladCuciureanu/Lyra",
     tags: ["React", "Next.js", "Node.js", "WebRTC", "Redis"],
-    year: 2021,
+    startYear: 2021,
     showcase: {
       orderId: 3,
       description: (
@@ -53,7 +53,7 @@ export const Projects: Project[] = [
     label: "Hymn",
     href: "https://github.com/VladCuciureanu/Hymn",
     tags: ["React", "Next.js", "TypeScript", "Tailwind", "Supabase"],
-    year: 2021,
+    startYear: 2021,
     showcase: {
       orderId: 4,
       description: (
@@ -68,7 +68,8 @@ export const Projects: Project[] = [
     label: "Garlic Bread",
     href: "https://github.com/VladCuciureanu/GarlicBread",
     tags: ["Node.js", "PostgreSQL"],
-    year: 2020,
+    startYear: 2020,
+    endYear: 2020,
     showcase: {
       orderId: 5,
       description: (
@@ -83,7 +84,8 @@ export const Projects: Project[] = [
     label: "CheckIt",
     href: "https://checkit.vlad.cuciureanu.net",
     tags: ["React", "Next.js", "TypeScript", "Sass"],
-    year: 2020,
+    startYear: 2020,
+    endYear: 2020,
     showcase: {
       orderId: 6,
       description: (
@@ -98,12 +100,13 @@ export const Projects: Project[] = [
     label: "SwaggerUI Watch",
     href: "https://github.com/VladCuciureanu/SwaggerUiWatch",
     tags: ["TypeScript"],
-    year: 2023,
+    startYear: 2023,
+    endYear: 2023,
   },
   {
     label: "Khora",
     href: "https://github.com/VladCuciureanu/Khora",
     tags: ["C++", "CMake", "ImGUI"],
-    year: 2020,
+    startYear: 2020,
   },
 ];

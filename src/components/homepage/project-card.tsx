@@ -8,16 +8,12 @@ export default function ProjectCard({ data }: { data: Project }) {
     <li>
       <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
         <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-orange-200/[.35] dark:lg:group-hover:bg-stone-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg" />
-        {data.showcase && data.showcase.imgSrc && (
-          <Image
-            alt=""
-            loading="lazy"
-            width={1920}
-            height={1080}
-            className="aspect-video w-full rounded border-2 border-stone-800/10 dark:border-stone-200/10 transition group-hover:border-stone-800/30 dark:group-hover:border-stone-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
-            src={data.showcase.imgSrc}
-          />
-        )}
+        <header
+          className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-stone-500 dark:text-stone-500 sm:col-span-2"
+          aria-label="July to December 2017"
+        >
+          {data.startYear} - {data.endYear ?? "Ongoing"}
+        </header>
         <div className="z-10 sm:order-2 sm:col-span-6">
           <h3>
             <OptionalLink
@@ -115,11 +111,6 @@ export default function ProjectCard({ data }: { data: Project }) {
             ))}
           </ul>
         </div>
-
-        {!data.showcase ||
-          (!data.showcase.imgSrc && (
-            <div className="rounded border-2 border-stone-800/10 dark:border-stone-200/10 transition group-hover:border-stone-800/30 dark:group-hover:border-stone-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1 aspect-video" />
-          ))}
       </div>
     </li>
   );

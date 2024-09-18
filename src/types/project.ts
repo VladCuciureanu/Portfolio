@@ -3,7 +3,8 @@ import { ReactNode } from "react";
 export type Project = {
   label: string;
   href: string;
-  year: number;
+  startYear: number;
+  endYear?: number;
   showcase?: {
     orderId: number;
     imgSrc?: string;
