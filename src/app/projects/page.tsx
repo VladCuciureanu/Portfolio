@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function ProjectsArchive() {
   const SortedProjects = Projects.sort(
-    (a, b) => b.year - a.year || a.label.localeCompare(b.label),
+    (a, b) => b.startYear - a.startYear || a.label.localeCompare(b.label),
   );
 
   return (
