@@ -7,7 +7,9 @@ export default function ProjectsArchiveRow({ data }: { data: Project }) {
   return (
     <tr className="border-b border-stone-700/10 dark:border-stone-300/10 last:border-none">
       <td className="py-4 pr-4 align-top text-sm">
-        <div className="translate-y-px">{data.year}</div>
+        <div className="translate-y-px">
+          {data.startYear} - {data.endYear ?? "Ongoing"}
+        </div>
       </td>
       <td className="py-4 pr-4 align-top font-semibold leading-snug text-stone-800 dark:text-stone-200">
         <div>
