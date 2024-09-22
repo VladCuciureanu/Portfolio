@@ -60,3 +60,19 @@ export function generateMetadata(props: {
 }
 
 export const DefaultMetadata = generateMetadata({});
+
+export function JsonLDMetadata(props: { metadata: Metadata }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: props.metadata.title,
+    url: props.metadata.openGraph?.url,
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+}

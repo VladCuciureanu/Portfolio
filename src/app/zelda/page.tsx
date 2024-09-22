@@ -1,6 +1,6 @@
 import GameBoy from "@/components/easter-egg";
 import ThemeSwitcher from "@/components/homepage/header/theme-switcher";
-import { DefaultMetadata } from "@/constants/seo";
+import { DefaultMetadata } from "@/components/shared/seo";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

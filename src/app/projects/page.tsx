@@ -1,7 +1,7 @@
 import ThemeSwitcher from "@/components/homepage/header/theme-switcher";
 import ProjectsArchiveRow from "@/components/projects/projects-archive-row";
+import { DefaultMetadata } from "@/components/shared/seo";
 import { Projects } from "@/constants/projects";
-import { DefaultMetadata } from "@/constants/seo";
 import { Metadata } from "next";
 import Link from "next/link";
 

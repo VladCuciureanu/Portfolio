@@ -4,7 +4,7 @@ import "@/styles/globals.css";
 import { twMerge } from "tailwind-merge";
 import Spotlight from "@/components/shared/spotlight";
 import ThemeProvider from "@/components/shared/theme-provider";
-import { DefaultMetadata } from "@/constants/seo";
+import { DefaultMetadata, JsonLDMetadata } from "@/components/shared/seo";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,6 +36,7 @@ export default function RootLayout({
             </div>
           </Spotlight>
         </ThemeProvider>
+        <JsonLDMetadata metadata={metadata} />
       </body>
     </html>
   );
