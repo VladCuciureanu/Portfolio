@@ -1,9 +1,0 @@
-//robots.txt
-
-# Block all crawlers for /zelda
-User-agent: *
-Disallow: /zelda
-
-# Allow all crawlers
-User-agent: *
-Allow: /
