@@ -11,7 +11,7 @@ const config: Config = {
     extend: {
       colors: {
         sand: "#f1e5d8",
-        "background-dark": "rgb(28, 25, 23)",
+        "background-dark": "rgb(24, 19, 15)",
         "background-light": "rgb(241, 229, 216)",
       },
       backgroundImage: {
