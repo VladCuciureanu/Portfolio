@@ -2,7 +2,34 @@ import { Job } from "@/types/job";
 
 export const Jobs: Job[] = [
   {
-    position: "Full-Stack Developer",
+    position: "Founding Full-Stack Engineeer",
+    company: { name: "SAEKI Robotics", href: "https://saeki.ch" },
+    startDate: new Date("11-18-2024"),
+    tags: [
+      "Next.js",
+      "React",
+      "Express",
+      "Postgres",
+      "Redis",
+      "CI/CD",
+      "Node.js",
+    ],
+    description: (
+      <ul>
+        <li>
+          {`Led the end-to-end development of scalable full-stack applications, designing and implementing both front-end and back-end systems for robotics solutions that improved operational efficiency by 30%.`}
+        </li>
+        <li>
+          {`Collaborated with cross-functional teams (hardware, AI, and firmware engineers) to build integrated software systems, ensuring seamless communication between robotics hardware and cloud-based platforms.`}
+        </li>
+        <li>
+          {`Optimized performance and scalability of applications by utilizing cutting-edge technologies and frameworks, resulting in a 25% reduction in system downtime and enhanced user experience for robotic operators.`}
+        </li>
+      </ul>
+    ),
+  },
+  {
+    position: "Full-Stack Engineeer",
     company: { name: "Vocode (YC W23)", href: "https://vocode.dev" },
     startDate: new Date("01-01-2024"),
     endDate: new Date("06-29-2024"),
@@ -38,7 +65,7 @@ export const Jobs: Job[] = [
     ),
   },
   {
-    position: "Full-Stack Developer",
+    position: "Full-Stack Engineeer",
     company: {
       name: "Unicef",
       href: "https://unicef.org",
@@ -93,7 +120,7 @@ export const Jobs: Job[] = [
     ),
   },
   {
-    position: "Full-Stack Developer",
+    position: "Full-Stack Engineeer",
     company: { name: "Blum", href: "https://blum.com" },
     startDate: new Date("11-01-2021"),
     endDate: new Date("12-29-2022"),
@@ -123,7 +150,7 @@ export const Jobs: Job[] = [
     ),
   },
   {
-    position: "Full-Stack Developer",
+    position: "Full-Stack Engineeer",
     company: { name: "Porsche", href: "https://www.porscheengineering.com" },
     startDate: new Date("12-01-2020"),
     endDate: new Date("11-29-2021"),
@@ -146,7 +173,7 @@ export const Jobs: Job[] = [
     ),
   },
   {
-    position: "Full-Stack Developer",
+    position: "Full-Stack Engineeer",
     company: { name: "Cloudflight", href: "https://cloudflight.io" },
     startDate: new Date("10-01-2020"),
     endDate: new Date("12-29-2020"),
@@ -176,7 +203,7 @@ export const Jobs: Job[] = [
     ),
   },
   {
-    position: "Full-Stack Developer",
+    position: "Full-Stack Engineeer",
     company: { name: "Vodafone", href: "https://vodafone.com" },
     startDate: new Date("08-01-2020"),
     endDate: new Date("10-29-2020"),

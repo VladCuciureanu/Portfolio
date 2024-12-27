@@ -10,7 +10,7 @@ export default function Header() {
         </h1>
         <h2 className="mt-3 text-lg font-medium tracking-tight text-stone-800 dark:text-stone-200 sm:text-xl">
           <span className="text-stone-800 dark:text-stone-200">
-            Full-Stack Developer
+            Full-Stack Engineer
           </span>
         </h2>
         <p className="mt-4 max-w-xs leading-normal">I like to build things.</p>
