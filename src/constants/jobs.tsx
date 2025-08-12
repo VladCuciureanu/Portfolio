@@ -16,15 +16,10 @@ export const Jobs: Job[] = [
     ],
     description: (
       <ul>
-        <li>
-          {`Led the end-to-end development of scalable full-stack applications, designing and implementing both front-end and back-end systems for robotics solutions that improved operational efficiency by 30%.`}
-        </li>
-        <li>
-          {`Collaborated with cross-functional teams (hardware, AI, and firmware engineers) to build integrated software systems, ensuring seamless communication between robotics hardware and cloud-based platforms.`}
-        </li>
-        <li>
-          {`Optimized performance and scalability of applications by utilizing cutting-edge technologies and frameworks, resulting in a 25% reduction in system downtime and enhanced user experience for robotic operators.`}
-        </li>
+        <li>{`Architected and developed a suite of manufacturing software aimed at driving the fourth industrial revolution into reality.`}</li>
+        <li>{`Developed a local-first manufacturing execution system (MES) specialized in optimizing and scheduling fleets of autonomous factory workers.`}</li>
+        <li>{`Implemented a decentralized enterprise resource planner (ERP) that coordinates a network of fully automated lights-out factories.`}</li>
+        <li>{`Built a customer sales platform designed to channel business opportunities directly into our ecosystem while providing accelerated feedback to potential customers.`}</li>
       </ul>
     ),
   },
