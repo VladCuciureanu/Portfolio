@@ -16,18 +16,14 @@
     "format": "prettier --write ./**/*.{ts,tsx} --no-error-on-unmatched-pattern"
   },
   "dependencies": {
-    "@react-three/drei": "^9.88.11",
-    "@react-three/fiber": "^8.15.10",
     "next": "14.0.1",
     "next-themes": "^0.2.1",
     "react": "^18",
     "react-dom": "^18",
     "sass": "^1.69.5",
-    "tailwind-merge": "^2.0.0",
-    "three": "^0.158.0"
+    "tailwind-merge": "^2.0.0"
   },
   "devDependencies": {
-    "@types/emscripten": "^1.39.10",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

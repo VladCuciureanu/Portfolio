@@ -1,4 +1,3 @@
-import EasterEggLink from "@/components/homepage/easter-egg-link";
 import Footer from "@/components/homepage/footer";
 import AboutMeSection from "@/components/homepage/sections/about-me";
 import WorkExperienceSection from "@/components/homepage/sections/experience";
@@ -15,9 +14,6 @@ export default function Homepage() {
         <ProjectsSection />
         <Footer />
       </main>
-      <div>
-        <EasterEggLink />
-      </div>
     </div>
   );
 }
