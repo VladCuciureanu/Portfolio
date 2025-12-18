@@ -1,4 +1,4 @@
-import { Projects } from "@/constants/projects";
+import { Projects } from "@/data/projects";
 import ProjectCard from "../project-card";
 import Section from "../section";
 

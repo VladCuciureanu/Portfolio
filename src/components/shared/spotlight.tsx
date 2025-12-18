@@ -11,7 +11,7 @@ export default function Spotlight(props: ComponentProps<"div">) {
       {...props}
       className="group/spotlight relative"
       style={
-        mousePosition.x && mousePosition.y
+        mousePosition
           ? ({
               "--spotlight-x": `${mousePosition.x}px`,
               "--spotlight-y": `${mousePosition.y}px`,
@@ -19,7 +19,13 @@ export default function Spotlight(props: ComponentProps<"div">) {
           : undefined
       }
     >
-      <div className="pointer-events-none fixed inset-0 z-30 transition duration-300 bg-lightSpotlight dark:bg-darkSpotlight" />
+      <div
+        className="pointer-events-none fixed inset-0 z-30 transition duration-300"
+        style={{
+          backgroundImage:
+            "radial-gradient(600px at var(--spotlight-x) var(--spotlight-y), var(--color-spotlight), transparent 80%)",
+        }}
+      />
       {props.children}
     </div>
   );

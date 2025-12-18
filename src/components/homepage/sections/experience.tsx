@@ -1,7 +1,7 @@
 import Link from "next/link";
 import ExperienceCard from "../experience-card";
 import Section from "../section";
-import { Jobs } from "@/constants/jobs";
+import { Jobs } from "@/data/jobs";
 
 export default function WorkExperienceSection() {
   return (

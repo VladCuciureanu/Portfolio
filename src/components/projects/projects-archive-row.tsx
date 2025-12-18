@@ -1,4 +1,4 @@
-import { Project } from "@/types/project";
+import { Project } from "@/data/projects";
 import Link from "next/link";
 
 export default function ProjectsArchiveRow({ data }: { data: Project }) {

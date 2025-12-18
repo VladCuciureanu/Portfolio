@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@custom-variant light (&:where([data-theme=light], [data-theme=light] *));
+
+[data-theme='light'] {
+  --color-background: oklch(92.79% 0.02169 69.68);
+  --color-foreground: oklch(0% 0 0);
+  --color-spotlight: oklch(0% 0 0 / 0);
+}
+
+[data-theme='dark'] {
+  --color-background: oklch(19.143% 0.01136 60.66);
+  --color-foreground: oklch(100% 0.00011 271.152);
+  --color-spotlight: oklch(70.485% 0.18669 47.592 / 0.125);
+}
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
+  --color-sand: #f1e5d8;
+}

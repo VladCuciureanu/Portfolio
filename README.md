@@ -4,14 +4,7 @@ This repository hosts the source code for my personal website, which serves as a
 
 ## Getting Started
 
-To initiate the project, ensure proper configuration of environment variables by executing the following commands:
-
-```sh
-cp .env.example .env
-nvim .env
-```
-
-Subsequently, proceed with the initialization process:
+To initiate the project execute the following commands:
 
 ```sh
 npm i && npm run build && npm run start
