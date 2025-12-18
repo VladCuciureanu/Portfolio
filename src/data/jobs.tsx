@@ -21,6 +21,7 @@ export const Jobs: Job[] = [
     position: "Founding Full-Stack Engineeer",
     company: { name: "SAEKI Robotics", href: "https://saeki.ch" },
     startDate: new Date("11-18-2024"),
+    endDate: new Date("12-18-2025"),
     tags: [
       "Next.js",
       "React",
